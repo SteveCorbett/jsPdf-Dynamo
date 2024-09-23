@@ -5,7 +5,10 @@
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SteveCorbett/jsPdf-Dynamo"
+    "url": "git+https://github.com/SteveCorbett/jsPdf-Dynamo"
+  },
+  "bugs": {
+    "url": "https://github.com/SteveCorbett/jsPdf-Dynamo/issues"
   },
   "scripts": {
     "build": "tsup",
@@ -27,7 +30,7 @@
     "template",
     "typescript"
   ],
-  "author": "Stephen Corbett",
+  "author": "Stephen Corbett <corbett@corbtech.com.au> (https://corbtech.com.au)",
   "license": "MIT",
   "dependencies": {
     "jspdf": "^2.5.1"
