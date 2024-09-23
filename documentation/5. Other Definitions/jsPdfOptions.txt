@@ -1,0 +1,56 @@
+.SetVar CommandName JsPdfOptions
+.Do CommandHeading
+.SetVar text This object may be passed to the JsPdfDynamo constructor and can contain zero or more of the following properties:
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+
+.SetVar CommandSubHeading Properties
+.Do CommandSubHeading
+.SetVar CommandLine1 pageSize
+.SetVar CommandLine2 A string containing one of the supported page sizes. (Refer to the section below.)
+.Do CommandLine2
+.SetVar CommandLine1 orientation
+.SetVar CommandLine2 A string containing one of the valid orientation values. The first page
+.SetVar CommandLine2 %CommandLine2% will have this orientation.
+.Do CommandLine2
+.SetVar CommandLine3 - 'portrait' or 'p'
+.Do CommandLine2
+.SetVar CommandLine3 - 'landscape' or 'l'
+.Do CommandLine2
+.SetVar CommandLine1 unit
+.SetVar CommandLine2 A string containing one of the valid unit of measure values:
+.Do CommandLine2
+.SetVar CommandLine3 - 'mm' for metric millimeters
+.Do CommandLine2
+.SetVar CommandLine3 - 'in' for imperial inches
+.Do CommandLine2
+.SetVar CommandLine3 - 'pt' for points, based on 96 points per inch.
+.Do CommandLine2
+.SetVar CommandLine1 margins
+.SetVar CommandLine2 An object containing zero or more of the following numeric values which will
+.SetVar CommandLine2 %CommandLine2% initialise the margins. These values are measurements in the given unit of measure.
+.Do CommandLine2
+.SetVar CommandLine3 - 'top'
+.Do CommandLine2
+.SetVar CommandLine3 - 'bottom'
+.Do CommandLine2
+.SetVar CommandLine3 - 'left'
+.Do CommandLine2
+.SetVar CommandLine3 - 'right'
+.Do CommandLine2
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 let options = {
+.SetVar CommandLine2 pageSize: "letter",
+.Do CommandLine2
+.SetVar CommandLine2 orientation: "portrait"}
+.Do CommandLine2
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 let options = {
+.SetVar CommandLine2 pageSize: "a3",
+.Do CommandLine2
+.SetVar CommandLine2 margins: { top: 10, bottom: 15, left: 10, right: 10 },
+.Do CommandLine2
+.SetVar CommandLine2 orientation: "l"}
+.Do CommandLine2
+.incCurrentY %_FontHeight%

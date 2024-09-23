@@ -1,0 +1,55 @@
+.SetVar CommandName SetFontStyle
+.Do CommandHeading
+.DrawText 0 %_CurrentY% Apply the typographical emphasis for the current font. For example, normal, bold or italic.
+.SetVar CommandLine1 Subsequent output of text will continue to use this emphasis until changed by another
+.Do CommandLine
+.SetVar CommandLine1 SetFontStyle command.
+.Do CommandLine
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .SetFontStyle  fontStyle
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 fontStyle
+.SetVar CommandLine2 The typographical emphasis to apply:
+.Do CommandLine2
+.incCurrentY %halfLineGap%
+.SetVar CommandLine2 Normal - Normal text (no typographical emphasis)
+.Do CommandLine2
+
+.SetVar CommandLine2 Bold - Bold text
+.SetFontStyle Bold
+.Do CommandLine2
+
+.SetVar CommandLine2 Italic - Italic text
+.SetFontStyle Italic
+.Do CommandLine2
+
+.SetVar CommandLine2 BoldItalic - Bold and italic text
+.SetFontStyle BoldItalic
+.Do CommandLine2
+
+.SetFontStyle Normal
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 The font style name is not case sensitive so can be either upper, lower
+.Do CommandLine
+.SetVar CommandLine1 or mixed case.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 If a valid font style is provided the variable _LastResult is set to '1' otherwise the current
+.Do CommandLine
+.SetVar CommandLine1 typographical emphasis is unchanged and _LastResult is set to '0'. 
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Set the emphasis of subsequent text to be italic:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetFontStyle 2
+.Do CommandLine2

@@ -1,0 +1,40 @@
+﻿.SetVar CommandName AddPage
+.Do CommandHeading
+.DrawText 0 %_CurrentY% Add a new page at the end of the document and make it active. 
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .AddPage {PageSize}
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 PageSize
+.SetVar CommandLine2 The page size: A3, A4, Letter, etc. Optional and if not supplied the
+.Do CommandLine2
+.SetVar CommandLine2 current page size is used
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 The variable _LastResult is set to the number of the page just created.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 Refer to the 'Other Definitions' chapter for a complete list of supported page sizes.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Create a new page using the current page size:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .AddPage
+.Do CommandLine2
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Create a new page with a page size of 'A4':
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .AddPage A4
+.Do CommandLine2
+.incCurrentY %_FontHeight%

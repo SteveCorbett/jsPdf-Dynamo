@@ -1,0 +1,58 @@
+﻿.SetVar CommandName IfGt
+.Do CommandHeading
+.SetVar text Compares two variables and if the first one is greater then the second then process a given command. This can be used
+.SetVar text %text% to process one or more groups of commands using the 'do' command or perform some other action, such
+.SetVar text %text% as setting the value of a variable. If either of the variables are not numbers then a string comparison is made.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .IfGt  Value1  Value2  Command
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Value1,
+.SetVar CommandLine2 The values to compare. These can either be constants or values of
+.Do CommandLine2
+.SetVar CommandLine1 Value2
+.SetVar CommandLine2 variables using substitution.
+.Do CommandLine2
+.SetVar CommandLine1 Command
+.SetVar CommandLine2 The command to execute if the first value is greater than the second.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar text The variable _LastResult is set to '0' if the first variable is less than or equal to the second, otherwise 
+.SetVar text %text% _LastResult is set to the result of the last command processed by this command.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %halfLineGap%
+.SetVar text No action is taken if the two variables have the same value or if the second value is greater than the first.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %HalfFontHeight%
+.SetVar text Comparison of string values is case sensitive.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar text Set the value of variable 'highest' to the greater of values of variables 'counter1' and 'counter2'.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetVar  highest  %%%%counter2%%%%
+.Do CommandLine2
+.SetVar CommandLine1 .IfGt  %%%%counter1%%%%  %%%%counter2%%%%  .SetVar  highest  %%%%counter1%%%%
+.Do CommandLine2
+
+.incCurrentY %_FontHeight%
+.SetVar LongText Process the groups 'CloseSection' and 'ApprovalRequired' if the value of the variable 'errorCount' is more than 3.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %LongText%
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .IfGt  3  %%%%errorCount%%%%  .Do  CloseSection  ApprovalRequired
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 IfBlank, IfNotBlank
+.Do CommandLine2
+.incCurrentY %_FontHeight%

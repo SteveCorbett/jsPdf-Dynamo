@@ -1,0 +1,28 @@
+﻿.SetVar CommandName prepareWrappedString()
+.Do CommandHeading
+.SetVar LongText This method prepares a given string for output by the DrawTextWrapped command.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %LongText%
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 const text = myJsPdfDynamo.prepareWrappedString(input)
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 input
+.SetVar CommandLine2 A string that may contain special characters, including percentage signs, back
+.SetVar CommandLine2 %CommandLine2% slashes and new line characters.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Returns
+.Do CommandSubHeading
+.SetVar CommandLine1 The input string with any special characters converted to a format that the DrawTextWrapped
+.SetVar CommandLine1 %CommandLine1% command can use to output the string correctly.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Notes
+.Do CommandSubHeading
+.SetVar LongText If the input string is null or undefined then an empty is returned.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %LongText%
+.incCurrentY %_FontHeight%

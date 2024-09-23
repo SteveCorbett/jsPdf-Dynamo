@@ -1,0 +1,69 @@
+﻿.SetVar CommandName SetVar
+.Do CommandHeading
+.DrawText 0 %_CurrentY% Set the value of a variable.  Note that all variables are stored as strings.
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .SetVar Variable Value
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Variable
+.SetVar CommandLine2 The name of the variable to update.
+.Do CommandLine2
+.SetVar CommandLine1 Value
+.SetVar CommandLine2 The value to assign to the variable. (Optional)
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 Variable _LastResult is set to '1' if a valid variable name is provided, otherwise it is set to '0'.
+.Do CommandLine
+.SetVar CommandLine1 The JsPdfDynamo maintained variables (those whose name starts with an underscore) can
+.Do CommandLine
+.SetVar CommandLine1  not be changed using this command.
+.Do CommandLine 
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 To set a variable to blank, omit the value parameter.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 The variable name may itself be, or contain a variable.
+.Do CommandLine 
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Set the variable 'Heading' to 'A mighty Good Heading':
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetVar Heading A mighty Good Heading
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandLine1 Save the current vertical position on the page in the variable 'top':
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetVar Top %%%%_CurrentY%%%%
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandLine1 Set the variable 'Index' to '3':
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetVar Index 3
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandLine1 Set the variable 'Item7' to the current value of the variable 'Description', given that the
+.Do CommandLine
+.SetVar CommandLine1 variable 'CurrentItem' has the value of '7':
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetVar Item%%%%CurrentItem%%%% %%%%Description%%%%
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 CopyVar, IncVar, MultVar
+.Do CommandLine2
+.incCurrentY %_FontHeight%

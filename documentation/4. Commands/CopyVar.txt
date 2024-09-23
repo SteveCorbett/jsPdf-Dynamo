@@ -1,0 +1,52 @@
+﻿.SetVar CommandName CopyVar
+.Do CommandHeading
+.SetVar CommandLine1 Sets the value of a variable from another variable.  This enables the dynamic evaluation
+.SetVar CommandLine1 %CommandLine1% of variable values.
+.Do CommandLine
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .CopyVar CopyTo CopyFrom
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 CopyTo
+.SetVar CommandLine2 The name of the variable to update. This can be a substitution variable.
+.Do CommandLine2
+.SetVar CommandLine1 CopyFrom
+.SetVar CommandLine2 The name of the variable whose values will be assigned to the variable being
+.SetVar CommandLine2 %CommandLine2% updated.  This can be a substitution variable.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 Variable _LastResult is set to '1' if valid variable names are provided, otherwise it is set to '0'.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 The system maintained variables (those whose name starts with an underscore) can
+.SetVar CommandLine1 %CommandLine1% not be changed using this command.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Set the variable 'SaveCurrentTop' to the system maintained variable '_CurrentY':
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .CopyVar SaveCurrentTop  _CurrentY
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.CheckPage 15 CommandOverflow
+.SetVar CommandLine1 Given that the variable 'Index' contains '3', save the current value of the variable 'line3' 
+.SetVar CommandLine1 %CommandLine1% into the variable 'ThisLine':
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .CopyVar  ThisLine  line%%%%Index%%%%
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 IncVar, MultVar, SetVar
+.Do CommandLine2
+.incCurrentY %_FontHeight%

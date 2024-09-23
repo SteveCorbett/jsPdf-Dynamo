@@ -1,0 +1,60 @@
+﻿.SetVar CommandName IfNotBlank
+.Do CommandHeading
+.DrawText 0 %_CurrentY% Tests a given variable and if it is not blank then process a given command. This can be
+.SetVar CommandLine1 used to process one or more groups of commands using the 'do' command.
+.Do CommandLine
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .IfNotBlank  VariableName  Command
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 VariableName
+.SetVar CommandLine2 The name of the variable to check. This does not need to be surrounded
+.Do CommandLine2
+.SetVar CommandLine2 by percentage signs unless the name of the actual variable to check is
+.Do CommandLine2
+.SetVar CommandLine2 given in the variable name parameter.
+.Do CommandLine2
+.SetVar CommandLine1 Command
+.SetVar CommandLine2 The command to execute if the given variable is not blank.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 The variable _LastResult is set to '-1' if the variable is blank, otherwise the result of the
+.Do CommandLine
+.SetVar CommandLine1 last command processed by this command.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Print text stored in the variable called 'MyHeading' if it is not blank:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .IfNotBlank MyHeading .DrawText 0 %%%%_CurrentY%%%% %%%%MyHeading%%%%
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandLine1 Process the groups 'continued' and 'AddPage' if the variable called 'more' is not blank:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .IfNotBlank MORE .Do continued AddPage
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandLine1 Process the groups 'continued' and 'AddPage' if the variable whose name is stored in the
+.Do CommandLine
+.SetVar CommandLine1 variable named 'varname' is not blank:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .IfNotBlank %%%%VarName%%%% .Do continued AddPage
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 IgGt, IfBlank
+.Do CommandLine2
+.incCurrentY %_FontHeight%

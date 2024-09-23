@@ -1,0 +1,62 @@
+﻿.SetVar CommandName DrawLine
+.Do CommandHeading
+.SetVar CommandLine1 Draw a line between two points on the same page, relative to the page margins. The 
+.SetVar CommandLine1 %CommandLine1% width and the colour of the line is set by the most recent SetLineColour and 
+.SetVar CommandLine1 %CommandLine1% SetLineWidth commands.
+.Do CommandLine
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .DrawLine Left Top Right Bottom
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Left
+.SetVar CommandLine2 The horizontal starting position of the line, measured from the left margin.
+.Do CommandLine2
+.SetVar CommandLine1 Top
+.SetVar CommandLine2 The vertical starting position of the line, measured from the top margin.
+.Do CommandLine2
+.SetVar CommandLine1 Right
+.SetVar CommandLine2 The horizontal ending position of the line, measured from the left margin.
+.Do CommandLine2
+.SetVar CommandLine1 Bottom
+.SetVar CommandLine2 The vertical ending position of the line, measured from the top margin.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 Variable _LastResult is set to '0' if any of the positions fall outside of the current
+.SetVar CommandLine1 %CommandLine1% page margins, otherwise it is set to '1'.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 The variables _CurrentX and _CurrentY are not changed by this command.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 The variables _LastObjectHeight and _LastObjectWidth are updated to reflect the vertical
+.SetVar CommandLine1 %CommandLine1% and horizontal sizes of the line just drawn and not the
+.SetVar CommandLine1 %CommandLine1% diagonal length of that line.
+.Do CommandLine 
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Assuming that the unit of measure is millimeters, 
+.SetVar CommandLine1 %CommandLine1% output a vertical line 15cm from the left margin:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .DrawLine 150 0 150 %%%%_PageHeight%%%%
+.Do CommandLine2
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Output a horizontal line at the current vertical position on the page:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .DrawLine 0 %%%%_CurrentY%%%% %%%%_PageWidth%%%% %%%%_CurrentY%%%% 
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 SetLineColour, SetLineWidth
+.Do CommandLine2
+.incCurrentY %_FontHeight%

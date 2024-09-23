@@ -1,0 +1,50 @@
+﻿.SetVar ChapterName To Be Documented
+.do ChapterHeading
+
+.DrawText 0 %_CurrentY% We definitely need to describe the 'groups of commands' and how they work. Maybe they
+.DrawText 0 %_CurrentY% should be referred to as 'macros'?
+.incCurrentY %halfLineGap%
+
+
+.DrawText 0 %_CurrentY% There's a few methods not currently documented, sorry! Here's a partial list of them.
+.incCurrentY %halfLineGap%
+
+.SetVar Indent 5
+.SetVar MaxWidth %_PageWidth%
+.IncVar MaxWidth -%Indent%
+.SetVar LongText * The JsPdfDynamo constructor. 
+.DrawTextWrapped %Indent% %_CurrentY% %MaxWidth% CommandCheckPage %LongText%
+
+.SetVar CommandLine1 * The .AddImageFromFile/Url, DrawImage commands
+.Do CommandLine2
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1   AddImageFromFile sets _LastError, _LastResult & _LastImageAdded
+.Do CommandLine2
+.SetVar CommandLine1   AddImageFromUrl sets _LastError, _LastResult & _LastImageAdded
+.Do CommandLine2
+.SetVar CommandLine1   DrawImage imageId left top %scale (default=1 full size)
+.Do CommandLine2
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 * The .SavePdf command
+.Do CommandLine2
+
+.SetVar CommandLine1 * The .SetTextColour, .SetFontName and .SetFontSize commands
+.Do CommandLine2
+
+
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 The file TempDoco.txt contains descriptions of some of this missing documentation.
+.Do CommandLine
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Some complete script examples would be useful
+.Do CommandLine
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Having examples in a fixed font within a shaded box would also be an improvement.
+.Do CommandLine
+
+.incCurrentY %_FontHeight%

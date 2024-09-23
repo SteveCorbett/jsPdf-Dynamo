@@ -1,0 +1,52 @@
+﻿.SetVar CommandName incCurrentX
+.Do CommandHeading
+
+.DrawText 0 %_CurrentY% Increment (or decrement) the JsPdfDynamo maintained _CurrentX variable.
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .incCurrentX Value Value (etc)
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Value
+.SetVar CommandLine2 One or more values to increment the _CurrentX variable by. These can be
+.Do CommandLine2
+.SetVar CommandLine2 constants or substitution variables.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 The _CurrentX variable can be decremented by using a negative value.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Increase the value of the _CurrentX variable by 2.4mm:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .incCurrentX  2.4
+.Do CommandLine2
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Decrease the value of the _CurrentX variable by the width of the last text written:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .DrawText  %%%%_CurrentX%%%%  %%%%_CurrentY%%%%  Here's some text
+.Do CommandLine2
+.SetVar CommandLine1 .incCurrentX  -%%%%_LastObjectWidth%%%%
+.Do CommandLine2
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Multiple values can be used to increase the value of the _CurrentX variable by 8mm:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .incCurrentX  5  1  2
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 incCurrentY, setCurrentX, setCurrentY, Variables
+.Do CommandLine2
+.incCurrentY %_FontHeight%

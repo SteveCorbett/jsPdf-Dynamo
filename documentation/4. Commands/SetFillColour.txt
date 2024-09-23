@@ -1,0 +1,58 @@
+﻿.SetVar CommandName SetFillColour
+.Do CommandHeading
+.DrawText 0 %_CurrentY% Set the fill colour of subsequent boxes drawn with the DrawBox command.
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .SetFillColor Red Green Blue
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Red
+.SetVar CommandLine2 The amount of red in the colour, represented as a number in the range
+.Do CommandLine2
+.SetVar CommandLine2 of  0 to 255
+.Do CommandLine2
+.SetVar CommandLine1 Green
+.SetVar CommandLine2 The amount of green in the colour, represented as a number in the range
+.Do CommandLine2
+.SetVar CommandLine2 of  0 to 255
+.Do CommandLine2
+.SetVar CommandLine1 Blue
+.SetVar CommandLine2 The amount of blue in the colour, represented as a number in the range
+.Do CommandLine2
+.SetVar CommandLine2 of  0 to 255
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 Colours are specified in the RGB style using three numbers in the range of 0 to 255,
+.Do CommandLine
+.SetVar CommandLine1 representing the amount of red, green and blue in the final colour.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 The variable _LastResult is set to '1' by this command.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Set the colour of subsequent filled boxes to be grey:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetLineColour 200 200 200
+.Do CommandLine2
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Set the colour of subsequent filled boxes to be green:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetLineColour 0 180 0
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 DrawBox, SetLineColour
+.Do CommandLine
+
+.incCurrentY %_FontHeight%

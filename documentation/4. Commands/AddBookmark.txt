@@ -1,0 +1,47 @@
+﻿.SetVar CommandName AddBookmark
+.Do CommandHeading
+.SetVar text Adds an entry to the document bookmarks. (Bookmarks
+.SetVar text %text% also known as Table of Contents, Sidebar Reference, or Outlines.)
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .AddBookmark ParentId PageNo Text
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 ParentId
+.SetVar CommandLine2 The Id of the parent bookmark for this entry. Set to zero to create
+.SetVar CommandLine2 %CommandLine2% a new top level bookmark.
+.Do CommandLine2
+.SetVar CommandLine1 PageNo
+.SetVar CommandLine2 The page number to which this bookmark refers to.
+.Do CommandLine2
+.SetVar CommandLine1 Text
+.SetVar CommandLine2 The text for this bookmark.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 If successful then the variable _LastResult is set to the Id of the bookmark just created, else
+.Do CommandLine
+.SetVar CommandLine1 it is set to '0'.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Create a top level bookmark entry for the current page:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .AddBookmark 0 %%%%_PAGENO%%%% Chapter one of the document 
+.Do CommandLine2
+.SetVar CommandLine1 .SetVar Chapter1 %%%%_LastResult%%%% 
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Create a child bookmark entry for the chapter 1:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .AddBookmark %%%%Chapter1%%%% %%%%_PAGENO%%%% Chapter one, Paragraph 1 
+.Do CommandLine2
+.incCurrentY %_FontHeight%

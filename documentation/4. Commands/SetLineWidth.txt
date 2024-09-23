@@ -1,0 +1,42 @@
+﻿.SetVar CommandName SetLineWidth
+.Do CommandHeading
+.DrawText 0 %_CurrentY% Set the width of subsequent lines drawn with the DrawBox and DrawLine commands.
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .SetLineWidth Width
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Width
+.SetVar CommandLine2 The width of the line(s) to be drawn in millimeters, as a floating point number
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 Variable _LastResult is set to '1'. The variable _CurrentLineWidth is set to the width.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Set the width of subsequent lines to be 0.5mm:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetLineWidth 0.5
+.Do CommandLine2
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Set the width of subsequent lines to be 1mm:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetLineWidth 1
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 DrawBox, DrawLine, SetFillColour, SetLineColour
+.Do CommandLine
+
+.incCurrentY %_FontHeight%

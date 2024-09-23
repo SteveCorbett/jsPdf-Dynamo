@@ -1,0 +1,37 @@
+﻿.SetVar CommandName SetCurrentY
+.Do CommandHeading
+.DrawText 0 %_CurrentY% Set the current top (vertical) position. This value can be retrieved using the system maintained
+.SetVar CommandLine1 _CurrentY variable.
+.Do CommandLine
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .setCurrentY Value
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Value
+.SetVar CommandLine2 The value to assign to the current top position, expressed in millimeters.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Set the current top position :
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .setCurrentY  14
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandLine1 Use a substitution variable to set the current top position:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .setCurrentY  %%%%previousSavedTop%%%%
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 incCurrentY, setCurrentX, Variables
+.Do CommandLine2
+.incCurrentY %_FontHeight%

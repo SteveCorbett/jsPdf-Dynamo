@@ -1,0 +1,27 @@
+﻿.SetVar CommandName processCommands()
+.Do CommandHeading
+.DrawText 0 %_CurrentY% This method processes the commands provided in an array of strings.
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 myJsPdfDynamo.processCommands(commands)
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 commands
+.SetVar CommandLine2 An array of strings containing commands to process.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Notes
+.Do CommandSubHeading
+.SetVar text The commands may (optionally) create the final document using the .SavePdf command.
+.SetVar text %text% Alternatively, additional calls may be made to the processCommands method and/or
+.SetVar text %text% the PDF document can be retrieved using the toBlob or toBlobUrl methods.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 SavePdf, toBlob, toBlobUrl
+.Do CommandLine2
+.incCurrentY %_FontHeight%

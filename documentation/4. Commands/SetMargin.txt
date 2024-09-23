@@ -1,0 +1,69 @@
+﻿.SetVar CommandName SetMargin
+.Do CommandHeading
+.DrawText 0 %_CurrentY% Set the page margins. The margins will remain in effect until changed by a subsequent
+.SetVar CommandLine1 SetMargin command. It is not unusual to change left and right margins multiple times
+.Do CommandLine
+.SetVar CommandLine1 on the same page.
+.Do CommandLine
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .SetMargin Side Size
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Side
+.SetVar CommandLine2 Only the first letter is used to determine the side(s). It is not case sensitive.
+.Do CommandLine2
+.incCurrentY %halfLineGap%
+.SetVar CommandLine2 L or Left - Margin from the left side of the page
+.Do CommandLine2
+.SetVar CommandLine2 R or Right - Margin from the right side of the page
+.Do CommandLine2
+.SetVar CommandLine2 T or Top - Margin from the top of the page
+.Do CommandLine2
+.SetVar CommandLine2 B or Bottom - Margin from the bottom of the page
+.Do CommandLine2
+.SetVar CommandLine2 A or All - All margins, top, bottom, left and right
+.Do CommandLine2
+.SetVar CommandLine2 H or Horizontal - Both horizontal margins, left and right
+.Do CommandLine2
+.SetVar CommandLine2 V or Vertical - Both vertical margins, top and bottom
+.Do CommandLine2
+.SetVar CommandLine1 Size
+.SetVar CommandLine2 The size of the margin in millimeters.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 Variable _LastResult is set to '1' if a valid margin is provided, otherwise it is set to '0'.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 The appropriate variables _MarginLeft, _MarginRight, _MarginTop and _MarginBottom are
+.Do CommandLine 
+.SetVar CommandLine1 set, while the _PageWidth and _Page_Height variables are re-calculated based on the
+.Do CommandLine 
+.SetVar CommandLine1 current page size and margins.
+.Do CommandLine 
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 Note that changing the margins does not change the values of the current position variables,
+.Do CommandLine 
+.SetVar CommandLine1 _CurrentY and _CurrentX, which are always relative to the current margins.
+.Do CommandLine 
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Set all margins (from now on) to 10mm:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetMargin All 10
+.Do CommandLine2
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Set the left and right margins to 15mm:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetMargin h 15
+.Do CommandLine2
+.incCurrentY %_FontHeight%

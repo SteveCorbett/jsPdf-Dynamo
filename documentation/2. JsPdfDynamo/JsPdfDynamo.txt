@@ -1,0 +1,6 @@
+﻿.SetVar ChapterName JsPdfDynamo Class
+.do ChapterHeading
+
+.DrawText 0 %_CurrentY% JsPdfDynamo is implemented using an instance of the JsPdfDynamo class. This class has the 
+.DrawText 0 %_CurrentY% following public properties.
+.incCurrentY %_FontHeight%

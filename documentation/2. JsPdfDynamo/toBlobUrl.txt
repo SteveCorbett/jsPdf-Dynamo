@@ -1,0 +1,36 @@
+﻿.SetVar CommandName toBlobUrl()
+.Do CommandHeading
+.SetVar text This is a browser only method that generates the current PDF as a Blob
+.SetVar text %text% and returns a string containing a URL to that Blob. This can be
+.SetVar text %text% used to display the PDF in the current or another browser window.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 const blobUrl = myJsPdfDynamo.toBlobUrl();
+.Do CommandLine2
+
+.SetVar CommandSubHeading Returns
+.Do CommandSubHeading
+.SetVar CommandLine1 A string containing the URL reference to the PDF.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Example
+.Do CommandSubHeading
+.SetVar CommandLine1 Display the PDF in a new browser window:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 const blobUrl = myJsPdfDynamo.toBlobUrl();
+.Do CommandLine2
+.SetVar CommandLine1 if (blobUrl) {
+.Do CommandLine2
+.SetVar CommandLine1    window.open(blobUrl, '_blank');
+.Do CommandLine2
+.SetVar CommandLine1 }
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 ProcessCommands, SavePdf, toBlob
+.Do CommandLine2
+.incCurrentY %_FontHeight%

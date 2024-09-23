@@ -1,0 +1,99 @@
+﻿.SetVar CommandName DrawTextBox
+.Do CommandHeading
+.SetVar CommandLine1 Draw text within the bounds of a given box. This is can be used to justify text
+.SetVar CommandLine1 %CommandLine1% horizontally and/or vertically within a defined area.
+.Do CommandLine
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .DrawTextBox Left Top Width Height Horizontal-alignment Vertical-alignment Text
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Left
+.SetVar CommandLine2 The position of the area containing the text, measured from the left margin.
+.Do CommandLine2
+.SetVar CommandLine1 Top
+.SetVar CommandLine2 The position of the area containing the text, measured from the top margin.
+.Do CommandLine2
+.SetVar CommandLine1 Width
+.SetVar CommandLine2 The width of the area containing the text.
+.Do CommandLine2
+.SetVar CommandLine1 Height
+.SetVar CommandLine2 The height of the area containing the text.
+.Do CommandLine2
+.SetVar CommandLine1 Horizontal-
+.SetVar CommandLine2 Specifies how the text is aligned horizontally within the bounding box:
+.Do CommandLine2
+.SetVar CommandLine1 alignment
+.SetVar CommandLine3 Left or 'L' - Left justified
+.Do CommandLine2
+.SetVar CommandLine3 Centre or 'C' - Centre justified
+.Do CommandLine2
+.SetVar CommandLine3 Right or 'R' - Right justified
+.Do CommandLine2
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 Vertical-
+.SetVar CommandLine2 Specifies how the text is aligned vertically within the bounding box:
+.Do CommandLine2
+.SetVar CommandLine1 alignment
+.SetVar CommandLine3 Top or 'T' - Top aligned
+.Do CommandLine2
+.SetVar CommandLine3 Centre or 'C' - Centre aligned
+.Do CommandLine2
+.SetVar CommandLine3 Bottom or 'B' - Bottom aligned
+.Do CommandLine2
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 Text
+.SetVar CommandLine2 The text to be output using the current font type, style and size.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+
+.SetVar text Variable _LastResult is set to '0' if the position falls outside of the 
+.SetVar text %text% page margins, or the box area would not fit within the 
+.SetVar text %text% page margins, otherwise it is set to '1'.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %halfLineGap%
+.SetVar text The variable _CurrentX is incremented by the
+.SetVar text %text% width of the box plus the value of the current horizontal spacing variable, _SpaceHoz.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %halfLineGap%
+.SetVar text The variable _CurrentY is incremented by the height of the box plus the value of the current vertical
+.SetVar text %text% spacing variable, _SpaceVert.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %halfLineGap%
+.SetVar text The variables _LastObjectHeight and _LastObjectWidth are updated to reflect the height of the box just output.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Note that there is no outline drawn of the box. If this is required, draw the box using the
+.SetVar CommandLine1 %CommandLine1% DrawBox command before drawing the text box.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Output a centered title at the top of the page:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .DrawTextBox  0  0  %%%%_PageWidth%%%%  C  T  CONFIDENTIAL
+.Do CommandLine2
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Print the page number on the bottom right of a page:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetVar  textTop  %%%%_PageHeight%%%%
+.Do CommandLine2
+.SetVar CommandLine1 .IncVar  textTop  -6
+.Do CommandLine2
+.SetVar CommandLine1 .DrawTextBox  0  %%%%textTop%%%%  %%%%_PageWidth%%%%  6  Right  Top  Page: %%%%_PageNo%%%%
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 DrawBox, DrawText, DrawTextWrapped, SetFontName, SetFontSize, SetFontStyle, SetTextColour
+.Do CommandLine2
+.incCurrentY %_FontHeight%

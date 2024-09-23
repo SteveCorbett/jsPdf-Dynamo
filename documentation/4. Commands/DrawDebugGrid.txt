@@ -1,0 +1,41 @@
+﻿.SetVar CommandName DrawDebugGrid
+.Do CommandHeading
+.SetVar CommandLine1 Draws a grid on the current page and is useful when designing or debugging templates. The
+.SetVar CommandLine1 %CommandLine1% distance between grid lines is dependent on the unit of measure specified when the 
+.SetVar CommandLine1 %CommandLine1% JsPdfDynamo object was created, and is either 10mm, ½ inch, or 30 points.
+.Do CommandLine
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .DrawDebugGrid Option
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Option
+.SetVar CommandLine2 Specifies whether the grid is drawn over the full page, or just within the current margins.
+.SetVar CommandLine2 %CommandLine2% Valid values are 'Margin' and 'Page'. If not given then the default value
+.SetVar CommandLine2 %CommandLine2% of 'Margin' is used.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Draws a debug grid on the current page, starting from the top left of the page
+.SetVar CommandLine1 %CommandLine1% down to the bottom right.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .DrawDebugGrid Page
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandLine1 Draws a debug grid on all pages of the document, within the current margin settings.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .ForEachPage .DrawDebugGrid
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 ForEachPage
+.Do CommandLine2
+.incCurrentY %_FontHeight%

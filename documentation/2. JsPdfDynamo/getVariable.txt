@@ -1,0 +1,29 @@
+﻿.SetVar CommandName getVariable()
+.Do CommandHeading
+.SetVar text This method returns the current value of a variable as a string. This can be useful for unit testing.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 getVariable(varName)
+.SetVar CommandLine2 The name of the variable to retrieve. This can be the name of either a user or a 
+.SetVar CommandLine2 %CommandLine2% system maintained variable.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 varName
+.SetVar CommandLine2 A string or constant containing the name of the variable whose value is to be retrieved.
+.SetVar CommandLine2 %CommandLine2% (The name is not case sensitive.)
+.Do CommandLine2
+
+.SetVar CommandSubHeading Returns
+.Do CommandSubHeading
+.SetVar CommandLine1 The current value of the named variable as a string.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Notes
+.Do CommandSubHeading
+.SetVar LongText If the supplied variable does not exist at the time this method is called then a null value is returned.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %LongText%
+.incCurrentY %_FontHeight%

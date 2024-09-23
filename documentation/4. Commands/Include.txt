@@ -1,0 +1,44 @@
+﻿.SetVar CommandName Include
+.Do CommandHeading
+.DrawText 0 %_CurrentY% Include a template into the current document. The template itself may include other templates.
+.SetVar CommandLine1 The template must be a text file and located relative to the current directory. The template
+.Do CommandLine
+.SetVar CommandLine1 may contain individual commands or groups of commands. Any individual commands in the
+.Do CommandLine
+.SetVar CommandLine1 template are run.
+.Do CommandLine
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .Include FileName
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 FileName
+.SetVar CommandLine2 The path and name of the file to be included.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 The variable _LastResult is set to '1' if the file is found or '0' if the file could not be found or
+.Do CommandLine
+.SetVar CommandLine1 opened. Note that the _LastResult of any commands run are not available unless they are
+.Do CommandLine
+.SetVar CommandLine1 saved within the template file to variables.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Include the template file StdReportLayout.txt:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .Include .\StdReportLayout.txt
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Include the template file specified in the 'ReportType' variable:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .Include \tmplates\%%%%ReportType%%%%
+.Do CommandLine2
+.incCurrentY %_FontHeight%

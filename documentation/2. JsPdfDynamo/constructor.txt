@@ -1,0 +1,31 @@
+.SetVar CommandName Constructor
+.Do CommandHeading
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 const dynamo = new JsPdfDynamo(options, logger)
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 options
+.SetVar CommandLine2 An optional object that implements some or all of the properties of a JsPdfOptions 
+.SetVar CommandLine2 %CommandLine2% object. (Refer to the description in the Other Definitions chapter.)
+.Do CommandLine2
+.SetVar CommandLine1 logger
+.SetVar CommandLine2 An optional object that implements some or all of the properties of a Logger
+.SetVar CommandLine2 %CommandLine2% class. (Refer to the description in the Other Definitions chapter.)
+.SetVar CommandLine2 %CommandLine2% If a logger object is not provided than a default one is created
+.SetVar CommandLine2 %CommandLine2% that outputs to the console.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Returns
+.Do CommandSubHeading
+.SetVar CommandLine1 An instance of the JsPdfDynamo class.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Notes
+.Do CommandSubHeading
+.SetVar text The first, blank page of the PDF will have been created and initialised with the given (or default) values.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %_FontHeight%

@@ -1,0 +1,55 @@
+{
+  "name": "jspdf-dynamo",
+  "version": "1.0.0-rc0",
+  "description": "Generate data driven PDFs from dynamic templates",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "build-docs": "vitest --dir ./documentation run",
+    "check-exports": "attw --pack . ",
+    "ci": "npm run test && npm run lint && npm run build && npm run check-format && npm run check-exports ",
+    "examples": "vitest --dir ./examples run",
+    "format": "prettier --write .",
+    "lint": "tsc",
+    "check-format": "prettier --check .",
+    "test": "vitest --dir ./src run"
+  },
+  "keywords": [
+    "dynamo",
+    "jsPdf",
+    "PDF",
+    "template",
+    "typescript"
+  ],
+  "author": "Stephen Corbett",
+  "license": "MIT",
+  "dependencies": {
+    "jspdf": "^2.5.1",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.15.4",
+    "@types/blob-stream": "^0.1.33",
+    "@types/jspdf": "^1.3.3",
+    "prettier": "^3.3.3",
+    "tslog": "^4.9.3",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4",
+    "vitest": "^2.1.1"
+  },
+  "files": [
+    "dist",
+    "documentation",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
+    }
+  }
+}

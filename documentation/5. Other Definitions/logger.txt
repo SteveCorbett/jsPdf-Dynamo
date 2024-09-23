@@ -1,0 +1,35 @@
+.SetVar CommandName Logger Object
+.Do CommandHeading
+.SetVar text If a logger object is passed to the JsPdfDynamo constructor, it should implement the following methods:
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+
+.SetVar CommandSubHeading Required Methods
+.Do CommandSubHeading
+.SetVar CommandLine1 Each of these methods should require at least one parameter followed by
+.SetVar CommandLine1 %CommandLine1% or more optional arguments.
+.DrawTextWrapped 0 %_CurrentY% %_pageWidth% CommandCheckPage %CommandLine1%
+
+.SetVar CommandLine1 trace
+.SetVar CommandLine2 Handle the output of the given trace message and optional arguments.
+.Do CommandLine2
+.SetVar CommandLine1 debug
+.SetVar CommandLine2 Handle the output of the given debug message and optional arguments.
+.Do CommandLine2
+.SetVar CommandLine1 info
+.SetVar CommandLine2 Handle the output of the given informational message and optional arguments.
+.Do CommandLine2
+.SetVar CommandLine1 warn
+.SetVar CommandLine2 Handle the output of the given warning message and optional arguments.
+.Do CommandLine2
+.SetVar CommandLine1 error
+.SetVar CommandLine2 Handle the output of the given error message and optional arguments.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Optional Methods
+.Do CommandSubHeading
+.SetVar CommandLine1 logLevel(level)
+.SetVar CommandLine2 Configure the logger so that it only actions messages that are at this, or a 
+.SetVar CommandLine2 %CommandLine2% higher logging level.
+.Do CommandLine2
+
+.incCurrentY %_FontHeight%

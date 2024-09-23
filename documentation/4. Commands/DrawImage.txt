@@ -1,0 +1,92 @@
+﻿.SetVar CommandName DrawImage
+.Do CommandHeading
+.SetVar CommandLine1 Draws a previously loaded image on the current page.
+.Do CommandLine
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .DrawImage ImageNo Left Top Width Height Scale
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 ImageNo
+.SetVar CommandLine2 The image Id. This was obtained when the image was loaded from the _LastImageAdded variable.
+.Do CommandLine2
+.SetVar CommandLine1 Left
+.SetVar CommandLine2 The horizontal starting position of the image, measured from the left margin.
+.Do CommandLine2
+.SetVar CommandLine1 Top
+.SetVar CommandLine2 The vertical starting position of the image, measured from the top margin.
+.Do CommandLine2
+.SetVar CommandLine1 Width
+.SetVar CommandLine2 The width of the image to be drawn in the document. This is optional.
+.Do CommandLine2
+.SetVar CommandLine1 Height
+.SetVar CommandLine2 The height of the image to be drawn in the document. This is optional.
+.Do CommandLine2
+.SetVar CommandLine1 Scale
+.SetVar CommandLine2 A scaling factor to apply to the image. This is optional.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 The variable _LastResult is set to '0' if there were any issues with the parameters
+.SetVar CommandLine1 %CommandLine1% provided, or if the image will not fit within the margins, otherwise it is set to '1'.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 There are a number of combinations of width, height and scaling factor that provide
+.SetVar CommandLine1 %CommandLine1% flexibility in the size of the image that is rendered in the document:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 -
+.SetVar CommandLine1b If none of the width, height or scale parameters are given, or are zero, 
+.SetVar CommandLine1b %CommandLine1b% then the image will be rendered using the dimensions of the image. 
+.Do CommandLine2
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 -
+.SetVar CommandLine1b If the width is given, and is not zero, and both the height and scale are not given or are zero,
+.SetVar CommandLine1b %CommandLine1b% then the height of the image is proportionally scaled. 
+.Do CommandLine2
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 -
+.SetVar CommandLine1b If the height is given, and is not zero, and both the width and scale are not given or are zero,
+.SetVar CommandLine1b %CommandLine1b% then the width of the image is proportionally scaled. 
+.Do CommandLine2
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 -
+.SetVar CommandLine1b If the width or height is given, or both, and the scale is not given or is zero,
+.SetVar CommandLine1b %CommandLine1b% then the dimensions of the image will be calculated as either the 
+.SetVar CommandLine1b %CommandLine1b% provided dimension or the image dimension.
+.Do CommandLine2
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 -
+.SetVar CommandLine1b If the width or height is given, or both, and the scale is given,
+.SetVar CommandLine1b %CommandLine1b% then the dimensions of the image will be calculated as either the 
+.SetVar CommandLine1b %CommandLine1b% provided dimension or the image dimension. These dimensions
+.SetVar CommandLine1b %CommandLine1b% will then be scaled by multiplying by the scaling factor.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Draws a previously loaded image on the current page, located at the current
+.SetVar CommandLine1 %CommandLine1% location on the page.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .DrawImage %%%%ImageId%%%% %%%%_CurrentX%%%% %%%%_CurrentY%%%%
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Assuming that the unit of measure is millimeters, 
+.SetVar CommandLine1 %CommandLine1% draws a previously loaded logo image on the current page, located at the top left of
+.SetVar CommandLine1 %CommandLine1% the page and scaled proportionally to be 10mm high.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .DrawImage %%%%LogoId%%%% 0 0 0 10
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 AddImageFromFile, AddImageFromUrl
+.Do CommandLine2
+.incCurrentY %_FontHeight%

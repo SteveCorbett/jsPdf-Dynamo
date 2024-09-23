@@ -1,0 +1,50 @@
+﻿.SetVar CommandName incCurrentY
+.Do CommandHeading
+
+.DrawText 0 %_CurrentY% Increment (or decrement) the JsPdfDynamo maintained _CurrentY variable.
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .incCurrentY Value Value (etc)
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Value
+.SetVar CommandLine2 One or more values to increment the _CurrentY variable by. These can be
+.Do CommandLine2
+.SetVar CommandLine2 constants or substitution variables.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 The _CurrentY variable can be decremented by using a negative value.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Increase the value of the _CurrentY variable by 5mm:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .incCurrentY  5
+.Do CommandLine2
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Decrease the value of the _CurrentY variable by the current font height:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .incCurrentY  -%%%%_FontHeight%%%%
+.Do CommandLine2
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Multiple values can be used to increase the value of the _CurrentY variable by 8mm:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .incCurrentY  5  1  2
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 incCurrentX, setCurrentX, setCurrentY, Variables
+.Do CommandLine2
+.incCurrentY %_FontHeight%

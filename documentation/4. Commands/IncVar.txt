@@ -1,0 +1,73 @@
+﻿.SetVar CommandName IncVar
+.Do CommandHeading
+.DrawText 0 %_CurrentY% Increment (or decrement) the value of a variable by one or more values.
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .IncVar Variable Value Value (etc)
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Variable
+.SetVar CommandLine2 The name of the variable to update. This is not usually a substitution variable,
+.Do CommandLine2
+.SetVar CommandLine2 but it can be, or contain substitution variables. The variable must exist.
+.Do CommandLine2
+.SetVar CommandLine1 Value
+.SetVar CommandLine2 One or more values to increment the variable by. These can be constants or
+.Do CommandLine2
+.SetVar CommandLine2 substitution variables.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 Variable _LastResult is set to '1' if a valid variable name is provided, otherwise it is set to '0'.
+.Do CommandLine
+.SetVar CommandLine1 The JsPdfDynamo maintained variables (those whose name starts with an underscore) can not 
+.Do CommandLine
+.SetVar CommandLine1 be changed by this command.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 A variable can be decremented by using a negative value.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 The variable name may itself be, or contain a variable. 
+.Do CommandLine 
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Increase the value of the variable 'LineNo' from '3' to '4':
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetVar LineNo  3
+.Do CommandLine2
+.SetVar CommandLine1 .IncVar LineNo  1
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandLine1 Decrease the value of 'Weight3' from '78.6' to '77.2':
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetVar index  3
+.Do CommandLine2
+.SetVar CommandLine1 .SetVar Weight%%%%index%%%%  78.6
+.Do CommandLine2
+.SetVar CommandLine1 .IncVar Weight%%%%index%%%%  -1.4
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandLine1 Multiple values can be used to increase value of 'total' from 0 to 4.55
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetVar Total  0
+.Do CommandLine2
+.SetVar CommandLine1 .IncVar  Total  5  -2.5  2.05
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 CopyVar, MultVar, SetVar
+.Do CommandLine2
+.incCurrentY %_FontHeight%

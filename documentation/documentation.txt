@@ -1,0 +1,266 @@
+﻿;
+; jsPdf-Dynamo Documentation.
+;
+; Use this template to generate the documentation
+;
+.SetDocumentInfo author Stephen Corbett
+.SetLineWidth 0.1
+.SetFillColour lightgrey
+.SetFontName helvetica
+.SetSpaceVert 0.8
+
+.SetVar themeColour red
+.SetVar black black
+.setVar codeBg 200 200 200
+.SetVar halfLineGap 2.0
+.SetLineColor %black%
+
+.Do SetDefaultText
+.SetVar margins 15
+.SetVar marginB %margins%
+.IncVar marginB %_FONTHEIGHT% 0.1
+
+[SetMargins]
+.SetMargin a %margins%
+.SetMargin b %marginB%
+[End]
+
+[SetDefaultText]
+.SetFontSize 11
+.SetTextColour %black%
+.SetFontStyle Normal
+.Do SetHalfFontHeight
+[End]
+
+[SetHalfFontHeight]
+.SetVar HalfFontHeight %_FontHeight%
+.MultVar HalfFontHeight 0.5
+[End]
+
+[SetSmallFont]
+.SetFontSize 7
+.SetFontStyle Normal
+.Do SetHalfFontHeight
+[End]
+
+[SetSmallFontBold]
+.SetFontSize 7
+.SetFontStyle Bold
+.Do SetHalfFontHeight
+[End]
+
+[TitlePage]
+.SetFontSize 36
+.SetTextColour %themeColour%
+.SetFontStyle Bold
+.DrawBox  0 0 %_PageWidth% %_PageHeight% 0
+.SetVar top %_PageHeight%
+.MultVar top 0.3
+.DrawTextBox 0 %top% %_PageWidth% %_FontHeight% centered top jsPdf-Dynamo
+.SetFontSize 24
+.SetTextColour %black%
+.DrawTextBox 0 %_CurrentY% %_PageWidth% %_FontHeight% centered top User Guide
+[End]
+
+[ChapterHeading]
+.AddPage
+.do SetMargins
+.SetFontSize 16
+.SetTextColour %themeColour%
+.SetFontStyle Bold
+.IncVar ChapterNo 1
+.AddBookmark 0 %_PAGENO% %ChapterNo%. %ChapterName%
+.SetVar ChapterOutLine %_LastResult%
+.DrawText 0 0 %ChapterNo%. %ChapterName%
+.SetLineColor %themeColour%
+.SetLineWidth 0.5
+.DrawLine 0 %_CurrentY% %_PageWidth% %_CurrentY%
+.do SetDefaultText
+.incCurrentY %HalfFontHeight%
+[End]
+
+[Footer]
+.SetVar top %_PageHeight%
+.incVar top -%_FontHeight%
+.ifGt %_PageNo% 1 .DrawTextBox 0 %top% %_PageWidth% %_FontHeight% centered centered Page %_PageNo% of %LastPage%
+[End]
+
+[CommandHeading]
+.do SetMargins
+.CheckPage 40 
+.SetFontSize 13
+.SetTextColour %themeColour%
+.SetFontStyle Bold
+.addBookmark %ChapterOutLine% %_PAGENO% %CommandName%
+.DrawText 0 %_CurrentY% %CommandName%
+.do SetDefaultText
+[End]
+
+[CheckCommandOverflow]
+.CheckPage %pageBottomMargin% CommandOverflow
+[End]
+
+[CommandOverflow]
+.AddPage
+.do SetMargins
+.SetFontSize 14
+.SetTextColour %themeColour%
+.SetFontStyle Bold
+.IfNotBlank CommandName .DrawText 0 %_CurrentY% %CommandName% (Continued)
+.SetMargin L 20
+.do SetDefaultText
+.incCurrentY %halfLineGap%
+[End]
+
+[CommandSubHeading]
+.incCurrentY %HalfFontHeight%
+.CheckPage 10  CommandOverflow
+.SetFontStyle Bold
+.ifNe %_MarginLeft% 20 .SetMargin L 20
+.DrawText 0 %_CurrentY% %CommandSubHeading%
+.do SetDefaultText
+[End]
+
+[CommandCheckPage]
+.CheckPage %_FONTHEIGHT% CommandOverflow
+[End]
+
+[CommandLine]
+.CheckPage %_FONTHEIGHT% CommandOverflow
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %CommandLine1%
+.SetVar CommandLine1
+[End]
+
+[CommandLine2]
+.CheckPage %_FONTHEIGHT% CommandOverflow
+.SetVar top %_CurrentY%
+.SetVar cl1Width %_PageWidth%
+.IncVar cl1Width -5
+.SetVar cl1bWidth %_PageWidth%
+.IncVar cl1bWidth -10
+.SetVar cl2Width %_PageWidth%
+.IncVar cl2Width -33
+.SetVar cl3Width %_PageWidth%
+.IncVar cl3Width -35
+.ifNotBlank CommandLine1 .DrawTextWrapped 5 %top% %cl1Width% CommandCheckPage %CommandLine1%
+.ifNotBlank CommandLine1b .DrawTextWrapped 10 %top% %cl1bWidth% CommandCheckPage %CommandLine1b%
+.ifNotBlank CommandLine1c .DrawText 15 %top% %CommandLine1c%
+.ifNotBlank CommandLine2 .DrawTextWrapped 33 %top% %cl2Width% CommandCheckPage %CommandLine2%
+.ifNotBlank CommandLine3 .DrawTextWrapped 35 %top% %cl3Width% CommandCheckPage %CommandLine3%
+.SetVar CommandLine1
+.SetVar CommandLine1b
+.SetVar CommandLine1c
+.SetVar CommandLine2
+.SetVar CommandLine3
+[End]
+
+[VariableLine]
+.SetVar pageBottomMargin %_FONTHEIGHT%
+.incVar pageBottomMargin %halfLineGap%
+.CheckPage %pageBottomMargin% CommandOverflow
+.SetVar top %_CurrentY%
+.ifNotBlank CommandLine1 .DrawText 0 %top% %CommandLine1%
+.ifNotBlank CommandLine2 .DrawText 38 %top% %CommandLine2%
+.SetVar CommandLine1
+.SetVar CommandLine2
+[End]
+
+[VariableLineWrapped]
+.SetVar pageBottomMargin %_FONTHEIGHT%
+.incVar pageBottomMargin %halfLineGap%
+.SetVar maxWidth %_PageWidth%
+.incVar maxWidth -38
+.CheckPage %pageBottomMargin% CommandOverflow
+.SetVar top %_CurrentY%
+.ifNotBlank CommandLine1 .DrawText 0 %top% %CommandLine1%
+.ifNotBlank CommandLine2 .DrawTextWrapped 38 %top% %maxWidth% CheckCommandOverflow %CommandLine2%
+.SetVar CommandLine1
+.SetVar CommandLine2
+[End]
+
+[VariableLineWide]
+.SetVar pageBottomMargin %_FONTHEIGHT%
+.incVar pageBottomMargin %halfLineGap%
+.CheckPage %pageBottomMargin% CommandOverflow
+.SetVar top %_CurrentY%
+.ifNotBlank CommandLine1 .DrawText 0 %top% %CommandLine1%
+.ifNotBlank CommandLine2 .DrawText 48 %top% %CommandLine2%
+.SetVar CommandLine1
+.SetVar CommandLine2
+[End]
+
+.do SetMargins TitlePage
+.SetDocumentInfo Title jsPdf-Dynamo Developer's Documentation 
+.SetDocumentInfo Author Stephen Corbett
+.SetDocumentInfo Creator jsPdf-Dynamo
+.SetVar ChapterNo 0
+
+.Include ./Documentation/1. Introduction/Introduction.txt
+.Include ./Documentation/2. JsPdfDynamo/JsPdfDynamo.txt
+.Include ./Documentation/2. JsPdfDynamo/constructor.txt
+.Include ./Documentation/2. JsPdfDynamo/getVariable.txt
+.Include ./Documentation/2. JsPdfDynamo/prepareWrappedString.txt
+.Include ./Documentation/2. JsPdfDynamo/processCommands.txt
+.Include ./Documentation/2. JsPdfDynamo/toBlob.txt
+.Include ./Documentation/2. JsPdfDynamo/toBlobUrl.txt
+
+.Include ./Documentation/3. Variables/Introduction.txt
+.Include ./Documentation/3. Variables/SystemMaintained.txt
+
+.SetVar ChapterName Commands
+.do ChapterHeading
+
+.Include ./Documentation/4. Commands/AddBookmark.txt
+.Include ./Documentation/4. Commands/AddImageFromFile.txt
+.Include ./Documentation/4. Commands/AddImageFromUrl.txt
+.Include ./Documentation/4. Commands/AddPage.txt
+.Include ./Documentation/4. Commands/CheckPage.txt
+.Include ./Documentation/4. Commands/CopyVar.txt
+.Include ./Documentation/4. Commands/Do.txt
+.Include ./Documentation/4. Commands/DoRepeat.txt
+.Include ./Documentation/4. Commands/DrawBox.txt
+.Include ./Documentation/4. Commands/DrawDebugGrid.txt
+.Include ./Documentation/4. Commands/DrawImage.txt
+.Include ./Documentation/4. Commands/DrawLine.txt
+.Include ./Documentation/4. Commands/DrawText.txt
+.Include ./Documentation/4. Commands/DrawTextBox.txt
+.Include ./Documentation/4. Commands/DrawTextWrapped.txt
+.Include ./Documentation/4. Commands/ForEachPage.txt
+.Include ./Documentation/4. Commands/IfBlank.txt
+.Include ./Documentation/4. Commands/IfGt.txt
+.Include ./Documentation/4. Commands/IfNotBlank.txt
+.Include ./Documentation/4. Commands/incCurrentX.txt
+.Include ./Documentation/4. Commands/incCurrentY.txt
+.Include ./Documentation/4. Commands/Include.txt
+.Include ./Documentation/4. Commands/IncVar.txt
+.Include ./Documentation/4. Commands/MultVar.txt    
+.Include ./Documentation/4. Commands/setCurrentX.txt
+.Include ./Documentation/4. Commands/setCurrentY.txt
+.Include ./Documentation/4. Commands/SetDocumentInfo.txt
+.Include ./Documentation/4. Commands/SetFillColour.txt
+.Include ./Documentation/4. Commands/SetFontName.txt
+.Include ./Documentation/4. Commands/SetFontSize.txt
+.Include ./Documentation/4. Commands/SetFontStyle.txt
+.Include ./Documentation/4. Commands/SetLineColour.txt
+.Include ./Documentation/4. Commands/SetLineWidth.txt
+.Include ./Documentation/4. Commands/SetMargin.txt
+.Include ./Documentation/4. Commands/SetPageOrientation.txt
+.Include ./Documentation/4. Commands/SetVar.txt
+
+.SetVar ChapterName Other Definitions
+.do ChapterHeading
+.Include ./Documentation/5. Other Definitions/jsPdfOptions.txt
+.Include ./Documentation/5. Other Definitions/logger.txt
+.Include ./Documentation/5. Other Definitions/pageSizes.txt
+
+.Include ./Documentation/6. Other/PossibleEnhancements.txt
+.Include ./Documentation/6. Other/To Be Documented.txt
+
+.SetVar LastPage %_PageNo%
+.Do SetMargins SetDefaultText
+.SetMargin b %margins%
+.ForEachPage Footer
+
+;.DrawDebugGrid
+.SAVEpdF ./documentation/Documentation.pdf
+.WriteLog info Documentation has been generated.

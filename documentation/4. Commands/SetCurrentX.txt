@@ -1,0 +1,37 @@
+﻿.SetVar CommandName SetCurrentX
+.Do CommandHeading
+.DrawText 0 %_CurrentY% Set the current left position. This value can be retrieved using the system maintained
+.SetVar CommandLine1 _CurrentX variable.
+.Do CommandLine
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .setCurrentX Value
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Value
+.SetVar CommandLine2 The value to assign to the current left position, expressed in millimeters.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Set the current left position :
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .setCurrentX 15
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandLine1 Use a substitution variable to set the current left position:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .setCurrentX %%%%myIndent%%%%
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 incCurrentX, setCurrentY, Variables
+.Do CommandLine2
+.incCurrentY %_FontHeight%

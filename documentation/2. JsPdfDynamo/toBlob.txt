@@ -1,0 +1,19 @@
+﻿.SetVar CommandName toBlob()
+.Do CommandHeading
+.DrawText 0 %_CurrentY% This method returns the contents of the current PDF as a Blob.
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 const myBlob = myJsPdfDynamo.toBlob();
+.Do CommandLine2
+
+.SetVar CommandSubHeading Returns
+.Do CommandSubHeading
+.SetVar CommandLine1 A JavaScript Blob containing the current PDF.
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 ProcessCommands, SavePdf, toBlobUri
+.Do CommandLine2
+.incCurrentY %_FontHeight%

@@ -1,0 +1,21 @@
+[Initialise]
+.SetVar themeColour blue
+.SetFontName helvetica
+.SetSpaceVert = 0.3
+.SetMargin a 10
+.SetMargin b 15
+[End]
+
+[TitlePage]
+.SetLineWidth 0.8
+.SetLineColor %themeColour%
+.DrawBox  0 0 %_PageWidth% %_PageHeight% 0
+.SetFontSize 36
+.SetTextColour %themeColour%
+.SetFontStyle Bold
+.DrawTextBox 0 0 %_PageWidth% %_PageHeight% center center %title%
+[End]
+
+[DrawPage]
+.Do Initialise TitlePage
+[End]

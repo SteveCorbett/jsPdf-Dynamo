@@ -1,0 +1,59 @@
+.SetVar CommandName AddImageFromFile (NodeJs Only)
+.Do CommandHeading
+.SetVar text Reads an image from the file system and stores it for later output. JsPdfDynamo can use all image types
+.SetVar text %text% that jsPDF supports, including: BMP, GIF, JPEG, PNG, TIFF and WEBP
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %halfLineGap%
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .AddImageFromFile FileName
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 FileName
+.SetVar CommandLine2 The name and relative path to the image file to be read.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 If successful then the variable _LastResult is set '1', else it is set to '0'.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 If successful then several other variables are also set:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1c _ImageHeight is set to the height of the image in the current units of measure.
+.Do CommandLine2
+.SetVar CommandLine1c _ImageHeightPx is set to the height of the image pixels.
+.Do CommandLine2
+.SetVar CommandLine1c _ImageWidth is set to the width of the image in the current units of measure.
+.Do CommandLine2
+.SetVar CommandLine1c _ImageWidthPx is set to the width of the image pixels.
+.Do CommandLine2
+.SetVar CommandLine1c _LastImageAdded is the Id of the image just loaded. This is used when adding the image to the document.
+.Do CommandLine2
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 An image only needs to be loaded once, but it can be drawn multiple times in the document 
+.SetVar CommandLine1 %CommandLine1% by referring to the image's Id.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Read a logo from an image and add it to the top left of the current page.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .AddImageFromFile ../images/myLogo.jpg
+.Do CommandLine2
+.SetVar CommandLine1 .SetVar IdLogo %%%%_LastImageAdded%%%% 
+.Do CommandLine2
+.SetVar CommandLine1 .DrawImage %%%%IdLogo%%%% 0 0 1
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 AddImageFromUrl, DrawImage
+.Do CommandLine2
+.incCurrentY %_FontHeight%

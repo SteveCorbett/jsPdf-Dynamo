@@ -1,0 +1,56 @@
+﻿.SetVar CommandName GetEnvVar
+.Do CommandHeading
+.DrawText 0 %_CurrentY% Sets the value of a variable from an environment variable.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .GetEnvVar  VariableName  EnvVar  Environment
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 VariableName
+.SetVar CommandLine2 The name of the variable to update or create.
+.Do CommandLine2
+.SetVar CommandLine1 EnvVar
+.SetVar CommandLine2 The name of the environment variable whose values will be assigned to
+.Do CommandLine2
+.SetVar CommandLine2 the specified variable. 
+.Do CommandLine2
+.SetVar CommandLine1 Environment
+.SetVar CommandLine2 This optional parameter can be used to specify from where the environment
+.Do CommandLine2
+.SetVar CommandLine2 variable will be obtained. Valid values are not case sensitive and are: 
+.Do CommandLine2
+.incCurrentY %halfLineGap%
+.SetVar CommandLine2 * Process (This is the default)
+.Do CommandLine2
+.SetVar CommandLine2 * Machine
+.Do CommandLine2
+.SetVar CommandLine2 * User
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 Variable _LastResult is set to '1' if valid variable names are provided and the specified
+.Do CommandLine
+.SetVar CommandLine1 environment variable is found, otherwise _LastResult is set to '0'.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Set the variable 'UserTemp' to the value of the current user's temporary directory:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .GetEnvVar UserTemp Temp User
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandLine1 Set the variable 'MachineTemp' to the value of the machine's temporary directory:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .GetEnvVar MachineTemp Temp Machine
+.Do CommandLine2
+
+.incCurrentY %_FontHeight%

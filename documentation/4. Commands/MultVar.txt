@@ -1,0 +1,70 @@
+﻿.SetVar CommandName MultVar
+.Do CommandHeading
+.DrawText 0 %_CurrentY% Multiple the value of a variable by one or more factors.
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .MultVar Variable Value Value (etc)
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Variable
+.SetVar CommandLine2 The name of the variable to update. This is not usually a substitution variable,
+.Do CommandLine2
+.SetVar CommandLine2 but it can be, or contain substitution variables. The variable must exist.
+.Do CommandLine2
+.SetVar CommandLine1 Value
+.SetVar CommandLine2 One or more values to multiple the variable by. These can be constants or
+.Do CommandLine2
+.SetVar CommandLine2 substitution variables.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 Variable _LastResult is set to '1' if a valid variable name is provided, otherwise it is set to '0'.
+.Do CommandLine
+.SetVar CommandLine1 The JsPdfDynamo maintained variables (those whose name starts with an underscore) can not 
+.Do CommandLine
+.SetVar CommandLine1 be changed by this command.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 The variable name may itself be, or contain a variable.
+.Do CommandLine 
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Multiple the value of the variable 'Total' by '4':
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetVar Total  3
+.Do CommandLine2
+.SetVar CommandLine1 .MultVar Total  4
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandLine1 Decrease the value of 'Weight6' by half from '78.6' to '39.3':
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetVar index  6
+.Do CommandLine2
+.SetVar CommandLine1 .SetVar Weight%%%%index%%%%  78.6
+.Do CommandLine2
+.SetVar CommandLine1 .MultVar Weight%%%%index%%%%  0.5
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandLine1 Multiple values can be used to increase value of 'total' from 1 to 5
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetVar Total  1
+.Do CommandLine2
+.SetVar CommandLine1 .MultVar Total  10  -0.5  -1
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 CopyVar, IncVar, SetVar
+.Do CommandLine2
+.incCurrentY %_FontHeight%

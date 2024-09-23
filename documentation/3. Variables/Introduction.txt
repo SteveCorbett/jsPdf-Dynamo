@@ -1,0 +1,36 @@
+﻿.SetVar ChapterName Variables
+.do ChapterHeading
+
+.DrawText 0 %_CurrentY% Variables can be used to substitute fixed text within a template. There are two kinds of variable:
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 * System variables. These are updated automatically and can not be changed directly.
+.Do CommandLine2
+.SetVar CommandLine1 * User defined variables which can be updated by commands in the script.
+.Do CommandLine2
+.incCurrentY %halfLineGap%
+.DrawText 0 %_CurrentY% Commands are described in a following chapter.
+
+.incCurrentY %_FontHeight%
+.DrawText 0 %_CurrentY% Variables are referenced by enclosing them in percentage symbols. For example, to write some
+.DrawText 0 %_CurrentY% text at the current position on the page the following DrawText command can be used:
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 .DrawText %%%%_CurrentX%%%% %%%%_CurrentY%%%% Hello World!
+.Do CommandLine2 
+.incCurrentY %_FontHeight%
+.DrawText 0 %_CurrentY% Variables (and commands) are not case sensitive and the above command could also be given
+.DrawText 0 %_CurrentY% as:
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 .drawTEXT %%%%_currentX%%%% %%%%_CURRENTy%%%% Hello World!
+.Do CommandLine2 
+.incCurrentY %_FontHeight%
+.DrawText 0 %_CurrentY% Variables are stored as strings though there is a limited capability to perform arithmatic on
+.DrawText 0 %_CurrentY% variables. For example, the .IncVar command can be used to add or subtract a number from
+.DrawText 0 %_CurrentY% a variable.
+.incCurrentY %_FontHeight%
+.DrawText 0 %_CurrentY% Variables do not have to be assigned a value before being used. 
+.DrawText 0 %_CurrentY% The value of a variable referenced before being assigned a value is an empty string.
+.incCurrentY %_FontHeight%
+.DrawText 0 %_CurrentY% All variables are global, there is no scoping of variables within a group. A variable
+.DrawText 0 %_CurrentY% defined within a group is available to commands run after that group.
+.incCurrentY %_FontHeight%
+

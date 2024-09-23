@@ -1,0 +1,22 @@
+﻿.SetVar CommandName SetFontSize
+.Do CommandHeading
+.SetVar CommandLine1 To be documented.
+.Do CommandLine
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Set a variable named 'BoldText' and then use this variable to set the emphasis of subsequent
+.Do CommandLine
+.SetVar CommandLine1 text to be bold:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetVar BoldText 1
+.Do CommandLine2
+.SetVar CommandLine1 .SetFontStyle %%%%BoldText%%%%
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 DrawTextBox, DrawText, SetFontType, SetFontSize, SetTextColour
+.Do CommandLine
+
+.incCurrentY %_FontHeight%

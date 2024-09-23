@@ -1,0 +1,40 @@
+﻿.SetVar CommandName Do
+.Do CommandHeading
+.DrawText 0 %_CurrentY% 'Do' (ie process) one or more groups of commands that have already been defined.
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .Do Group1, Group2...etc
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Group(s)
+.SetVar CommandLine2 Zero or more groups to be processed
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 Variable _LastResult is set to the result of the last group processed. If there are no groups
+.SetVar CommandLine1 %CommandLine1% specified, or the last group does not exists then _LastResult is set to '0'.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Process the groups 'NewChapter' and 'NewSection':
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .Do NewChapter NewSection
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Process the group whose name is stored in the variable 'NextGroup':
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .Do %%%%NextGroup%%%%
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 DoRepeat
+.Do CommandLine2
+.incCurrentY %_FontHeight%

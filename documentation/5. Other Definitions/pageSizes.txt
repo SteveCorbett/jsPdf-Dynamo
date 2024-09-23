@@ -1,0 +1,41 @@
+.SetVar CommandName Supported Page Sizes
+.Do CommandHeading
+.SetVar text JsPdfDynamo implements all page sizes implemented by jsPDF with the exception of custom 
+.SetVar text %text% page sizes. These page sizes are described below.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %HalfFontHeight%
+
+.SetVar CommandSubHeading ISO 216 & ISO 269 (Metric)
+.Do CommandSubHeading
+.SetVar CommandLine1c %CommandLine2% - a0 to a10
+.Do CommandLine2
+.SetVar CommandLine1c %CommandLine2% - b0 to b10
+.Do CommandLine2
+.SetVar CommandLine1c %CommandLine2% - c0 to c10
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1c %CommandLine2% - Letter
+.Do CommandLine2
+.SetVar CommandLine1c %CommandLine2% - Ledger
+.Do CommandLine2
+.SetVar CommandLine1c %CommandLine2% - Legal
+.Do CommandLine2
+.SetVar CommandLine1c %CommandLine2% - Government-letter
+.Do CommandLine2
+.SetVar CommandLine1c %CommandLine2% - Junior-legal
+.Do CommandLine2
+.SetVar CommandLine1c %CommandLine2% - Tabloid
+.Do CommandLine2
+.SetVar CommandLine1c %CommandLine2% - DL
+.Do CommandLine2
+.SetVar CommandLine1c %CommandLine2% - Credit-card
+.Do CommandLine2
+
+.SetVar CommandSubHeading Notes
+.Do CommandSubHeading
+.SetVar text Page sizes can only be set on the initial creation of a JsPdfDynamo object or when adding 
+.SetVar text %text% a new page.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %_FontHeight%

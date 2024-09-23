@@ -1,0 +1,190 @@
+.SetVar CommandName System Maintained Variables
+.Do CommandHeading
+
+.incCurrentY %halfLineGap%
+.SetVar text JsPdfDynamo maintains and updates various variables as each command is processed. These
+.SetVar text %text% variables can not be changed directly by using the SetVar command. They include:
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %LongText%
+.incCurrentY %halfLineGap%
+.SetMargin L 20
+
+.SetVar CommandLine1 _CurrentX
+.SetVar CommandLine2 The current horizontal position on the page, relative to the left margin, in
+.Do VariableLine
+.SetVar CommandLine2 millimeters.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _CurrentY
+.SetVar CommandLine2 The current vertical position on the page, relative to the top margin, in
+.Do VariableLine
+.SetVar CommandLine2 millimeters.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _CurrentPageSize
+.SetVar CommandLine2 The name of the last page size specified, for example, 'A4', 'Letter'.
+.Do VariableLineWide
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _CurrentPageOrientation
+.SetVar CommandLine2 The last page orientation specified: 
+.Do VariableLineWide
+.SetVar CommandLine2 0=Portrait (default) 1=Landscape 
+.Do VariableLineWide
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _FontHeight
+.SetVar CommandLine2 The height of the current font, in millimeters. This can be used to create
+.Do VariableLine
+.SetVar CommandLine2 a space between paragraphs when used in conjunction with the
+.Do VariableLine
+.SetVar CommandLine2 incCurrentY command: .incCurrentY %%%%_FontHeight%%%%
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _FontPointSize
+.SetVar CommandLine2 The size of the current font in points. The default font size is 12 points.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _FontStyle
+.SetVar CommandLine2 The current font style. For example, "normal" or "italic".
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _FontType
+.SetVar CommandLine2 The name of the current font. For example, "Helvetica", which is the
+.Do VariableLine
+.SetVar CommandLine2 default font type.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _ImageHeight
+.SetVar CommandLine2 The height of the last loaded image in the current units of measure.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _ImageHeightPx
+.SetVar CommandLine2 The height of the last loaded image in pixels.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _ImageWidth
+.SetVar CommandLine2 The width of the last loaded image in the current units of measure.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _ImageWidthPx
+.SetVar CommandLine2 The width of the last loaded image in pixels.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _LastError
+.SetVar CommandLine2 A description of the last error encountered. 
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _LastImageAdded
+.SetVar CommandLine2 The zero based index of the last image added to the PDF, either from a file or from a URL.
+.Do VariableLineWrapped
+
+.SetVar CommandLine1 _LastImageIndex
+.SetVar CommandLine2 The index of the last drawn image. 
+.Do VariableLineWrapped
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _LastObjectHeight
+.SetVar CommandLine2 The height of the last object that has been output, in millimeters.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _LastObjectWidth
+.SetVar CommandLine2 The width of the last object that has been output, in millimeters.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _LastOutline
+.SetVar CommandLine2 This contains the number assigned to each outline entry when it is
+.Do VariableLine
+.SetVar CommandLine2 created. This number is used when creating child outline entries. 
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _LastResult
+.SetVar CommandLine2 Most commands update this variable. If the command fails, this will be
+.Do VariableLine
+.SetVar CommandLine2 set to '0'. A successful command wil set this to '1' or to some other
+.Do VariableLine
+.SetVar CommandLine2 useful value. For example, when a new page is created the page number
+.Do VariableLine
+.SetVar CommandLine2 is returned in this variable.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _MarginBottom
+.SetVar CommandLine2 The current margin, in millimeters, from the page bottom edge.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _MarginLeft
+.SetVar CommandLine2 The current margin, in millimeters, from the page left edge.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _MarginRight
+.SetVar CommandLine2 The current margin, in millimeters, from the page right edge.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _MarginTop
+.SetVar CommandLine2 The current margin, in millimeters, from the page top edge.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _PageNo
+.SetVar CommandLine2 The current page number, starting from 1 for the first page.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _PageHeight
+.SetVar CommandLine2 The height of the page, less the current top and bottom margins,
+.Do VariableLine
+.SetVar CommandLine2 expressed in millimeters.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _Pages
+.SetVar CommandLine2 The total number of pages in the document.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _PageWidth
+.SetVar CommandLine2 The width of the page, less the current left and right margins, expressed
+.Do VariableLine
+.SetVar CommandLine2 in millimeters.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _SpaceHoz
+.SetVar CommandLine2 JsPdfDynamo keeps track of the current position, relative to the left
+.Do VariableLine
+.SetVar CommandLine2 margin, after each object is output. This position is calculated in
+.Do VariableLine
+.SetVar CommandLine2 millimeters from the width of the object plus the current horizontal spacing, 
+.Do VariableLine
+.SetVar CommandLine2 which can be set with the SetSpaceHoz command. 
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _SpaceVert
+.SetVar CommandLine2 JsPdfDynamo keeps track of the current position, in millimeters, relative
+.Do VariableLine
+.SetVar CommandLine2 to the top margin, after each object is output. This position is calculated
+.Do VariableLine
+.SetVar CommandLine2 from the height of the object plus the current vertical spacing, which can 
+.Do VariableLine
+.SetVar CommandLine2 be set with the SetSpaceVert command. 
+.Do VariableLine
+.incCurrentY %_SPACEVERT%
+.Do SetMargins 

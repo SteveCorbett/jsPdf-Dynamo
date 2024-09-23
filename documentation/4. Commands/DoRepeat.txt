@@ -1,0 +1,51 @@
+﻿.SetVar CommandName DoRepeat
+.Do CommandHeading
+.SetVar CommandLine1 Process one or more groups of commands that have already been defined, in
+.SetVar CommandLine1 %CommandLine1% sequence, one or more times.
+.Do CommandLine
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .DoRepeat Number Group1, Group2...etc
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Number
+.SetVar CommandLine2 The number of times that the groups will be processed
+.Do CommandLine2
+.SetVar CommandLine1 Group(s)
+.SetVar CommandLine2 Zero or more groups to be processed. 
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 The group(s) of commands are processed in sequence
+.SetVar CommandLine1 %CommandLine1% as many  times as specified by the number. 
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 The variable _LastResult is set to the result of the last group processed. If there are no
+.SetVar CommandLine1 %CommandLine1% groups specified, or the last group does not exists then _LastResult is set to '0'.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Process the groups 'Heading', 'Detail', 'Footer' in sequence, three times. (This will be 'Heading',
+.SetVar CommandLine1 %CommandLine1% 'Detail', 'Footer', 'Heading', 'Detail', 'Footer', 'Heading', 'Detail, 'Footer'):
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .DoRepeat 3 Heading Detail Footer
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Process the group PrintAddress the number of times stored in the variable 'AddressCount':
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .DoRepeat %%%%AddressCount%%%% PrintAddress
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 Do
+.Do CommandLine2
+.incCurrentY %_FontHeight%

@@ -1,0 +1,61 @@
+﻿.SetVar CommandName DrawText
+.Do CommandHeading
+.DrawText 0 %_CurrentY% Draw text at the given point on the page, relative to the page margins. 
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .DrawText  Left  Top  Text
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Left
+.SetVar CommandLine2 The position of the text, measured from the left margin.
+.Do CommandLine2
+.SetVar CommandLine1 Top
+.SetVar CommandLine2 The position of the text, measured from the top margin.
+.Do CommandLine2
+.SetVar CommandLine1 Text
+.SetVar CommandLine2 The text to be output using the current font, style and size.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+
+.SetVar CommandLine1 Variable _LastResult is set to '0' if the position falls outside of the 
+.SetVar CommandLine1 %CommandLine1% page margins, or the text is truncated to fit within the 
+.SetVar CommandLine1 %CommandLine1% page margins, otherwise it is set to '1'.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1  The variable _CurrentX is incremented by the width of the text plus the value 
+.SetVar CommandLine1 %CommandLine1% of the current horizontal spacing variable, _SpaceHoz.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 The variable _CurrentY is incremented by the height plus the value of the current vertical
+.SetVar CommandLine1 %CommandLine1% spacing variable, _SpaceVert.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 The variables _LastObjectHeight and _LastObjectWidth are
+.SetVar CommandLine1 %CommandLine1% updated to reflect the height of the text just output.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Output some text starting from the left margin at the current vertical position on the page:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .DrawText  0  %%%%_CurrentY%%%%  JsPdfDynamo is a work of beauty!
+.Do CommandLine2
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Substitution variables can be used in the text:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .DrawText  15  30  Who does number %%%%number%%%% work for?
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 DrawTextBox, DrawTextWrapped, SetFontName, SetFontSize, SetFontStyle, SetTextColour
+.Do CommandLine2
+.incCurrentY %_FontHeight%

@@ -1,0 +1,35 @@
+﻿.SetVar CommandName SetDocumentInfo
+.Do CommandHeading
+.DrawText 0 %_CurrentY% Set the value of one of the PDF properties
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .SetDocumentInfo Property Value
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Property
+.SetVar CommandLine2 One of the following values: Application, Author, Creator, CreationDate, Keywords, 
+.Do CommandLine2
+.SetVar CommandLine2 ModDate, Producer, Subject or Title.
+.Do CommandLine2
+.SetVar CommandLine1 Value
+.SetVar CommandLine2 The value to set the property to. For CreationDate and ModDate this must
+.Do CommandLine2
+.SetVar CommandLine2 either be in the format of yyyy-mm-dd or blank.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 Variable _LastResult is set to '1' if a valid property is specified, otherwise it is set to '0'.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 .SetDocumentInfo Author 12th Level
+.Do CommandLine2
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetDocumentInfo Title Weekly Status Report %%%%ReportDate%%%%
+.Do CommandLine2
+.incCurrentY %_FontHeight%

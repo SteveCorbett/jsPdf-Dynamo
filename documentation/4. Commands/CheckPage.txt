@@ -1,0 +1,52 @@
+﻿.SetVar CommandName CheckPage
+.Do CommandHeading
+.SetVar text Check whether the current vertical position (as defined by the _CurrentY variable) is
+.SetVar text %text% within a given distance from the bottom page margin. If so then execute one or more
+.SetVar text %text% optional groups. If no groups are defined then a new page is created.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %_FontHeight%
+.CheckPage 10 CommandOverflow
+.SetVar text  This is the usually used to detect the end of a page and then create any end of page output
+.SetVar text %text% before creating a new page and creating appropriate headings on the new page.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .CheckPage Distance {Group1, Group2 ...}
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Distance
+.SetVar CommandLine2 The distance from the bottom margin of the page in the unit of measure specified when the
+.SetVar CommandLine2 %CommandLine2% JsPdfDynamo object was created.
+.Do CommandLine2
+.SetVar CommandLine1 Group(s)
+.SetVar CommandLine2 Zero or more groups to be processed if the current vertical position is beyond
+.SetVar CommandLine2 %CommandLine2% this point. If no groups are provided then a new page is created.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 Variable _LastResult is set to the result of the last group processed. If no groups are defined
+.SetVar CommandLine1 %CommandLine1% this will be the number of the page just created.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Assuming that the unit of measure is millimeters, check if the current position on the page 
+.SetVar CommandLine1 %CommandLine1% is within 10mm of the bottom margin and create a new page if so:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .CheckPage 10
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandLine1 Assuming that the unit of measure is inches, check if the current position on the page 
+.SetVar CommandLine1 %CommandLine1% is within 1.25 inches of the bottom margin and if so,
+.SetVar CommandLine1 %CommandLine1% process the groups PageFooter, AddPage and GroupHeadingContinued:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .CHECKPAGE 1.25 PageFooter AddPage GroupHeadingContinued
+.Do CommandLine2
+.incCurrentY %_FontHeight%
