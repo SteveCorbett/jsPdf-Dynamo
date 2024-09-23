@@ -17,18 +17,22 @@
 .SetVar CommandLine2 The typographical emphasis to apply:
 .Do CommandLine2
 .incCurrentY %halfLineGap%
-.SetVar CommandLine2 Normal - Normal text (no typographical emphasis)
+.SetVar CommandLine2 -
+.SetVar CommandLine3 Normal - Normal text (no typographical emphasis)
 .Do CommandLine2
 
-.SetVar CommandLine2 Bold - Bold text
+.SetVar CommandLine2 -
+.SetVar CommandLine3 Bold - Bold text
 .SetFontStyle Bold
 .Do CommandLine2
 
-.SetVar CommandLine2 Italic - Italic text
+.SetVar CommandLine2 -
+.SetVar CommandLine3 Italic - Italic text
 .SetFontStyle Italic
 .Do CommandLine2
 
-.SetVar CommandLine2 BoldItalic - Bold and italic text
+.SetVar CommandLine2 -
+.SetVar CommandLine3 BoldItalic - Bold and italic text
 .SetFontStyle BoldItalic
 .Do CommandLine2
 
@@ -36,14 +40,11 @@
 
 .SetVar CommandSubHeading Other
 .Do CommandSubHeading
-.SetVar CommandLine1 The font style name is not case sensitive so can be either upper, lower
-.Do CommandLine
-.SetVar CommandLine1 or mixed case.
+.SetVar CommandLine1 The font style name is not case sensitive so can be either upper, lower or mixed case.
 .Do CommandLine
 .incCurrentY %halfLineGap%
 .SetVar CommandLine1 If a valid font style is provided the variable _LastResult is set to '1' otherwise the current
-.Do CommandLine
-.SetVar CommandLine1 typographical emphasis is unchanged and _LastResult is set to '0'. 
+.SetVar CommandLine1 %CommandLine1% typographical emphasis is unchanged and _LastResult is set to '0'. 
 .Do CommandLine
 
 .SetVar CommandSubHeading Examples
@@ -51,5 +52,22 @@
 .SetVar CommandLine1 Set the emphasis of subsequent text to be italic:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .SetFontStyle 2
+.SetVar CommandLine1 .SetFontStyle  italic
 .Do CommandLine2
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Set a variable named 'BoldText' and then use this variable to set the emphasis of subsequent
+.SetVar CommandLine1 %CommandLine1% text to be bold:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetVar  BoldText bold
+.Do CommandLine2
+.SetVar CommandLine1 .SetFontStyle  %%%%BoldText%%%%
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 DrawTextBox, DrawText, SetFontType, SetFontSize, SetTextColour
+.Do CommandLine
+
+.incCurrentY %_FontHeight%

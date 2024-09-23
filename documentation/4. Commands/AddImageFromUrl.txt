@@ -1,10 +1,7 @@
-.SetVar CommandName AddImageFromUrl
+.SetVar CommandName AddImageFromUrl (Browser Only)
 .Do CommandHeading
 .SetVar text Reads an image from the given URL and stores it for later output. JsPdfDynamo can use all image types
 .SetVar text %text% that jsPDF supports, including: BMP, GIF, JPEG, PNG, TIFF and WEBP
-.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
-.incCurrentY %halfLineGap%
-.SetVar text This command is available for both browser and NodeJs applications.
 .DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
 .incCurrentY %halfLineGap%
 

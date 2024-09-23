@@ -1,0 +1,9840 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 459
+>>
+stream
+0.5670000000000001 w
+0 G
+0.5669291338582678 w
+0. G
+1. g
+0.2834645669291339 w
+0.83 g
+0. G
+42.3779527559055111 799.5120472440944468 510.8031496062992574 -745.1433070866142998 re
+S
+BT
+/F2 36 Tf
+36. TL
+1. 0. 0. rg
+177.2177952755905892 539.9974015748031206 Td
+(jsPdf-Dynamo) Tj
+ET
+BT
+/F2 36 Tf
+36. TL
+1. 0. 0. rg
+243.9977952755905619 501.7325196850393354 Td
+(\(Draft\)) Tj
+ET
+BT
+/F2 24 Tf
+24. TL
+0. g
+233.7977952755905733 469.7954645669290699 Td
+(User Guide) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 6291
+>>
+stream
+0.2834645669291339 w
+0. G
+BT
+/F2 16 Tf
+16. TL
+1. 0. 0. rg
+42.5196850393700814 783.3703779527559163 Td
+(1. Introduction) Tj
+ET
+1. 0. 0. RG
+1.4173228346456694 w
+42.5196850393700814 781.1151968503936587 m
+552.7559055118110791 781.1151968503936587 l
+S
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 764.6159212598424801 Td
+(jsPdf-Dynamo is a wrapper around the open-source JavaScript PDF generation library, jsPDF. Using a) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 751.3497795275590079 Td
+(template driven approach, it enables the separation of layout and formatting logic from the placement of) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 738.0836377952755356 Td
+(data.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 713.8190708661417148 Td
+(jsPdf-Dynamo can be used with browser or NodeJs applications written in JavaScript or TypeScript.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 689.5545039370078939 Td
+(Advantages of using jsPdf-Dynamo include:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 670.6190708661416693 Td
+(-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 670.6190708661416693 Td
+(The separation of layout and formatting logic from the placement of data. As a page is filled with) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 657.352929133858197 Td
+(data, jsPdf-Dynamo can insert new pages, with appropriate headings, footings, and bookmarks as) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 644.0867874015747248 Td
+(required.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 630.8206456692912525 Td
+(-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 630.8206456692912525 Td
+(The ability to store corporate and application wide format settings in templates that can be) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 617.5545039370078939 Td
+(maintained independently from the application. This is similar to the use of style sheets in web) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 604.2883622047244216 Td
+(applications to enable visual consistency, reduce errors and minimise maintenance costs. These) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 591.0222204724409494 Td
+(format settings can include colours, font styles and sizes, page headings, and more.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 566.7576535433070148 Td
+(There are a few basic concepts to be aware of when using jsPdf-Dynamo:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 547.8222204724409039 Td
+(-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 547.8222204724409039 Td
+(The functionality of jsPdf-Dynamo is implemented through the JsPdfDynamo class.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 534.5560787401574316 Td
+(-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 534.5560787401574316 Td
+(The initial page size, orientation and units of measure are set when the JsPdfDynamo instance is) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 521.2899370078739594 Td
+(instantiated.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 508.0237952755904871 Td
+(-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 508.0237952755904871 Td
+(Output is driven by a series of plain text 'commands'. These commands can be provided as a list of) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 494.7576535433070717 Td
+(strings from multiple sources, including the JavaScript or TypeScript application, or loaded from) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 481.4915118110235426 Td
+('templates' retrieved from a URL \(browser only\) or from local text files \(NodeJs only\).) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 468.2253700787401272 Td
+(-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 468.2253700787401272 Td
+(Positions are specified relative to the left and top margin. The exception to this are margins which) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 454.9592283464566549 Td
+(are measured from the appropriate edge of the page.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 441.6930866141731258 Td
+(-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 441.6930866141731258 Td
+(All measurements and positions are in the unit of measure specified when the instance of) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 428.4269448818896535 Td
+(JsPdfDynamo is created. This can be millimeters, inches, or points. The exception to this are fonts,) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 415.1608031496062381 Td
+(which are always specified in points.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 401.8946614173227658 Td
+(-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 401.8946614173227658 Td
+(A series of commands can be grouped and named. These groups of commands can then) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 388.6285196850392936 Td
+(be processed one or more times. This is a similar concept to methods or procedures) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 375.3623779527558781 Td
+(in more sophisticated computer languages.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 362.0962362204724059 Td
+(-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 362.0962362204724059 Td
+(All commands, command group names and variable names are case insensitive.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 348.8300944881889336 Td
+(-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 348.8300944881889336 Td
+(There are two kinds of variables, user variables and system maintained variables. User variables) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 335.5639527559054045 Td
+(can be created and modified as required using script commands. As the name implies, system) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 322.2978110236219891 Td
+(maintained variables are created and maintained and cannot be directly modified directly by script) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 309.0316692913385168 Td
+(commands.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 284.767102362204696 Td
+(This document has been generated by jsPdf-Dynamo and demonstrates some of its capabilities.) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+266.6727952755906017 42.5205511811021779 Td
+(Page 2 of 27) Tj
+ET
+endstream
+endobj
+7 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 8 0 R
+>>
+endobj
+8 0 obj
+<<
+/Length 5796
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 16 Tf
+16. TL
+1. 0. 0. rg
+42.5196850393700814 783.3703779527559163 Td
+(2. JsPdfDynamo Class) Tj
+ET
+1. 0. 0. RG
+1.4173228346456694 w
+42.5196850393700814 781.1151968503936587 m
+552.7559055118110791 781.1151968503936587 l
+S
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 764.6159212598424801 Td
+(JsPdfDynamo is implemented using an instance of the JsPdfDynamo class. This class has the) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 751.3497795275590079 Td
+(following public properties.) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 725.0852913385826923 Td
+(Constructor) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 706.3072598425196702 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 693.0411181102361979 Td
+(const dynamo = new JsPdfDynamo\(options, logger\)) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 674.2757637795275514 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 661.0096220472440791 Td
+(options) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 661.0096220472440791 Td
+(An optional object that implements some or all of the properties of a JsPdfOptions) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 647.7434803149606068 Td
+(object. \(Refer to the description in the Other Definitions chapter.\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 634.4773385826771346 Td
+(logger) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 634.4773385826771346 Td
+(An optional object that implements some or all of the properties of a Logger class.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 621.2111968503936623 Td
+(\(Refer to the description in the Other Definitions chapter.\) If a logger object is not) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 607.9450551181101901 Td
+(provided than a default one is created that outputs to the console.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 589.1797007874015435 Td
+(Returns) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 575.9135590551180712 Td
+(An instance of the JsPdfDynamo class.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 557.1482047244094247 Td
+(Notes) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 543.8820629921259524 Td
+(The first, blank page of the PDF will have been created and initialised with the given \(or default\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 530.6159212598424801 Td
+(values.) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 504.3514330708661078 Td
+(getVariable\(\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 491.0726141732283168 Td
+(This method returns the current value of a variable as a string. This can be useful for unit testing.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 472.3072598425196702 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 459.0411181102361411 Td
+(getVariable\(varName\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 459.0411181102361411 Td
+(The name of the variable to retrieve. This can be the name of either a user or a) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 445.7749763779526688 Td
+(system maintained variable.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 427.0096220472440223 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 413.7434803149606068 Td
+(varName) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 413.7434803149606068 Td
+(A string or constant containing the name of the variable whose value is to be) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 400.4773385826771346 Td
+(retrieved. \(The name is not case sensitive.\)) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 381.7119842519684312 Td
+(Returns) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 368.4458425196850158 Td
+(The current value of the named variable as a string.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 349.6804881889763692 Td
+(Notes) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 336.4143464566928401 Td
+(If the supplied variable does not exist at the time this method is called then a null value is returned.) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 310.1498582677164677 Td
+(prepareWrappedString\(\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 296.8710393700787336 Td
+(This method prepares a given string for output by the DrawTextWrapped command.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 278.105685039370087 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 264.8395433070866147 Td
+(const text = myJsPdfDynamo.prepareWrappedString\(input\)) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 246.0741889763778545 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 232.8080472440943822 Td
+(input) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 232.8080472440943822 Td
+(A string that may contain special characters, including percentage signs, back) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 219.5419055118110236 Td
+(slashes and new line characters.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 200.7765511811022634 Td
+(Returns) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 187.5104094488187911 Td
+(The input string with any special characters converted to a format that the DrawTextWrapped) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 174.2442677165353189 Td
+(command can use to output the string correctly.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 155.4789133858266723 Td
+(Notes) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 142.2127716535433137 Td
+(If the input string is null or undefined then an empty is returned.) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+266.6727952755906017 42.5205511811021779 Td
+(Page 3 of 27) Tj
+ET
+endstream
+endobj
+9 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 4240
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 786.3703307086614132 Td
+(processCommands\(\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 773.0915118110235653 Td
+(This method processes the commands provided in an array of strings.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 754.3261574803149188 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 741.0600157480314465 Td
+(myJsPdfDynamo.processCommands\(commands\)) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 722.2946614173227999 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 709.0285196850393277 Td
+(commands) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 709.0285196850393277 Td
+(An array of strings containing commands to process.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 690.2631653543306811 Td
+(Notes) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 676.9970236220472088 Td
+(The commands may \(optionally\) create the final document using the .SavePdf command. Alternatively,) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 663.7308818897637366 Td
+(additional calls may be made to the processCommands method and/or the PDF document can be) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 650.4647401574802643 Td
+(retrieved using the toBlob or toBlobUrl methods.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 631.6993858267716178 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 618.4332440944881455 Td
+(SavePdf, toBlob, toBlobUrl) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 592.1687559055117163 Td
+(toBlob\(\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 578.8899370078739821 Td
+(This method returns the contents of the current PDF as a Blob.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 560.1245826771653356 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 546.8584409448818633 Td
+(const myBlob = myJsPdfDynamo.toBlob\(\);) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 528.0930866141732167 Td
+(Returns) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 514.8269448818897445 Td
+(A JavaScript Blob containing the current PDF.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 496.0615905511810411 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 482.7954488188976256 Td
+(ProcessCommands, SavePdf, toBlobUri) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 456.5309606299211964 Td
+(toBlobUrl\(\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 443.2521417322834054 Td
+(This is a browser only method that generates the current PDF as a Blob and returns a string containing a) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 429.9859999999999332 Td
+(URL to that Blob. This can be used to display the PDF in the current or another browser window.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 411.2206456692912866 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 397.9545039370078712 Td
+(const blobUrl = myJsPdfDynamo.toBlobUrl\(\);) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 379.1891496062991678 Td
+(Returns) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 365.9230078740156955 Td
+(A string containing the URL reference to the PDF.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 347.1576535433069921 Td
+(Example) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 333.8915118110235198 Td
+(Display the PDF in a new browser window:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 314.9560787401574089 Td
+(const blobUrl = myJsPdfDynamo.toBlobUrl\(\);) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 301.6899370078739366 Td
+(if \(blobUrl\) {) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 288.4237952755904644 Td
+(window.open\(blobUrl, '_blank'\);) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 275.1576535433069921 Td
+(}) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 256.3922992125983455 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 243.1261574803148733 Td
+(ProcessCommands, SavePdf, toBlob) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+266.6727952755906017 42.5205511811021779 Td
+(Page 4 of 27) Tj
+ET
+endstream
+endobj
+11 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 12 0 R
+>>
+endobj
+12 0 obj
+<<
+/Length 7171
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 16 Tf
+16. TL
+1. 0. 0. rg
+42.5196850393700814 783.3703779527559163 Td
+(3. Variables) Tj
+ET
+1. 0. 0. RG
+1.4173228346456694 w
+42.5196850393700814 781.1151968503936587 m
+552.7559055118110791 781.1151968503936587 l
+S
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 764.6159212598424801 Td
+(Variables can be used to substitute fixed text within a template. There are two kinds of variable:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 745.6804881889763692 Td
+(* System variables. These are updated automatically and can not be changed directly.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 732.4143464566928969 Td
+(* User defined variables which can be updated by commands in the script.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 713.4789133858266723 Td
+(Commands are described in a following chapter.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 689.2143464566928515 Td
+(Variables are referenced by enclosing them in percentage symbols. For example, to write some) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 675.9482047244093792 Td
+(text at the current position on the page the following DrawText command can be used:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 651.6836377952755583 Td
+(.DrawText %_CurrentX% %_CurrentY% Hello World!) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 627.4190708661417375 Td
+(Variables \(and commands\) are not case sensitive and the above command could also be given) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 614.1529291338581515 Td
+(as:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 589.8883622047244444 Td
+(.drawTEXT %_currentX% %_CURRENTy% Hello World!) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 565.6237952755905098 Td
+(Variables are stored as strings though there is a limited capability to perform arithmatic on) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 552.3576535433070376 Td
+(variables. For example, the .IncVar command can be used to add or subtract a number from) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 539.0915118110235653 Td
+(a variable.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 514.8269448818897445 Td
+(Variables do not have to be assigned a value before being used.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 501.5608031496062154 Td
+(The value of a variable referenced before being assigned a value is an empty string.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 477.2962362204724514 Td
+(All variables are global, there is no scoping of variables within a group. A variable) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 464.0300944881888654 Td
+(defined within a group is available to commands run after that group.) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 437.765606299212493 Td
+(System Maintained Variables) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 418.8174960629920633 Td
+(If the input string is null or undefined then an empty is returned.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 399.8820629921258956 Td
+(_CurrentX) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 399.8820629921258956 Td
+(The current horizontal position on the page, relative to the left margin, in) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 386.6159212598424801 Td
+(millimeters.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 367.6804881889763124 Td
+(_CurrentY) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 367.6804881889763124 Td
+(The current vertical position on the page, relative to the top margin, in) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 354.4143464566928401 Td
+(millimeters.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 335.4789133858266723 Td
+(_CurrentPageSize) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+192.7559055118110507 335.4789133858266723 Td
+(The name of the last page size specified, for example, 'A4', 'Letter'.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 316.5434803149605614 Td
+(_CurrentPageOrientation) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+192.7559055118110507 316.5434803149605614 Td
+(The last page orientation specified:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+192.7559055118110507 303.2773385826770891 Td
+(0=Portrait \(default\) 1=Landscape) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 284.3419055118109782 Td
+(_FontHeight) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 284.3419055118109782 Td
+(The height of the current font, in millimeters. This can be used to create) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 271.0757637795275059 Td
+(a space between paragraphs when used in conjunction with the) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 257.8096220472440336 Td
+(incCurrentY command: .incCurrentY %%_FontHeight%%) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 238.8741889763779227 Td
+(_FontPointSize) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 238.8741889763779227 Td
+(The size of the current font in points. The default font size is 12 points.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 219.9387559055116981 Td
+(_FontStyle) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 219.9387559055116981 Td
+(The current font style. For example, "normal" or "italic".) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 201.0033228346455871 Td
+(_FontType) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 201.0033228346455871 Td
+(The name of the current font. For example, "Helvetica", which is the) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 187.7371811023622286 Td
+(default font type.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 168.8017480314960039 Td
+(_ImageHeight) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 168.8017480314960039 Td
+(The height of the last loaded image in the current units of measure.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 149.866314960629893 Td
+(_ImageHeightPx) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 149.866314960629893 Td
+(The height of the last loaded image in pixels.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 130.9308818897636684 Td
+(_ImageWidth) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 130.9308818897636684 Td
+(The width of the last loaded image in the current units of measure.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 111.9954488188975574 Td
+(_ImageWidthPx) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 111.9954488188975574 Td
+(The width of the last loaded image in pixels.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 93.0600157480315602 Td
+(_LastError) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 93.0600157480315602 Td
+(A description of the last error encountered.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 74.1245826771652219 Td
+(_LastImageAdded) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 74.1245826771652219 Td
+(The zero based index of the last image added to the PDF, either from a file or) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 60.8584409448818633 Td
+(from a URL.) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+266.6727952755906017 42.5205511811021779 Td
+(Page 5 of 27) Tj
+ET
+endstream
+endobj
+13 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 14 0 R
+>>
+endobj
+14 0 obj
+<<
+/Length 5388
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 14 Tf
+14. TL
+1. 0. 0. rg
+42.5196850393700814 785.370299212598411 Td
+(System Maintained Variables \(Continued\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 766.4300944881889563 Td
+(_LastImageIndex) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 766.4300944881889563 Td
+(The index of the last drawn image.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 747.4946614173228454 Td
+(_LastObjectHeight) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 747.4946614173228454 Td
+(The height of the last object that has been output, in millimeters.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 728.5592283464566208 Td
+(_LastObjectWidth) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 728.5592283464566208 Td
+(The width of the last object that has been output, in millimeters.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 709.6237952755905098 Td
+(_LastOutline) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 709.6237952755905098 Td
+(This contains the number assigned to each outline entry when it is) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 696.3576535433070376 Td
+(created. This number is used when creating child outline entries.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 677.4222204724409266 Td
+(_LastResult) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 677.4222204724409266 Td
+(Most commands update this variable. If the command fails, this will be) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 664.1560787401574544 Td
+(set to '0'. A successful command wil set this to '1' or to some other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 650.8899370078739821 Td
+(useful value. For example, when a new page is created the page number) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 637.6237952755905098 Td
+(is returned in this variable.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 618.6883622047243989 Td
+(_MarginBottom) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 618.6883622047243989 Td
+(The current margin, in millimeters, from the page bottom edge.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 599.752929133858288 Td
+(_MarginLeft) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 599.752929133858288 Td
+(The current margin, in millimeters, from the page left edge.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 580.817496062992177 Td
+(_MarginRight) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 580.817496062992177 Td
+(The current margin, in millimeters, from the page right edge.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 561.8820629921259524 Td
+(_MarginTop) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 561.8820629921259524 Td
+(The current margin, in millimeters, from the page top edge.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 542.9466299212598415 Td
+(_PageNo) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 542.9466299212598415 Td
+(The current page number, starting from 1 for the first page.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 524.0111968503936168 Td
+(_PageHeight) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 524.0111968503936168 Td
+(The height of the page, less the current top and bottom margins,) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 510.7450551181102014 Td
+(expressed in millimeters.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 491.8096220472440336 Td
+(_Pages) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 491.8096220472440336 Td
+(The total number of pages in the document.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 472.8741889763779795 Td
+(_PageWidth) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 472.8741889763779795 Td
+(The width of the page, less the current left and right margins, expressed) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 459.6080472440943936 Td
+(in millimeters.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 440.6726141732283395 Td
+(_SpaceHoz) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 440.6726141732283395 Td
+(JsPdfDynamo keeps track of the current position, relative to the left) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 427.4064724409448104 Td
+(margin, after each object is output. This position is calculated in) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 414.1403307086613381 Td
+(millimeters from the width of the object plus the current horizontal spacing,) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 400.8741889763779227 Td
+(which can be set with the SetSpaceHoz command.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 381.9387559055117549 Td
+(_SpaceVert) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 381.9387559055117549 Td
+(JsPdfDynamo keeps track of the current position, in millimeters, relative) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 368.6726141732282827 Td
+(to the top margin, after each object is output. This position is calculated) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 355.4064724409448104 Td
+(from the height of the object plus the current vertical spacing, which can) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+164.4094488188976584 342.140330708661395 Td
+(be set with the SetSpaceVert command.) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+266.6727952755906017 42.5205511811021779 Td
+(Page 6 of 27) Tj
+ET
+endstream
+endobj
+15 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 16 0 R
+>>
+endobj
+16 0 obj
+<<
+/Length 6067
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 16 Tf
+16. TL
+1. 0. 0. rg
+42.5196850393700814 783.3703779527559163 Td
+(4. Commands) Tj
+ET
+1. 0. 0. RG
+1.4173228346456694 w
+42.5196850393700814 781.1151968503936587 m
+552.7559055118110791 781.1151968503936587 l
+S
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 762.6159999999999854 Td
+(AddBookmark) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 749.3371811023621376 Td
+(Adds an entry to the document bookmarks. \(Bookmarks also known as Table of Contents, Sidebar) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 736.0710393700786653 Td
+(Reference, or Outlines.\)) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 717.3056850393700188 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 704.0395433070865465 Td
+(.AddBookmark ParentId PageNo Text) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 685.2741889763779 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 672.0080472440944277 Td
+(ParentId) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 672.0080472440944277 Td
+(The Id of the parent bookmark for this entry. Set to zero to create a new top level) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 658.7419055118109554 Td
+(bookmark.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 645.4757637795275969 Td
+(PageNo) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 645.4757637795275969 Td
+(The page number to which this bookmark refers to.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 632.2096220472440109 Td
+(Text) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 632.2096220472440109 Td
+(The text for this bookmark.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 613.4442677165353643 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 600.1781259842518921 Td
+(If successful then the variable _LastResult is set to the Id of the bookmark just created, else) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 586.9119842519685335 Td
+(it is set to '0'.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 568.1466299212597733 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 554.8804881889764147 Td
+(Create a top level bookmark entry for the current page:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 535.9450551181101901 Td
+(.AddBookmark 0 %_PAGENO% Chapter one of the document) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 522.6789133858267178 Td
+(.SetVar Chapter1 %_LastResult%) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 498.4143464566928401 Td
+(Create a child bookmark entry for the chapter 1:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 479.4789133858267292 Td
+(.AddBookmark %Chapter1% %_PAGENO% Chapter one, Paragraph 1) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 453.2144251968503568 Td
+(AddImageFromFile \(NodeJs Only\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 439.9356062992125089 Td
+(Reads an image from the file system and stores it for later output. JsPdfDynamo can use all image types) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 426.6694645669290935 Td
+(that jsPDF supports, including: BMP, GIF, JPEG, PNG, TIFF and WEBP) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 402.2348188976377514 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 388.9686771653542792 Td
+(.AddImageFromFile FileName) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 370.2033228346455758 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 356.9371811023621603 Td
+(FileName) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 356.9371811023621603 Td
+(The name and relative path to the image file to be read.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 338.1718267716535138 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 324.9056850393700415 Td
+(If successful then the variable _LastResult is set '1', else it is set to '0'.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 305.9702519685038169 Td
+(If successful then several other variables are also set:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 287.034818897637706 Td
+(_ImageHeight is set to the height of the image in the current units of measure.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 273.7686771653543474 Td
+(_ImageHeightPx is set to the height of the image pixels.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 260.5025354330707614 Td
+(_ImageWidth is set to the width of the image in the current units of measure.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 247.2363937007872892 Td
+(_ImageWidthPx is set to the width of the image pixels.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 233.9702519685038169 Td
+(_LastImageAdded is the Id of the image just loaded. This is used when adding the image to) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 220.7041102362204583 Td
+(the document.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 201.7686771653542337 Td
+(An image only needs to be loaded once, but it can be drawn multiple times in the document by) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 188.5025354330707614 Td
+(referring to the image's Id.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 169.7371811023621149 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 156.4710393700787563 Td
+(Read a logo from an image and add it to the top left of the current page.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 137.5356062992125317 Td
+(.AddImageFromFile ../images/myLogo.jpg) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 124.2694645669290594 Td
+(.SetVar IdLogo %_LastImageAdded%) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 111.0033228346454734 Td
+(.DrawImage %IdLogo% 0 0 1) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 81.2395433070864783 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 67.9734015748031197 Td
+(AddImageFromUrl, DrawImage) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+266.6727952755906017 42.5205511811021779 Td
+(Page 7 of 27) Tj
+ET
+endstream
+endobj
+17 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 18 0 R
+>>
+endobj
+18 0 obj
+<<
+/Length 5089
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 786.3703307086614132 Td
+(AddImageFromUrl \(Browser Only\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 773.0915118110235653 Td
+(Reads an image from the given URL and stores it for later output. JsPdfDynamo can use all image types) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 759.825370078740093 Td
+(that jsPDF supports, including: BMP, GIF, JPEG, PNG, TIFF and WEBP) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 735.3907244094488078 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 722.1245826771653356 Td
+(.AddImageFromUrl URL) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 703.359228346456689 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 690.0930866141732167 Td
+(URL) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 690.0930866141732167 Td
+(The URL to the image file to be read.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 671.3277322834645702 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 658.0615905511810979 Td
+(If successful then the variable _LastResult is set '1', else it is set to '0'.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 639.126157480314987 Td
+(If successful then several other variables are also set:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 620.1907244094487623 Td
+(_ImageHeight is set to the height of the image in the current units of measure.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 606.9245826771652901 Td
+(_ImageHeightPx is set to the height of the image pixels.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 593.6584409448819315 Td
+(_ImageWidth is set to the width of the image in the current units of measure.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 580.3922992125983455 Td
+(_ImageWidthPx is set to the width of the image pixels.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 567.126157480314987 Td
+(_LastImageAdded is Id of the image just loaded. This is used when adding the image to the) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 553.860015748031401 Td
+(document.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 534.9245826771652901 Td
+(An image only needs to be loaded once, but it can be drawn multiple times in the document by) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 521.6584409448818178 Td
+(referring to the image's Id.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 502.8930866141732281 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 489.626944881889699 Td
+(Read a logo from an image and add it to the top left of the current page.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 470.6915118110235881 Td
+(.AddImageFromUrl /images/logo.png) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 457.4253700787401158 Td
+(.SetVar IdLogo %_LastImageAdded%) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 444.1592283464566435 Td
+(.DrawImage %IdLogo% 0 0 1) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 414.3954488188975915 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 401.1293070866140624 Td
+(AddImageFromFile, DrawImage) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 374.8648188976378037 Td
+(AddPage) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 361.5859999999999559 Td
+(Add a new page at the end of the document and make it active.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 342.8206456692912525 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 329.5545039370077802 Td
+(.AddPage {PageSize}) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 310.7891496062991337 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 297.5230078740156614 Td
+(PageSize) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 297.5230078740156614 Td
+(The page size: A3, A4, Letter, etc. Optional and if not supplied the) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 284.2568661417321891 Td
+(current page size is used) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 265.4915118110235426 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 252.225370078740184 Td
+(The variable _LastResult is set to the number of the page just created.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 233.2899370078739594 Td
+(Refer to the 'Other Definitions' chapter for a complete list of supported page sizes.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 214.5245826771653128 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 201.2584409448818406 Td
+(Create a new page using the current page size:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 182.3230078740156159 Td
+(.AddPage) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 158.0584409448817951 Td
+(Create a new page with a page size of 'A4':) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 139.1230078740156841 Td
+(.AddPage A4) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+266.6727952755906017 42.5205511811021779 Td
+(Page 8 of 27) Tj
+ET
+endstream
+endobj
+19 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 20 0 R
+>>
+endobj
+20 0 obj
+<<
+/Length 6272
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 786.3703307086614132 Td
+(CheckPage) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 773.0915118110235653 Td
+(Check whether the current vertical position \(as defined by the _CurrentY variable\) is within a given) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 759.825370078740093 Td
+(distance from the bottom page margin. If so then execute one or more optional groups. If no groups are) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 746.5592283464566208 Td
+(defined then a new page is created.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 722.2946614173227999 Td
+(This is the usually used to detect the end of a page and then create any end of page output before) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 709.0285196850393277 Td
+(creating a new page and creating appropriate headings on the new page.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 690.2631653543306811 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 676.9970236220472088 Td
+(.CheckPage Distance {Group1, Group2 ...}) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 658.2316692913385623 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 644.96552755905509 Td
+(Distance) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 644.96552755905509 Td
+(The distance from the bottom margin of the page in the unit of measure specified) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 631.6993858267716178 Td
+(when the JsPdfDynamo object was created.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 618.4332440944881455 Td
+(Group\(s\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 618.4332440944881455 Td
+(Zero or more groups to be processed if the current vertical position is beyond this) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 605.1671023622046732 Td
+(point. If no groups are provided then a new page is created.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 586.4017480314960267 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 573.1356062992125544 Td
+(Variable _LastResult is set to the result of the last group processed. If no groups are defined this will) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 559.8694645669290821 Td
+(be the number of the page just created.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 541.1041102362204356 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 527.8379685039369633 Td
+(Assuming that the unit of measure is millimeters, check if the current position on the page is within) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 514.5718267716534911 Td
+(10mm of the bottom margin and create a new page if so:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 495.6363937007873801 Td
+(.CheckPage 10) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 471.3718267716535593 Td
+(Assuming that the unit of measure is inches, check if the current position on the page is within 1.25) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 458.105685039370087 Td
+(inches of the bottom margin and if so, process the groups PageFooter, AddPage and) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 444.8395433070865579 Td
+(GroupHeadingContinued:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 425.9041102362203901 Td
+(.CHECKPAGE 1.25 PageFooter AddPage GroupHeadingContinued) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 399.6396220472440177 Td
+(CopyVar) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 386.3608031496062836 Td
+(Sets the value of a variable from another variable.  This enables the dynamic evaluation of variable) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 373.0946614173228113 Td
+(values.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 354.3293070866141079 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 341.0631653543306356 Td
+(.CopyVar CopyTo CopyFrom) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 322.2978110236219891 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 309.0316692913385168 Td
+(CopyTo) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 309.0316692913385168 Td
+(The name of the variable to update. This can be a substitution variable.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 295.7655275590550445 Td
+(CopyFrom) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 295.7655275590550445 Td
+(The name of the variable whose values will be assigned to the variable being) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 282.4993858267715723 Td
+(updated.  This can be a substitution variable.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 263.7340314960629257 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 250.4678897637794535 Td
+(Variable _LastResult is set to '1' if valid variable names are provided, otherwise it is set to '0'.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 231.5324566929133425 Td
+(The system maintained variables \(those whose name starts with an underscore\) can not be changed) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 218.2663149606298703 Td
+(using this command.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 199.50096062992111 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 186.2348188976377514 Td
+(Set the variable 'SaveCurrentTop' to the system maintained variable '_CurrentY':) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 167.2993858267716405 Td
+(.CopyVar SaveCurrentTop  _CurrentY) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 143.034818897637706 Td
+(Given that the variable 'Index' contains '3', save the current value of the variable 'line3' into the) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 129.7686771653542337 Td
+(variable 'ThisLine':) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 110.8332440944880091 Td
+(.CopyVar  ThisLine  line%Index%) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 92.0678897637794762 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 78.8017480314960039 Td
+(IncVar, MultVar, SetVar) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+266.6727952755906017 42.5205511811021779 Td
+(Page 9 of 27) Tj
+ET
+endstream
+endobj
+21 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 22 0 R
+>>
+endobj
+22 0 obj
+<<
+/Length 5697
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 786.3703307086614132 Td
+(Do) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 773.0915118110235653 Td
+('Do' \(ie process\) one or more groups of commands that have already been defined.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 754.3261574803149188 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 741.0600157480314465 Td
+(.Do Group1, Group2...etc) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 722.2946614173227999 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 709.0285196850393277 Td
+(Group\(s\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 709.0285196850393277 Td
+(Zero or more groups to be processed) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 690.2631653543306811 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 676.9970236220472088 Td
+(Variable _LastResult is set to the result of the last group processed. If there are no groups specified,) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 663.7308818897637366 Td
+(or the last group does not exists then _LastResult is set to '0'.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 644.96552755905509 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 631.6993858267716178 Td
+(Process the groups 'NewChapter' and 'NewSection':) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 612.7639527559055068 Td
+(.Do NewChapter NewSection) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 588.4993858267715723 Td
+(Process the group whose name is stored in the variable 'NextGroup':) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 569.5639527559054613 Td
+(.Do %NextGroup%) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 539.8001732283464662 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 526.5340314960628803 Td
+(DoRepeat) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 500.2695433070865647 Td
+(DoRepeat) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 486.9907244094487737 Td
+(Process one or more groups of commands that have already been defined, in sequence, one or more) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 473.7245826771653014 Td
+(times.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 454.9592283464566549 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 441.6930866141731258 Td
+(.DoRepeat Number Group1, Group2...etc) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 422.9277322834645361 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 409.6615905511810638 Td
+(Number) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 409.6615905511810638 Td
+(The number of times that the groups will be processed) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 396.3954488188975915 Td
+(Group\(s\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 396.3954488188975915 Td
+(Zero or more groups to be processed.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 377.6300944881888881 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 364.3639527559054159 Td
+(The group\(s\) of commands are processed in sequence as many  times as specified by the number.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 345.4285196850393618 Td
+(The variable _LastResult is set to the result of the last group processed. If there are no groups) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 332.1623779527558327 Td
+(specified, or the last group does not exists then _LastResult is set to '0'.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 313.3970236220471861 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 300.1308818897637138 Td
+(Process the groups 'Heading', 'Detail', 'Footer' in sequence, three times. \(This will be 'Heading',) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 286.8647401574802416 Td
+('Detail', 'Footer', 'Heading', 'Detail', 'Footer', 'Heading', 'Detail, 'Footer'\):) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 267.9293070866141306 Td
+(.DoRepeat 3 Heading Detail Footer) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 243.6647401574803098 Td
+(Process the group PrintAddress the number of times stored in the variable 'AddressCount':) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 224.7293070866140852 Td
+(.DoRepeat %AddressCount% PrintAddress) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 194.96552755905509 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 181.6993858267715041 Td
+(Do) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 155.4348976377951885 Td
+(DrawBox) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 142.1560787401574544 Td
+(Draw a box at given point using the current fill colour, line colour and line width.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 123.3907244094486941 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 110.1245826771652219 Td
+(.DrawBox Left Top Width Height Option) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 91.359228346456689 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 78.0930866141732167 Td
+(Left) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 78.0930866141732167 Td
+(The horizontal starting position of the box, measured from the left margin.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 64.8269448818896308 Td
+(Top) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 64.8269448818896308 Td
+(The vertical starting position of the box, measured from the top margin.) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 10 of 27) Tj
+ET
+endstream
+endobj
+23 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 24 0 R
+>>
+endobj
+24 0 obj
+<<
+/Length 5090
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 14 Tf
+14. TL
+1. 0. 0. rg
+42.5196850393700814 785.370299212598411 Td
+(DrawBox \(Continued\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 766.4300944881889563 Td
+(Width) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 766.4300944881889563 Td
+(The width of the box.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 753.1639527559054841 Td
+(Height) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 753.1639527559054841 Td
+(The height of the box.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 739.8978110236220118 Td
+(Option) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 739.8978110236220118 Td
+(Specifies how the box is drawn:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 720.9623779527559009 Td
+(0 - An outline of the box is drawn) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 707.6962362204724286 Td
+(1 - A filled box, without an outline is drawn) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 694.4300944881889563 Td
+(2 - A filled box, with an outline is drawn) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 675.4946614173227317 Td
+(All measurements are in the unit of measure specified when the JsPdfDynamo object was created.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 656.7293070866141989 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 643.4631653543306129 Td
+(The variable _LastResult is set to '0' if there were any issues with the parameters provided, otherwise) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 630.1970236220472543 Td
+(it is set to '1'.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 611.4316692913384941 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 598.1655275590551355 Td
+(Assuming that the unit of measure is millimeters, an outline of a box is drawn at the current vertical) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 584.8993858267715495 Td
+(position that spans the width of the page and is 14.5 millimeters high.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 565.9639527559054386 Td
+(.DrawBox 0 %_CurrentY% %_PageWidth% 14.5 0) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 541.6993858267716178 Td
+(Assuming that the unit of measure is inches, an outlined and filled box is drawn at the top of the page) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 528.4332440944881455 Td
+(that spans the width of the page and is ½ inch high.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 509.4978110236220346 Td
+(.DrawBox 0 0 %_PageWidth% 0.5 2) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 490.7324566929133312 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 477.4663149606298589 Td
+(SetFillColour, SetLineColour, SetLineWidth) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 451.2018267716534865 Td
+(DrawDebugGrid) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 437.9230078740156955 Td
+(Draws a grid on the current page and is useful when designing or debugging templates. The distance) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 424.6568661417322232 Td
+(between grid lines is dependent on the unit of measure specified when the JsPdfDynamo object was) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 411.390724409448751 Td
+(created, and is either 10mm, ½ inch, or 30 points.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 392.6253700787400476 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 379.359228346456689 Td
+(.DrawDebugGrid Option) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 360.5938740157479856 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 347.3277322834645133 Td
+(Option) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 347.3277322834645133 Td
+(Specifies whether the grid is drawn over the full page, or just within the current) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 334.0615905511810411 Td
+(margins. Valid values are 'Margin' and 'Page'. If not given then the default value of) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 320.7954488188976256 Td
+('Margin' is used.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 302.0300944881889791 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 288.7639527559055068 Td
+(Draws a debug grid on the current page, starting from the top left of the page down to the bottom right.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 256.5623779527558099 Td
+(.DrawDebugGrid Page) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 232.2978110236219891 Td
+(Draws a debug grid on all pages of the document, within the current margin settings.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 213.3623779527558781 Td
+(.ForEachPage .DrawDebugGrid) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 194.5970236220472316 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 181.3308818897636456 Td
+(ForEachPage) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 11 of 27) Tj
+ET
+endstream
+endobj
+25 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 26 0 R
+>>
+endobj
+26 0 obj
+<<
+/Length 7728
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 786.3703307086614132 Td
+(DrawImage) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 773.0915118110235653 Td
+(Draws a previously loaded image on the current page.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 754.3261574803149188 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 741.0600157480314465 Td
+(.DrawImage ImageNo Left Top Width Height Scale) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 722.2946614173227999 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 709.0285196850393277 Td
+(ImageNo) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 709.0285196850393277 Td
+(The image Id. This was obtained when the image was loaded from the) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 695.7623779527558554 Td
+(_LastImageAdded variable.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 682.4962362204723831 Td
+(Left) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 682.4962362204723831 Td
+(The horizontal starting position of the image, measured from the left margin.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 669.2300944881889109 Td
+(Top) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 669.2300944881889109 Td
+(The vertical starting position of the image, measured from the top margin.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 655.9639527559054386 Td
+(Width) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 655.9639527559054386 Td
+(The width of the image to be drawn in the document. This is optional.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 642.69781102362208 Td
+(Height) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 642.69781102362208 Td
+(The height of the image to be drawn in the document. This is optional.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 629.4316692913386078 Td
+(Scale) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 629.4316692913386078 Td
+(A scaling factor to apply to the image. This is optional.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 610.6663149606299612 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 597.4001732283463753 Td
+(The variable _LastResult is set to '0' if there were any issues with the parameters provided, or if the) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 584.1340314960630167 Td
+(image will not fit within the margins, otherwise it is set to '1'.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 565.198598425196792 Td
+(There are a number of combinations of width, height and scaling factor that provide flexibility in the) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 551.9324566929133198 Td
+(size of the image that is rendered in the document:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 532.9970236220472088 Td
+(-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+85.0393700787401627 532.9970236220472088 Td
+(If none of the width, height or scale parameters are given, or are zero, then the image will be) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+85.0393700787401627 519.7308818897637366 Td
+(rendered using the dimensions of the image.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 500.7954488188975688 Td
+(-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+85.0393700787401627 500.7954488188975688 Td
+(If the width is given, and is not zero, and both the height and scale are not given or are zero,) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+85.0393700787401627 487.5293070866141534 Td
+(then the height of the image is proportionally scaled.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 468.5938740157479856 Td
+(-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+85.0393700787401627 468.5938740157479856 Td
+(If the height is given, and is not zero, and both the width and scale are not given or are zero,) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+85.0393700787401627 455.3277322834645133 Td
+(then the width of the image is proportionally scaled.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 436.3922992125983455 Td
+(-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+85.0393700787401627 436.3922992125983455 Td
+(If the width or height is given, or both, and the scale is not given or is zero, then the dimensions) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+85.0393700787401627 423.1261574803149301 Td
+(of the image will be calculated as either the provided dimension or the image dimension.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 404.1907244094487623 Td
+(-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+85.0393700787401627 404.1907244094487623 Td
+(If the width or height is given, or both, and the scale is given, then the dimensions of the image) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+85.0393700787401627 390.9245826771652901 Td
+(will be calculated as either the provided dimension or the image dimension. These dimensions) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+85.0393700787401627 377.6584409448818747 Td
+(will then be scaled by multiplying by the scaling factor.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 358.8930866141732281 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 345.626944881889699 Td
+(Draws a previously loaded image on the current page, located at the current location on the page.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 326.6915118110235881 Td
+(.DrawImage %ImageId% %_CurrentX% %_CurrentY%) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 302.4269448818896535 Td
+(Assuming that the unit of measure is millimeters, draws a previously loaded logo image on the current) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 289.1608031496061813 Td
+(page, located at the top left of the page and scaled proportionally to be 10mm high.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 270.2253700787400703 Td
+(.DrawImage %LogoId% 0 0 0 10) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 240.4615905511810752 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 227.1954488188976029 Td
+(AddImageFromFile, AddImageFromUrl) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 200.9309606299211737 Td
+(DrawLine) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 187.6521417322834395 Td
+(Draw a line between two points on the same page, relative to the page margins. The width and the colour) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 174.3859999999999673 Td
+(of the line is set by the most recent SetLineColour and SetLineWidth commands.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 155.6206456692913207 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 142.3545039370077347 Td
+(.DrawLine Left Top Right Bottom) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 123.5891496062990882 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 110.3230078740157296 Td
+(Left) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 110.3230078740157296 Td
+(The horizontal starting position of the line, measured from the left margin.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 97.0568661417322573 Td
+(Top) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 97.0568661417322573 Td
+(The vertical starting position of the line, measured from the top margin.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 83.7907244094487851 Td
+(Right) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 83.7907244094487851 Td
+(The horizontal ending position of the line, measured from the left margin.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 70.5245826771651991 Td
+(Bottom) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 70.5245826771651991 Td
+(The vertical ending position of the line, measured from the top margin.) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 12 of 27) Tj
+ET
+endstream
+endobj
+27 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 28 0 R
+>>
+endobj
+28 0 obj
+<<
+/Length 5307
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 14 Tf
+14. TL
+1. 0. 0. rg
+42.5196850393700814 785.370299212598411 Td
+(DrawLine \(Continued\)) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 766.4300944881889563 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 753.1639527559054841 Td
+(Variable _LastResult is set to '0' if any of the positions fall outside of the current page margins,) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 739.8978110236220118 Td
+(otherwise it is set to '1'.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 720.9623779527559009 Td
+(The variables _CurrentX and _CurrentY are not changed by this command.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 702.0269448818896763 Td
+(The variables _LastObjectHeight and _LastObjectWidth are updated to reflect the vertical and) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 688.7608031496063177 Td
+(horizontal sizes of the line just drawn and not the diagonal length of that line.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 669.9954488188975574 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 656.7293070866141989 Td
+(Assuming that the unit of measure is millimeters, output a vertical line 15cm from the left margin:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 637.7938740157479742 Td
+(.DrawLine 150 0 150 %_PageHeight%) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 613.5293070866141534 Td
+(Output a horizontal line at the current vertical position on the page:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 594.5938740157480424 Td
+(.DrawLine 0 %_CurrentY% %_PageWidth% %_CurrentY%) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 575.8285196850392822 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 562.5623779527559236 Td
+(SetLineColour, SetLineWidth) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 536.2978897637794944 Td
+(DrawText) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 523.0190708661416465 Td
+(Draw text at the given point on the page, relative to the page margins.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 504.253716535433 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 490.9875748031495846 Td
+(.DrawText  Left  Top  Text) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 472.2222204724408812 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 458.9560787401575226 Td
+(Left) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 458.9560787401575226 Td
+(The position of the text, measured from the left margin.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 445.6899370078739935 Td
+(Top) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 445.6899370078739935 Td
+(The position of the text, measured from the top margin.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 432.4237952755905212 Td
+(Text) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 432.4237952755905212 Td
+(The text to be output using the current font, style and size.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 413.6584409448818747 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 400.3922992125983455 Td
+(Variable _LastResult is set to '0' if the position falls outside of the page margins, or the text is) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 387.1261574803148733 Td
+(truncated to fit within the page margins, otherwise it is set to '1'.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 368.1907244094488192 Td
+(The variable _CurrentX is incremented by the width of the text plus the value of the current horizontal) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 354.9245826771652901 Td
+(spacing variable, _SpaceHoz.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 335.9891496062991223 Td
+(The variable _CurrentY is incremented by the height plus the value of the current vertical spacing) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 322.7230078740157069 Td
+(variable, _SpaceVert.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 303.7875748031495959 Td
+(The variables _LastObjectHeight and _LastObjectWidth are updated to reflect the height of the text) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 290.5214330708661237 Td
+(just output.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 271.7560787401573634 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 258.4899370078738912 Td
+(Output some text starting from the left margin at the current vertical position on the page:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 239.5545039370077802 Td
+(.DrawText  0  %_CurrentY%  JsPdfDynamo is a work of beauty!) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 215.2899370078739594 Td
+(Substitution variables can be used in the text:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 196.3545039370078484 Td
+(.DrawText  15  30  Who does number %number% work for?) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 177.5891496062992019 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 164.3230078740156159 Td
+(DrawTextBox, DrawTextWrapped, SetFontName, SetFontSize, SetFontStyle, SetTextColour) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 13 of 27) Tj
+ET
+endstream
+endobj
+29 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 30 0 R
+>>
+endobj
+30 0 obj
+<<
+/Length 7070
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 786.3703307086614132 Td
+(DrawTextBox) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 773.0915118110235653 Td
+(Draw text within the bounds of a given box. This is can be used to justify text horizontally and/or vertically) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 759.825370078740093 Td
+(within a defined area.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 741.0600157480314465 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 727.7938740157479742 Td
+(.DrawTextBox Left Top Width Height Horizontal-alignment Vertical-alignment Text) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 709.0285196850393277 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 695.7623779527558554 Td
+(Left) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 695.7623779527558554 Td
+(The position of the area containing the text, measured from the left margin.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 682.4962362204723831 Td
+(Top) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 682.4962362204723831 Td
+(The position of the area containing the text, measured from the top margin.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 669.2300944881889109 Td
+(Width) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 669.2300944881889109 Td
+(The width of the area containing the text.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 655.9639527559054386 Td
+(Height) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 655.9639527559054386 Td
+(The height of the area containing the text.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 642.69781102362208 Td
+(Horizontal-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 642.69781102362208 Td
+(Specifies how the text is aligned horizontally within the bounding box:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 629.4316692913386078 Td
+(alignment) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 629.4316692913386078 Td
+(Left or 'L' - Left justified) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 616.1655275590551355 Td
+(Centre or 'C' - Centre justified) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 602.8993858267715495 Td
+(Right or 'R' - Right justified) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 583.9639527559054386 Td
+(Vertical-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 583.9639527559054386 Td
+(Specifies how the text is aligned vertically within the bounding box:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 570.69781102362208 Td
+(alignment) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 570.69781102362208 Td
+(Top or 'T' - Top aligned) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 557.4316692913384941 Td
+(Centre or 'C' - Centre aligned) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 544.1655275590551355 Td
+(Bottom or 'B' - Bottom aligned) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 525.2300944881890246 Td
+(Text) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 525.2300944881890246 Td
+(The text to be output using the current font type, style and size.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 506.4647401574802643 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 493.1985984251968489 Td
+(Variable _LastResult is set to '0' if the position falls outside of the page margins, or the box area would) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 479.9324566929133198 Td
+(not fit within the page margins, otherwise it is set to '1'.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 460.997023622047152 Td
+(The variable _CurrentX is incremented by the width of the box plus the value of the current horizontal) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 447.7308818897636797 Td
+(spacing variable, _SpaceHoz.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 428.7954488188976256 Td
+(The variable _CurrentY is incremented by the height of the box plus the value of the current vertical) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 415.5293070866140965 Td
+(spacing variable, _SpaceVert.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 396.5938740157479856 Td
+(The variables _LastObjectHeight and _LastObjectWidth are updated to reflect the height of the box) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 383.3277322834645702 Td
+(just output.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 359.0631653543306925 Td
+(Note that there is no outline drawn of the box. If this is required, draw the box using the DrawBox) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 345.7970236220472202 Td
+(command before drawing the text box.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 327.0316692913385168 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 313.7655275590550445 Td
+(Output a centered title at the top of the page:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 294.8300944881889336 Td
+(.DrawTextBox  0  0  %_PageWidth%  C  T  CONFIDENTIAL) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 270.5655275590551128 Td
+(Print the page number on the bottom right of a page:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 251.6300944881888881 Td
+(.SetVar  textTop  %_PageHeight%) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 238.3639527559054159 Td
+(.IncVar  textTop  -6) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 225.0978110236219436 Td
+(.DrawTextBox  0  %textTop%  %_PageWidth%  6  Right  Top  Page: %_PageNo%) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 206.332456692913297 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 193.0663149606298248 Td
+(DrawBox, DrawText, DrawTextWrapped, SetFontName, SetFontSize, SetFontStyle, SetTextColour) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 166.8018267716535092 Td
+(DrawTextWrapped) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 153.5230078740156614 Td
+(Draw text at the given point on the page, relative to the page margins, wrapping to one or more new lines) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 140.2568661417323028 Td
+(as required.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 121.4915118110235426 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 108.2253700787400703 Td
+(.DrawTextWrapped  Left  Top  MaxWidth  CmdGroup  Text) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 89.4600157480314238 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 76.1938740157479515 Td
+(Left) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 76.1938740157479515 Td
+(The position of the text, measured from the left margin, in millimeters.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 62.9277322834645929 Td
+(Top) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 62.9277322834645929 Td
+(The position of the text, measured from the top margin, in millimeters.) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 14 of 27) Tj
+ET
+endstream
+endobj
+31 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 32 0 R
+>>
+endobj
+32 0 obj
+<<
+/Length 5836
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 14 Tf
+14. TL
+1. 0. 0. rg
+42.5196850393700814 785.370299212598411 Td
+(DrawTextWrapped \(Continued\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 766.4300944881889563 Td
+(MaxWidth) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 766.4300944881889563 Td
+(The maximum width of text to be output on each line before wrapping to) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 753.1639527559054841 Td
+(a new line.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 739.8978110236220118 Td
+(CmdGroup) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 739.8978110236220118 Td
+(The name of a command group \(macro\) to be run prior to the output of) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 726.6316692913385396 Td
+(each line. This is usually used to detect for end of page and process) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 713.3655275590550673 Td
+(accordingly. Use the special value *None if no command group is to be run.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 700.099385826771595 Td
+(Text) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 700.099385826771595 Td
+(The text to be output using the current font type, style and size.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 681.3340314960629485 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 668.0678897637794762 Td
+(The variable _LastResult is always set to '1'.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 654.8017480314960039 Td
+(\\nThe variable _CurrentX is set to the starting left position of the text plus the maximum width of the) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 641.5356062992125317 Td
+(text plus the value of the current horizontal spacing variable, _SpaceHoz. \\n\\nThe variable _CurrentY) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 628.2694645669291731 Td
+(is incremented by the height plus the value of the current vertical spacing variable, _SpaceVert, for) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 615.0033228346455871 Td
+(each line written. \\n\\nThe variable _LastObjectHeight is updated to reflect the height of the text just) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 601.7371811023622286 Td
+(output. \\n\\nThe variable _LastObjectWidth is set to the value of the MaxWidth parameter.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 582.9718267716534683 Td
+(Example) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 569.7056850393701097 Td
+(Output some text contained in the variable 'myLongText', over one or more lines starting from the left) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 556.4395433070865238 Td
+(margin at the current vertical position on the page. Command group 'CheckPage' is run to check for) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 543.1734015748031652 Td
+(page overflow.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 524.2379685039369406 Td
+(.DrawTextWrapped  0  %_CurrentY%  %_PageWidth%  CheckPage  %myLongText%) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 499.9734015748031197 Td
+(Substitution variables can be used in the text. In this example, no command group is run to check for) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 486.7072598425196475 Td
+(page overflow.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 467.7718267716535365 Td
+(.DrawTextWrapped  15  30  *none  Who does number %number% work for?) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 449.0064724409448331 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 435.7403307086613609 Td
+(DrawText, DrawTextBox, SetFontName, SetFontSize, SetFontStyle, SetTextColour) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 409.4758425196849885 Td
+(ForEachPage) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 396.1970236220471975 Td
+(Run one or more groups of commands for each page that has been created so far. This) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 382.9308818897637252 Td
+(can be used for several purposes, including: to run at the end of the report to .) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 363.9954488188975574 Td
+(* Printing a footer "Page 1 of 4" on each page.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 345.0600157480315033 Td
+(* Printing a debug grid on each page.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 326.2946614173227999 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 313.0285196850393277 Td
+(.ForEachPage Group1, Group2...etc) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 294.2631653543306811 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 280.9970236220472088 Td
+(Group\(s\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 280.9970236220472088 Td
+(Zero or more groups to be processed on each page) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 262.2316692913384486 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 248.96552755905509 Td
+(Variable _LastResult is always set to '1'. The current page will be set to the last page.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 230.2001732283464435 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 216.9340314960629712 Td
+(Execute the commands in the 'footer' group on each page:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 197.9985984251967466 Td
+(.ForEachPage Footer) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 173.7340314960629257 Td
+(Print a debug grid on each page \(which is specified in the group called 'DrawDebug'\):) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 154.7985984251968148 Td
+(.ForEachPage DrawDebug) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 15 of 27) Tj
+ET
+endstream
+endobj
+33 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 34 0 R
+>>
+endobj
+34 0 obj
+<<
+/Length 6506
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 786.3703307086614132 Td
+(IfBlank) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 773.0915118110235653 Td
+(Tests a given variable and if it is blank then process a given command. This can be used to process one) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 759.825370078740093 Td
+(or more groups of commands using the 'do' command or perform some other action, such as setting the) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 746.5592283464566208 Td
+(value of a variable.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 727.7938740157479742 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 714.527732283464502 Td
+(.IfBlank  VariableName  Command) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 695.7623779527558554 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 682.4962362204723831 Td
+(VariableName) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 682.4962362204723831 Td
+(The name of the variable to check. This does not need to be surrounded) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 669.2300944881889109 Td
+(by percentage signs unless the name of the actual variable to check is) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 655.9639527559054386 Td
+(given in the variable name parameter.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 642.69781102362208 Td
+(Command) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 642.69781102362208 Td
+(The command to execute if the given variable is blank.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 623.9324566929133198 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 610.6663149606299612 Td
+(The variable _LastResult is set to '-1' if the variable is not blank, otherwise the result of the) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 597.4001732283463753 Td
+(last command processed by this command.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 578.6348188976378424 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 565.3686771653542564 Td
+(Print a warning message if a variable called 'MyHeading' is blank \(or not defined\):) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 546.4332440944881455 Td
+(.IfBlank MyHeading  .DrawText  0  %_CurrentY%  *** No heading provided **) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 522.1686771653543246 Td
+(Process the groups 'CloseSection' and 'NewSection' if the variable called 'more' is blank) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 508.9025354330707955 Td
+(\(or not defined\):) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 489.9671023622046846 Td
+(.IfBlank  MORE  .Do  CloseSection  NewSection) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 465.7025354330708637 Td
+(Process the groups 'CloseSection' and 'NewSection' if the variable whose name is stored) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 452.4363937007873915 Td
+(in the variable named 'varname' is blank \(or not defined\):) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 433.5009606299212237 Td
+(.IfBlank  %VarName%  .Do  CloseSection NewSection) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 414.7356062992125203 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 401.469464566929048 Td
+(IfGt, IfNotBlank) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 375.2049763779526756 Td
+(IfGt) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 361.9261574803149415 Td
+(Compares two variables and if the first one is greater then the second then process a given command.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 348.6600157480314124 Td
+(This can be used to process one or more groups of commands using the 'do' command or perform some) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 335.3938740157479401 Td
+(other action, such as setting the value of a variable. If either of the variables are not numbers then a) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 322.1277322834645247 Td
+(string comparison is made.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 303.3623779527558781 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 290.0962362204724059 Td
+(.IfGt  Value1  Value2  Command) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 271.3308818897637593 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 258.0647401574801734 Td
+(Value1,) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 258.0647401574801734 Td
+(The values to compare. These can either be constants or values of) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 244.7985984251968148 Td
+(Value2) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 244.7985984251968148 Td
+(variables using substitution.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 231.5324566929133425 Td
+(Command) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 231.5324566929133425 Td
+(The command to execute if the first value is greater than the second.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 212.767102362204696 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 199.50096062992111 Td
+(The variable _LastResult is set to '0' if the first variable is less than or equal to the second, otherwise) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 186.2348188976377514 Td
+(_LastResult is set to the result of the last command processed by this command.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 167.2993858267716405 Td
+(No action is taken if the two variables have the same value or if the second value is greater than the) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 154.0332440944881682 Td
+(first.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 135.267889763779408 Td
+(Comparison of string values is case sensitive.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 116.5025354330707614 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 103.2363937007874028 Td
+(Set the value of variable 'highest' to the greater of values of variables 'counter1' and 'counter2'.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 84.3009606299211782 Td
+(.SetVar  highest  %counter2%) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 71.034818897637706 Td
+(.IfGt  %counter1%  %counter2%  .SetVar  highest  %counter1%) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 16 of 27) Tj
+ET
+endstream
+endobj
+35 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 36 0 R
+>>
+endobj
+36 0 obj
+<<
+/Length 5744
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 14 Tf
+14. TL
+1. 0. 0. rg
+42.5196850393700814 785.370299212598411 Td
+(IfGt \(Continued\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 766.4300944881889563 Td
+(Process the groups 'CloseSection' and 'ApprovalRequired' if the value of the variable 'errorCount' is) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 753.1639527559054841 Td
+(more than 3.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 734.2285196850393731 Td
+(.IfGt  3  %errorCount%  .Do  CloseSection  ApprovalRequired) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 715.4631653543307266 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 702.1970236220472543 Td
+(IfBlank, IfNotBlank) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 675.9325354330708251 Td
+(IfNotBlank) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 662.6537165354329773 Td
+(Tests a given variable and if it is not blank then process a given command. This can be) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 649.3875748031496187 Td
+(used to process one or more groups of commands using the 'do' command.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 630.6222204724408584 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 617.3560787401574999 Td
+(.IfNotBlank  VariableName  Command) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 598.5907244094487396 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 585.324582677165381 Td
+(VariableName) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 585.324582677165381 Td
+(The name of the variable to check. This does not need to be surrounded) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 572.0584409448817951 Td
+(by percentage signs unless the name of the actual variable to check is) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 558.7922992125984365 Td
+(given in the variable name parameter.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 545.5261574803148505 Td
+(Command) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 545.5261574803148505 Td
+(The command to execute if the given variable is not blank.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 526.7608031496063177 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 513.4946614173227317 Td
+(The variable _LastResult is set to '-1' if the variable is blank, otherwise the result of the) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 500.2285196850393163 Td
+(last command processed by this command.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 481.4631653543306697 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 468.1970236220472543 Td
+(Print text stored in the variable called 'MyHeading' if it is not blank:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 449.2615905511810865 Td
+(.IfNotBlank MyHeading .DrawText 0 %_CurrentY% %MyHeading%) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 424.9970236220472088 Td
+(Process the groups 'continued' and 'AddPage' if the variable called 'more' is not blank:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 406.0615905511810411 Td
+(.IfNotBlank MORE .Do continued AddPage) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 381.7970236220471634 Td
+(Process the groups 'continued' and 'AddPage' if the variable whose name is stored in the) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 368.5308818897636911 Td
+(variable named 'varname' is not blank:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 349.5954488188975802 Td
+(.IfNotBlank %VarName% .Do continued AddPage) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 330.8300944881889336 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 317.5639527559054613 Td
+(IgGt, IfBlank) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 291.2994645669290321 Td
+(incCurrentX) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 278.020645669291298 Td
+(Increment \(or decrement\) the JsPdfDynamo maintained _CurrentX variable.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 259.2552913385826514 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 245.9891496062991791 Td
+(.incCurrentX Value Value \(etc\)) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 227.2237952755904189 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 213.9576535433070603 Td
+(Value) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 213.9576535433070603 Td
+(One or more values to increment the _CurrentX variable by. These can be) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 200.6915118110235881 Td
+(constants or substitution variables.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 181.9261574803149415 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 168.6600157480313555 Td
+(The _CurrentX variable can be decremented by using a negative value.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 149.894661417322709 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 136.6285196850393504 Td
+(Increase the value of the _CurrentX variable by 2.4mm:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 117.6930866141731258 Td
+(.incCurrentX  2.4) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 93.4285196850394186 Td
+(Decrease the value of the _CurrentX variable by the width of the last text written:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 74.4930866141730803 Td
+(.DrawText  %_CurrentX%  %_CurrentY%  Here's some text) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 61.2269448818897217 Td
+(.incCurrentX  -%_LastObjectWidth%) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 17 of 27) Tj
+ET
+endstream
+endobj
+37 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 38 0 R
+>>
+endobj
+38 0 obj
+<<
+/Length 5294
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 14 Tf
+14. TL
+1. 0. 0. rg
+42.5196850393700814 785.370299212598411 Td
+(incCurrentX \(Continued\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 766.4300944881889563 Td
+(Multiple values can be used to increase the value of the _CurrentX variable by 8mm:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 747.4946614173228454 Td
+(.incCurrentX  5  1  2) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 728.7293070866141989 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 715.4631653543307266 Td
+(incCurrentY, setCurrentX, setCurrentY, Variables) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 689.1986771653542974 Td
+(incCurrentY) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 675.9198582677164495 Td
+(Increment \(or decrement\) the JsPdfDynamo maintained _CurrentY variable.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 657.154503937007803 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 643.8883622047244444 Td
+(.incCurrentY Value Value \(etc\)) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 625.1230078740156841 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 611.8568661417322119 Td
+(Value) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 611.8568661417322119 Td
+(One or more values to increment the _CurrentY variable by. These can be) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 598.5907244094487396 Td
+(constants or substitution variables.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 579.8253700787402067 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 566.5592283464566208 Td
+(The _CurrentY variable can be decremented by using a negative value.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 547.7938740157479742 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 534.527732283464502 Td
+(Increase the value of the _CurrentY variable by 5mm:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 515.592299212598391 Td
+(.incCurrentY  5) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 491.3277322834645133 Td
+(Decrease the value of the _CurrentY variable by the current font height:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 472.3922992125984024 Td
+(.incCurrentY  -%_FontHeight%) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 448.1277322834645247 Td
+(Multiple values can be used to increase the value of the _CurrentY variable by 8mm:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 429.1922992125984138 Td
+(.incCurrentY  5  1  2) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 410.4269448818897104 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 397.1608031496062949 Td
+(incCurrentX, setCurrentX, setCurrentY, Variables) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 370.8963149606299226 Td
+(Include \(NodeJs Only\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 357.6174960629920747 Td
+(Load commands from a text file in the file system. The loaded commands may also load other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 344.3513543307086593 Td
+(commands. The text file  may contain individual commands or groups of commands. Commands not) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 331.085212598425187 Td
+(within a group will be executed.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 312.3198582677165405 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 299.0537165354329545 Td
+(.Include FileName) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 280.288362204724308 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 267.0222204724409494 Td
+(FileName) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 267.0222204724409494 Td
+(The path and name of the file to be included.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 248.2568661417321891 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 234.9907244094487169 Td
+(The variable _LastResult is set to '1' if the file is found or '0' if the file could not be found or opened.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 221.7245826771652446 Td
+(opened. Note that the _LastResult of any commands run by the include are not available and should) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 208.4584409448817723 Td
+(be saved to variables within the included file if required.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 189.6930866141732395 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 176.4269448818896535 Td
+(Include the template file StdReportLayout.txt:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 157.4915118110235426 Td
+(.Include ./StdReportLayout.txt) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 133.2269448818897217 Td
+(Include the template file specified in the 'ReportType' variable:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 114.2915118110234971 Td
+(.Include /tmplates/%ReportType%) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 95.5261574803149642 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 82.2600157480313783 Td
+(IncludeUrl) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 18 of 27) Tj
+ET
+endstream
+endobj
+39 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 40 0 R
+>>
+endobj
+40 0 obj
+<<
+/Length 5815
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 786.3703307086614132 Td
+(IncludeUrl \(Browser Only\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 773.0915118110235653 Td
+(To be documented.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 754.3261574803149188 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 741.0600157480314465 Td
+(Include) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 714.795527559055131 Td
+(IncVar) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 701.5167086614172831 Td
+(Increment \(or decrement\) the value of a variable by one or more values.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 682.7513543307086366 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 669.4852125984251643 Td
+(.IncVar Variable Value Value \(etc\)) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 650.7198582677165177 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 637.4537165354330455 Td
+(Variable) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 637.4537165354330455 Td
+(The name of the variable to update. This is not usually a substitution variable,) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 624.1875748031495732 Td
+(but it can be, or contain substitution variables. The variable must exist.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 610.9214330708661009 Td
+(Value) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 610.9214330708661009 Td
+(One or more values to increment the variable by. These can be constants or) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 597.6552913385826287 Td
+(substitution variables.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 578.8899370078739821 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 565.6237952755905098 Td
+(Variable _LastResult is set to '1' if a valid variable name is provided, otherwise it is set to '0'.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 552.3576535433070376 Td
+(The JsPdfDynamo maintained variables \(those whose name starts with an underscore\) can not) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 539.0915118110235653 Td
+(be changed by this command.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 520.1560787401574544 Td
+(A variable can be decremented by using a negative value.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 501.2206456692912866 Td
+(The variable name may itself be, or contain a variable.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 482.45529133858264 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 469.1891496062991678 Td
+(Increase the value of the variable 'LineNo' from '3' to '4':) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 450.253716535433 Td
+(.SetVar LineNo  3) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 436.9875748031496414 Td
+(.IncVar LineNo  1) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 412.72300787401565 Td
+(Decrease the value of 'Weight3' from '78.6' to '77.2':) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 393.7875748031495959 Td
+(.SetVar index  3) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 380.5214330708661237 Td
+(.SetVar Weight%index%  78.6) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 367.2552913385825946 Td
+(.IncVar Weight%index%  -1.4) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 342.9907244094487737 Td
+(Multiple values can be used to increase value of 'total' from 0 to 4.55) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 324.0552913385826059 Td
+(.SetVar Total  0) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 310.7891496062991337 Td
+(.IncVar  Total  5  -2.5  2.05) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 281.0253700787401385 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 267.7592283464566663 Td
+(CopyVar, MultVar, SetVar) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 241.494740157480237 Td
+(MultVar) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 228.2159212598423892 Td
+(Multiple the value of a variable by one or more factors.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 209.4505669291338563 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 196.1844251968503841 Td
+(.MultVar Variable Value Value \(etc\)) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 177.4190708661416238 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 164.1529291338581515 Td
+(Variable) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 164.1529291338581515 Td
+(The name of the variable to update. This is not usually a substitution variable,) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 150.886787401574793 Td
+(but it can be, or contain substitution variables. The variable must exist.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 137.6206456692913207 Td
+(Value) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 137.6206456692913207 Td
+(One or more values to multiple the variable by. These can be constants or) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 124.3545039370078484 Td
+(substitution variables.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 105.5891496062990882 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 92.3230078740156159 Td
+(Variable _LastResult is set to '1' if a valid variable name is provided, otherwise it is set to '0'.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 79.0568661417321437 Td
+(The JsPdfDynamo maintained variables \(those whose name starts with an underscore\) can not) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 65.7907244094487851 Td
+(be changed by this command.) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 19 of 27) Tj
+ET
+endstream
+endobj
+41 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 42 0 R
+>>
+endobj
+42 0 obj
+<<
+/Length 4830
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 14 Tf
+14. TL
+1. 0. 0. rg
+42.5196850393700814 785.370299212598411 Td
+(MultVar \(Continued\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 766.4300944881889563 Td
+(The variable name may itself be, or contain a variable.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 747.6647401574803098 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 734.3985984251968375 Td
+(Multiple the value of the variable 'Total' by '4':) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 715.4631653543307266 Td
+(.SetVar Total  3) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 702.1970236220472543 Td
+(.MultVar Total  4) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 677.9324566929133198 Td
+(Decrease the value of 'Weight6' by half from '78.6' to '39.3':) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 658.9970236220472088 Td
+(.SetVar index  6) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 645.7308818897637366 Td
+(.SetVar Weight%index%  78.6) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 632.4647401574802643 Td
+(.MultVar Weight%index%  0.5) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 608.2001732283464435 Td
+(Multiple values can be used to increase value of 'total' from 1 to 5) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 589.2647401574803325 Td
+(.SetVar Total  1) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 575.9985984251968603 Td
+(.MultVar Total  10  -0.5  -1) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 546.2348188976377514 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 532.9686771653543929 Td
+(CopyVar, IncVar, SetVar) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 506.7041889763779068 Td
+(SetCurrentX) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 493.4253700787401158 Td
+(Set the current left position. This value can be retrieved using the system maintained) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 480.1592283464566435 Td
+(_CurrentX variable.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 461.393874015747997 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 448.1277322834645247 Td
+(.setCurrentX Value) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 429.3623779527558213 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 416.096236220472349 Td
+(Value) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 416.096236220472349 Td
+(The value to assign to the current left position, expressed in millimeters.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 397.3308818897637593 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 384.0647401574802871 Td
+(Set the current left position :) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 365.1293070866141193 Td
+(.setCurrentX 15) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 340.8647401574802416 Td
+(Use a substitution variable to set the current left position:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 321.9293070866141306 Td
+(.setCurrentX %myIndent%) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 303.1639527559054841 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 289.8978110236220118 Td
+(incCurrentX, setCurrentY, Variables) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 263.6333228346455826 Td
+(SetCurrentY) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 250.3545039370077347 Td
+(Set the current top \(vertical\) position. This value can be retrieved using the system maintained) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 237.0883622047243762 Td
+(_CurrentY variable.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 218.3230078740157296 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 205.0568661417322573 Td
+(.setCurrentY Value) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 186.2915118110234971 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 173.0253700787400248 Td
+(Value) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 173.0253700787400248 Td
+(The value to assign to the current top position, expressed in millimeters.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 154.260015748031492 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 140.9938740157480197 Td
+(Set the current top position :) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 122.0584409448817951 Td
+(.setCurrentY  14) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 97.7938740157479742 Td
+(Use a substitution variable to set the current top position:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 78.8584409448817496 Td
+(.setCurrentY  %previousSavedTop%) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 20 of 27) Tj
+ET
+endstream
+endobj
+43 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 44 0 R
+>>
+endobj
+44 0 obj
+<<
+/Length 5080
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 14 Tf
+14. TL
+1. 0. 0. rg
+42.5196850393700814 785.370299212598411 Td
+(SetCurrentY \(Continued\)) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 766.4300944881889563 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 753.1639527559054841 Td
+(incCurrentY, setCurrentX, Variables) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 726.8994645669290549 Td
+(SetDocumentInfo) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 713.6206456692913207 Td
+(Set the value of one of the PDF properties) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 694.8552913385826741 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 681.5891496062992019 Td
+(.SetDocumentInfo Property Value) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 662.8237952755905553 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 649.5576535433070831 Td
+(Property) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 649.5576535433070831 Td
+(One of the following values: Application, Author, Creator, CreationDate, Keywords,) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 636.2915118110236108 Td
+(ModDate, Producer, Subject or Title.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 623.0253700787401385 Td
+(Value) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 623.0253700787401385 Td
+(The value to set the property to. For CreationDate and ModDate this must) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 609.7592283464566663 Td
+(either be in the format of yyyy-mm-dd or blank.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 590.9938740157480197 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 577.7277322834645474 Td
+(Variable _LastResult is set to '1' if a valid property is specified, otherwise it is set to '0'.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 558.9623779527557872 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 545.6962362204724286 Td
+(.SetDocumentInfo Author 12th Level) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 526.7608031496063177 Td
+(.SetDocumentInfo Title Weekly Status Report %ReportDate%) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 500.4963149606298884 Td
+(SetFillColour) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 487.2174960629920974 Td
+(Set the fill colour of subsequent boxes drawn with the DrawBox command.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 468.4521417322834509 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 455.1859999999999218 Td
+(.SetFillColor Red Green Blue) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 436.4206456692913321 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 423.154503937007803 Td
+(Red) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 423.154503937007803 Td
+(The amount of red in the colour, represented as a number in the range) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 409.8883622047243307 Td
+(of  0 to 255) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 396.6222204724409153 Td
+(Green) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 396.6222204724409153 Td
+(The amount of green in the colour, represented as a number in the range) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 383.356078740157443 Td
+(of  0 to 255) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 370.0899370078739707 Td
+(Blue) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 370.0899370078739707 Td
+(The amount of blue in the colour, represented as a number in the range) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 356.8237952755904985 Td
+(of  0 to 255) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 338.0584409448817951 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 324.7922992125984365 Td
+(Colours are specified in the RGB style using three numbers in the range of 0 to 255,) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 311.5261574803149642 Td
+(representing the amount of red, green and blue in the final colour.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 292.5907244094487396 Td
+(The variable _LastResult is set to '1' by this command.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 273.825370078740093 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 260.5592283464566208 Td
+(Set the colour of subsequent filled boxes to be grey:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 241.6237952755905098 Td
+(.SetLineColour 200 200 200) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 217.359228346456689 Td
+(Set the colour of subsequent filled boxes to be green:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 198.4237952755904644 Td
+(.SetLineColour 0 180 0) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 179.6584409448818178 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 166.3922992125983455 Td
+(DrawBox, SetLineColour) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 21 of 27) Tj
+ET
+endstream
+endobj
+45 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 46 0 R
+>>
+endobj
+46 0 obj
+<<
+/Length 6243
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 786.3703307086614132 Td
+(SetFontName) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 773.0915118110235653 Td
+(To be documented.) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 757.8254488188975984 Td
+(SetFontSize) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 744.5466299212598642 Td
+(To be documented.) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 729.2805669291337836 Td
+(SetFontStyle) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 716.0017480314960494 Td
+(Apply the typographical emphasis for the current font. For example, normal, bold or italic.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 702.7356062992125771 Td
+(Subsequent output of text will continue to use this emphasis until changed by another) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 689.4694645669291049 Td
+(SetFontStyle command.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 670.7041102362204583 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 657.4379685039369861 Td
+(.SetFontStyle  fontStyle) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 638.6726141732283395 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 625.4064724409448672 Td
+(fontStyle) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 625.4064724409448672 Td
+(The typographical emphasis to apply:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 606.4710393700786426 Td
+(-) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 606.4710393700786426 Td
+(Normal - Normal text \(no typographical emphasis\)) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+150.236220472440948 593.204897637795284 Td
+(-) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+155.9055118110236435 593.204897637795284 Td
+(Bold - Bold text) Tj
+ET
+BT
+/F3 11 Tf
+11. TL
+0. g
+150.236220472440948 579.9387559055116981 Td
+(-) Tj
+ET
+BT
+/F3 11 Tf
+11. TL
+0. g
+155.9055118110236435 579.9387559055116981 Td
+(Italic - Italic text) Tj
+ET
+BT
+/F4 11 Tf
+11. TL
+0. g
+150.236220472440948 566.6726141732283395 Td
+(-) Tj
+ET
+BT
+/F4 11 Tf
+11. TL
+0. g
+155.9055118110236435 566.6726141732283395 Td
+(BoldItalic - Bold and italic text) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 547.9072598425195793 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 534.6411181102362207 Td
+(The font style name is not case sensitive so can be either upper, lower or mixed case.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 515.7056850393701097 Td
+(If a valid font style is provided the variable _LastResult is set to '1' otherwise the current typographical) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 502.4395433070865806 Td
+(emphasis is unchanged and _LastResult is set to '0'.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 483.6741889763779341 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 470.4080472440944618 Td
+(Set the emphasis of subsequent text to be italic:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 451.472614173228294 Td
+(.SetFontStyle  italic) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 427.2080472440944732 Td
+(Set a variable named 'BoldText' and then use this variable to set the emphasis of subsequent text to) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 413.9419055118109441 Td
+(be bold:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 395.0064724409448331 Td
+(.SetVar  BoldText bold) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 381.7403307086614177 Td
+(.SetFontStyle  %BoldText%) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 362.9749763779527143 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 349.708834645669242 Td
+(DrawTextBox, DrawText, SetFontType, SetFontSize, SetTextColour) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 323.4443464566928697 Td
+(SetLineColour) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 310.1655275590551355 Td
+(Set the colour of subsequent lines drawn with the DrawBox and DrawLine commands.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 291.4001732283463753 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 278.134031496062903 Td
+(.SetLineColor Red Green Blue) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 259.3686771653542564 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 246.1025354330707842 Td
+(Red) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 246.1025354330707842 Td
+(The amount of red in the colour, represented as a number in the range) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 232.8363937007873119 Td
+(of  0 to 255) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 219.5702519685038396 Td
+(Green) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 219.5702519685038396 Td
+(The amount of green in the colour, represented as a number in the range) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 206.3041102362203674 Td
+(of  0 to 255) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 193.0379685039368951 Td
+(Blue) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 193.0379685039368951 Td
+(The amount of blue in the colour, represented as a number in the range) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 179.7718267716535365 Td
+(of  0 to 255) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 161.0064724409447763 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 147.740330708661304 Td
+(Colours are specified in the RGB style using three numbers in the range of 0 to 255,) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 134.4741889763778318 Td
+(representing the amount of red, green and blue in the final colour.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 115.5387559055117208 Td
+(The variable _LastResult is set to '1' by this command.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 96.7734015748030743 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 83.5072598425197157 Td
+(Set the colour of subsequent lines to be black:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 64.5718267716533774 Td
+(.SetLineColour 0 0 0) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 22 of 27) Tj
+ET
+endstream
+endobj
+47 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 48 0 R
+>>
+endobj
+48 0 obj
+<<
+/Length 5835
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 14 Tf
+14. TL
+1. 0. 0. rg
+42.5196850393700814 785.370299212598411 Td
+(SetLineColour \(Continued\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 766.4300944881889563 Td
+(Set the colour of subsequent lines to be blue:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 747.4946614173228454 Td
+(.SetLineColour 0 0 200) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 728.7293070866141989 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 715.4631653543307266 Td
+(DrawBox, DrawLine, SetFillColour, SetLineWidth) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 689.1986771653542974 Td
+(SetLineWidth) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 675.9198582677164495 Td
+(Set the width of subsequent lines drawn with the DrawBox and DrawLine commands.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 657.154503937007803 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 643.8883622047244444 Td
+(.SetLineWidth Width) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 625.1230078740156841 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 611.8568661417322119 Td
+(Width) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 611.8568661417322119 Td
+(The width of the line\(s\) to be drawn in millimeters, as a floating point number) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 593.0915118110235653 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 579.8253700787402067 Td
+(Variable _LastResult is set to '1'. The variable _CurrentLineWidth is set to the width.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 561.0600157480314465 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 547.7938740157479742 Td
+(Set the width of subsequent lines to be 0.5mm:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 528.8584409448818633 Td
+(.SetLineWidth 0.5) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 504.5938740157479856 Td
+(Set the width of subsequent lines to be 1mm:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 485.6584409448818178 Td
+(.SetLineWidth 1) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 455.894661417322709 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 442.6285196850393504 Td
+(DrawBox, DrawLine, SetFillColour, SetLineColour) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 416.364031496062978 Td
+(SetMargin) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 403.085212598425187 Td
+(Set the page margins. The margins will remain in effect until changed by a subsequent) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 389.8190708661417148 Td
+(SetMargin command. It is not unusual to change left and right margins multiple times) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 376.5529291338582425 Td
+(on the same page.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 357.7875748031495391 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 344.5214330708660668 Td
+(.SetMargin Side Size) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 325.7560787401574771 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 312.4899370078740048 Td
+(Side) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 312.4899370078740048 Td
+(Only the first letter is used to determine the side\(s\). It is not case sensitive.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 293.5545039370077802 Td
+(L or Left - Margin from the left side of the page) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 280.288362204724308 Td
+(R or Right - Margin from the right side of the page) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 267.0222204724409494 Td
+(T or Top - Margin from the top of the page) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 253.7560787401574771 Td
+(B or Bottom - Margin from the bottom of the page) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 240.4899370078740048 Td
+(A or All - All margins, top, bottom, left and right) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 227.2237952755904189 Td
+(H or Horizontal - Both horizontal margins, left and right) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 213.9576535433070603 Td
+(V or Vertical - Both vertical margins, top and bottom) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 200.6915118110235881 Td
+(Size) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 200.6915118110235881 Td
+(The size of the margin in millimeters.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 181.9261574803149415 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 168.6600157480313555 Td
+(Variable _LastResult is set to '1' if a valid margin is provided, otherwise it is set to '0'.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 149.7245826771652446 Td
+(The appropriate variables _MarginLeft, _MarginRight, _MarginTop and _MarginBottom are) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 136.458440944881886 Td
+(set, while the _PageWidth and _Page_Height variables are re-calculated based on the) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 123.1922992125984138 Td
+(current page size and margins.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 104.2568661417320754 Td
+(Note that changing the margins does not change the values of the current position variables,) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 90.9907244094488306 Td
+(_CurrentY and _CurrentX, which are always relative to the current margins.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 72.2253700787400703 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 58.959228346456598 Td
+(Set all margins \(from now on\) to 10mm:) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 23 of 27) Tj
+ET
+endstream
+endobj
+49 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 50 0 R
+>>
+endobj
+50 0 obj
+<<
+/Length 5414
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 14 Tf
+14. TL
+1. 0. 0. rg
+42.5196850393700814 785.370299212598411 Td
+(SetMargin \(Continued\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 766.4300944881889563 Td
+(.SetMargin All 10) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 742.1655275590551355 Td
+(Set the left and right margins to 15mm:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 723.2300944881889109 Td
+(.SetMargin h 15) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 696.9656062992125953 Td
+(SetPageOrientation) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 683.6867874015747475 Td
+(Set the orientation for the current page. Usually this would be used after creating a new) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 670.4206456692912752 Td
+(page. The default orientation is portrait and the setting is retained for the current and) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 657.154503937007803 Td
+(subsequent pages or until another SetPageOrientation is specified.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 638.3891496062992701 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 625.1230078740156841 Td
+(.SetPageOrientation Orientation) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 606.3576535433070376 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 593.0915118110235653 Td
+(Orientation) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 593.0915118110235653 Td
+(Set the page orientation: P or Portrait \(default\), L or Landscape.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 574.3261574803149188 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 561.0600157480314465 Td
+(Variable _LastResult is set to '1'. The variables  _PageWidth and _Page_Height are) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 547.7938740157479742 Td
+(calculated based on the current page size and margins.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 529.0285196850393277 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 515.7623779527558554 Td
+(Set the orientation to landscape:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 496.8269448818897445 Td
+(.SetPageOrientation L) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 472.5623779527558668 Td
+(Set the orientation to portrait:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 453.626944881889699 Td
+(.SetPageOrientation Portrait) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 427.3624566929133266 Td
+(SetVar) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 414.0836377952755925 Td
+(Set the value of a variable.  Note that all variables are stored as strings.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 395.3182834645668891 Td
+(Syntax) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 382.0521417322834168 Td
+(.SetVar Variable Value) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 363.2867874015747134 Td
+(Parameters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 350.020645669291298 Td
+(Variable) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 350.020645669291298 Td
+(The name of the variable to update.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 336.7545039370078257 Td
+(Value) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 336.7545039370078257 Td
+(The value to assign to the variable. \(Optional\)) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 317.9891496062991791 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 304.7230078740157069 Td
+(Variable _LastResult is set to '1' if a valid variable name is provided, otherwise it is set to '0'.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 291.4568661417322346 Td
+(The JsPdfDynamo maintained variables \(those whose name starts with an underscore\) can) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 278.1907244094487623 Td
+(not be changed using this command.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 259.2552913385826514 Td
+(To set a variable to blank, omit the value parameter.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 240.3198582677164268 Td
+(The variable name may itself be, or contain a variable.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 221.5545039370077802 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 208.2883622047244216 Td
+(Set the variable 'Heading' to 'A mighty Good Heading':) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 189.352929133858197 Td
+(.SetVar Heading A mighty Good Heading) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 165.0883622047243762 Td
+(Save the current vertical position on the page in the variable 'top':) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 146.1529291338581515 Td
+(.SetVar Top %_CurrentY%) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 121.8883622047243307 Td
+(Set the variable 'Index' to '3':) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 102.9529291338581061 Td
+(.SetVar Index 3) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 78.6883622047242852 Td
+(Set the variable 'Item7' to the current value of the variable 'Description', given that the) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 65.4222204724409266 Td
+(variable 'CurrentItem' has the value of '7':) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 24 of 27) Tj
+ET
+endstream
+endobj
+51 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 52 0 R
+>>
+endobj
+52 0 obj
+<<
+/Length 631
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 14 Tf
+14. TL
+1. 0. 0. rg
+42.5196850393700814 785.370299212598411 Td
+(SetVar \(Continued\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 766.4300944881889563 Td
+(.SetVar Item%CurrentItem% %Description%) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 747.6647401574803098 Td
+(See Also) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 734.3985984251968375 Td
+(CopyVar, IncVar, MultVar) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 25 of 27) Tj
+ET
+endstream
+endobj
+53 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 54 0 R
+>>
+endobj
+54 0 obj
+<<
+/Length 7031
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 16 Tf
+16. TL
+1. 0. 0. rg
+42.5196850393700814 783.3703779527559163 Td
+(5. Other Definitions) Tj
+ET
+1. 0. 0. RG
+1.4173228346456694 w
+42.5196850393700814 781.1151968503936587 m
+552.7559055118110791 781.1151968503936587 l
+S
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 762.6159999999999854 Td
+(JsPdfOptions) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 749.3371811023621376 Td
+(This object may be passed to the JsPdfDynamo constructor and can contain zero or more of the following) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 736.0710393700786653 Td
+(properties:) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 717.3056850393700188 Td
+(Properties) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 704.0395433070865465 Td
+(pageSize) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 704.0395433070865465 Td
+(A string containing one of the supported page sizes. \(Refer to the section below.\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 690.7734015748030743 Td
+(orientation) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 690.7734015748030743 Td
+(A string containing one of the valid orientation values. The first page will have this) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 677.5072598425197157 Td
+(orientation.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 664.2411181102361297 Td
+(- 'portrait' or 'p') Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 650.9749763779527711 Td
+(- 'landscape' or 'l') Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 637.7088346456691852 Td
+(unit) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 637.7088346456691852 Td
+(A string containing one of the valid unit of measure values:) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 624.4426929133858266 Td
+(- 'mm' for metric millimeters) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 611.1765511811023543 Td
+(- 'in' for imperial inches) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 597.9104094488188821 Td
+(- 'pt' for points, based on 96 points per inch.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 584.6442677165354098 Td
+(margins) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 584.6442677165354098 Td
+(An object containing zero or more of the following numeric values which will) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 571.3781259842519376 Td
+(initialise the margins. These values are measurements in the given unit of) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 558.1119842519684653 Td
+(measure.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 544.845842519684993 Td
+(- 'top') Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 531.5797007874015208 Td
+(- 'bottom') Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 518.3135590551180485 Td
+(- 'left') Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+155.9055118110236435 505.0474173228345762 Td
+(- 'right') Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 486.2820629921259865 Td
+(Examples) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 473.0159212598424574 Td
+(let options = {) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 473.0159212598424574 Td
+(pageSize: "letter",) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 459.7497795275589851 Td
+(orientation: "portrait"}) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 440.8143464566928174 Td
+(let options = {) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 440.8143464566928174 Td
+(pageSize: "a3",) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 427.5482047244093451 Td
+(margins: { top: 10, bottom: 15, left: 10, right: 10 },) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 414.2820629921259297 Td
+(orientation: "l"}) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 388.0175748031495573 Td
+(Logger Object) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 374.7387559055118231 Td
+(If a logger object is passed to the JsPdfDynamo constructor, it should implement the following methods:) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 355.9734015748031197 Td
+(Required Methods) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 342.7072598425196475 Td
+(Each of these methods should require at least one parameter followed by or more optional arguments.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 316.1749763779527029 Td
+(trace) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 316.1749763779527029 Td
+(Handle the output of the given trace message and optional arguments.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 302.9088346456692307 Td
+(debug) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 302.9088346456692307 Td
+(Handle the output of the given debug message and optional arguments.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 289.6426929133857584 Td
+(info) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 289.6426929133857584 Td
+(Handle the output of the given informational message and optional arguments.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 276.3765511811022861 Td
+(warn) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 276.3765511811022861 Td
+(Handle the output of the given warning message and optional arguments.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 263.1104094488188139 Td
+(error) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 263.1104094488188139 Td
+(Handle the output of the given error message and optional arguments.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 244.3450551181101673 Td
+(Optional Methods) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+70.8661417322834666 231.078913385826695 Td
+(logLevel\(level\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 231.078913385826695 Td
+(Configure the logger so that it only actions messages that are at this, or a higher) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+150.236220472440948 217.8127716535432228 Td
+(logging level.) Tj
+ET
+BT
+/F2 13 Tf
+13. TL
+1. 0. 0. rg
+42.5196850393700814 191.5482834645669072 Td
+(Supported Page Sizes) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 178.2694645669290594 Td
+(JsPdfDynamo implements all page sizes implemented by jsPDF with the exception of custom page sizes.) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+42.5196850393700814 165.0033228346455871 Td
+(These page sizes are described below.) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 140.7387559055117663 Td
+(ISO 216 & ISO 269 \(Metric\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 127.472614173228294 Td
+(- a0 to a10) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 114.2064724409447081 Td
+(- b0 to b10) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 100.9403307086613495 Td
+(- c0 to c10) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 82.1749763779527029 Td
+(Other) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 68.9088346456692307 Td
+(- Letter) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 55.6426929133857584 Td
+(- Ledger) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 26 of 27) Tj
+ET
+endstream
+endobj
+55 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 56 0 R
+>>
+endobj
+56 0 obj
+<<
+/Length 1212
+>>
+stream
+1.4173228346456694 w
+1. 0. 0. RG
+BT
+/F2 14 Tf
+14. TL
+1. 0. 0. rg
+42.5196850393700814 785.370299212598411 Td
+(Supported Page Sizes \(Continued\)) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 766.4300944881889563 Td
+(- Legal) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 753.1639527559054841 Td
+(- Government-letter) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 739.8978110236220118 Td
+(- Junior-legal) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 726.6316692913385396 Td
+(- Tabloid) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 713.3655275590550673 Td
+(- DL) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+99.2125984251968589 700.099385826771595 Td
+(- Credit-card) Tj
+ET
+BT
+/F2 11 Tf
+11. TL
+0. g
+56.6929133858267775 681.3340314960629485 Td
+(Notes) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 668.0678897637794762 Td
+(Page sizes can only be set on the initial creation of a JsPdfDynamo object or when adding a new) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+56.6929133858267775 654.8017480314960039 Td
+(page.) Tj
+ET
+BT
+/F2 18 Tf
+18. TL
+1. 0. 0. rg
+250.6577952755905869 801.7088976377953031 Td
+(*** Draft ***) Tj
+ET
+BT
+/F1 11 Tf
+11. TL
+0. g
+263.6477952755905676 42.5205511811021779 Td
+(Page 27 of 27) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R 29 0 R 31 0 R 33 0 R 35 0 R 37 0 R 39 0 R 41 0 R 43 0 R 45 0 R 47 0 R 49 0 R 51 0 R 53 0 R 55 0 R ]
+/Count 27
+>>
+endobj
+57 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+58 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+59 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+60 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+61 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+62 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+63 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+64 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+65 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+66 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+67 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+68 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+69 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+70 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 57 0 R
+/F2 58 0 R
+/F3 59 0 R
+/F4 60 0 R
+/F5 61 0 R
+/F6 62 0 R
+/F7 63 0 R
+/F8 64 0 R
+/F9 65 0 R
+/F10 66 0 R
+/F11 67 0 R
+/F12 68 0 R
+/F13 69 0 R
+/F14 70 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+
+71 0 obj
+<<
+/Type /Outlines
+/First 72 0 R
+/Last 120 0 R
+/Count 52
+>> 
+endobj
+
+72 0 obj
+<<
+/Title (1. Introduction)
+/Parent 71 0 R
+/Next 73 0 R
+/Dest [5 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+73 0 obj
+<<
+/Title (2. JsPdfDynamo Class)
+/Parent 71 0 R
+/Prev 72 0 R
+/Next 80 0 R
+/First 74 0 R
+/Last 79 0 R
+/Count 6
+/Dest [7 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+80 0 obj
+<<
+/Title (3. Variables)
+/Parent 71 0 R
+/Prev 73 0 R
+/Next 82 0 R
+/First 81 0 R
+/Last 81 0 R
+/Count 1
+/Dest [11 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+82 0 obj
+<<
+/Title (4. Commands)
+/Parent 71 0 R
+/Prev 80 0 R
+/Next 120 0 R
+/First 83 0 R
+/Last 119 0 R
+/Count 37
+/Dest [15 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+120 0 obj
+<<
+/Title (5. Other Definitions)
+/Parent 71 0 R
+/Prev 82 0 R
+/First 121 0 R
+/Last 123 0 R
+/Count 3
+/Dest [53 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+74 0 obj
+<<
+/Title (Constructor)
+/Parent 73 0 R
+/Next 75 0 R
+/Dest [7 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+75 0 obj
+<<
+/Title (getVariable\(\))
+/Parent 73 0 R
+/Prev 74 0 R
+/Next 76 0 R
+/Dest [7 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+76 0 obj
+<<
+/Title (prepareWrappedString\(\))
+/Parent 73 0 R
+/Prev 75 0 R
+/Next 77 0 R
+/Dest [7 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+77 0 obj
+<<
+/Title (processCommands\(\))
+/Parent 73 0 R
+/Prev 76 0 R
+/Next 78 0 R
+/Dest [9 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+78 0 obj
+<<
+/Title (toBlob\(\))
+/Parent 73 0 R
+/Prev 77 0 R
+/Next 79 0 R
+/Dest [9 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+79 0 obj
+<<
+/Title (toBlobUrl\(\))
+/Parent 73 0 R
+/Prev 78 0 R
+/Dest [9 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+81 0 obj
+<<
+/Title (System Maintained Variables)
+/Parent 80 0 R
+/Dest [11 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+83 0 obj
+<<
+/Title (AddBookmark)
+/Parent 82 0 R
+/Next 84 0 R
+/Dest [15 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+84 0 obj
+<<
+/Title (AddImageFromFile \(NodeJs Only\))
+/Parent 82 0 R
+/Prev 83 0 R
+/Next 85 0 R
+/Dest [15 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+85 0 obj
+<<
+/Title (AddImageFromUrl \(Browser Only\))
+/Parent 82 0 R
+/Prev 84 0 R
+/Next 86 0 R
+/Dest [17 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+86 0 obj
+<<
+/Title (AddPage)
+/Parent 82 0 R
+/Prev 85 0 R
+/Next 87 0 R
+/Dest [17 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+87 0 obj
+<<
+/Title (CheckPage)
+/Parent 82 0 R
+/Prev 86 0 R
+/Next 88 0 R
+/Dest [19 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+88 0 obj
+<<
+/Title (CopyVar)
+/Parent 82 0 R
+/Prev 87 0 R
+/Next 89 0 R
+/Dest [19 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+89 0 obj
+<<
+/Title (Do)
+/Parent 82 0 R
+/Prev 88 0 R
+/Next 90 0 R
+/Dest [21 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+90 0 obj
+<<
+/Title (DoRepeat)
+/Parent 82 0 R
+/Prev 89 0 R
+/Next 91 0 R
+/Dest [21 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+91 0 obj
+<<
+/Title (DrawBox)
+/Parent 82 0 R
+/Prev 90 0 R
+/Next 92 0 R
+/Dest [21 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+92 0 obj
+<<
+/Title (DrawDebugGrid)
+/Parent 82 0 R
+/Prev 91 0 R
+/Next 93 0 R
+/Dest [23 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+93 0 obj
+<<
+/Title (DrawImage)
+/Parent 82 0 R
+/Prev 92 0 R
+/Next 94 0 R
+/Dest [25 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+94 0 obj
+<<
+/Title (DrawLine)
+/Parent 82 0 R
+/Prev 93 0 R
+/Next 95 0 R
+/Dest [25 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+95 0 obj
+<<
+/Title (DrawText)
+/Parent 82 0 R
+/Prev 94 0 R
+/Next 96 0 R
+/Dest [27 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+96 0 obj
+<<
+/Title (DrawTextBox)
+/Parent 82 0 R
+/Prev 95 0 R
+/Next 97 0 R
+/Dest [29 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+97 0 obj
+<<
+/Title (DrawTextWrapped)
+/Parent 82 0 R
+/Prev 96 0 R
+/Next 98 0 R
+/Dest [29 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+98 0 obj
+<<
+/Title (ForEachPage)
+/Parent 82 0 R
+/Prev 97 0 R
+/Next 99 0 R
+/Dest [31 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+99 0 obj
+<<
+/Title (IfBlank)
+/Parent 82 0 R
+/Prev 98 0 R
+/Next 100 0 R
+/Dest [33 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+100 0 obj
+<<
+/Title (IfGt)
+/Parent 82 0 R
+/Prev 99 0 R
+/Next 101 0 R
+/Dest [33 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+101 0 obj
+<<
+/Title (IfNotBlank)
+/Parent 82 0 R
+/Prev 100 0 R
+/Next 102 0 R
+/Dest [35 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+102 0 obj
+<<
+/Title (incCurrentX)
+/Parent 82 0 R
+/Prev 101 0 R
+/Next 103 0 R
+/Dest [35 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+103 0 obj
+<<
+/Title (incCurrentY)
+/Parent 82 0 R
+/Prev 102 0 R
+/Next 104 0 R
+/Dest [37 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+104 0 obj
+<<
+/Title (Include \(NodeJs Only\))
+/Parent 82 0 R
+/Prev 103 0 R
+/Next 105 0 R
+/Dest [37 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+105 0 obj
+<<
+/Title (IncludeUrl \(Browser Only\))
+/Parent 82 0 R
+/Prev 104 0 R
+/Next 106 0 R
+/Dest [39 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+106 0 obj
+<<
+/Title (IncVar)
+/Parent 82 0 R
+/Prev 105 0 R
+/Next 107 0 R
+/Dest [39 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+107 0 obj
+<<
+/Title (MultVar)
+/Parent 82 0 R
+/Prev 106 0 R
+/Next 108 0 R
+/Dest [39 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+108 0 obj
+<<
+/Title (SetCurrentX)
+/Parent 82 0 R
+/Prev 107 0 R
+/Next 109 0 R
+/Dest [41 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+109 0 obj
+<<
+/Title (SetCurrentY)
+/Parent 82 0 R
+/Prev 108 0 R
+/Next 110 0 R
+/Dest [41 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+110 0 obj
+<<
+/Title (SetDocumentInfo)
+/Parent 82 0 R
+/Prev 109 0 R
+/Next 111 0 R
+/Dest [43 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+111 0 obj
+<<
+/Title (SetFillColour)
+/Parent 82 0 R
+/Prev 110 0 R
+/Next 112 0 R
+/Dest [43 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+112 0 obj
+<<
+/Title (SetFontName)
+/Parent 82 0 R
+/Prev 111 0 R
+/Next 113 0 R
+/Dest [45 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+113 0 obj
+<<
+/Title (SetFontSize)
+/Parent 82 0 R
+/Prev 112 0 R
+/Next 114 0 R
+/Dest [45 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+114 0 obj
+<<
+/Title (SetFontStyle)
+/Parent 82 0 R
+/Prev 113 0 R
+/Next 115 0 R
+/Dest [45 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+115 0 obj
+<<
+/Title (SetLineColour)
+/Parent 82 0 R
+/Prev 114 0 R
+/Next 116 0 R
+/Dest [45 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+116 0 obj
+<<
+/Title (SetLineWidth)
+/Parent 82 0 R
+/Prev 115 0 R
+/Next 117 0 R
+/Dest [47 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+117 0 obj
+<<
+/Title (SetMargin)
+/Parent 82 0 R
+/Prev 116 0 R
+/Next 118 0 R
+/Dest [47 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+118 0 obj
+<<
+/Title (SetPageOrientation)
+/Parent 82 0 R
+/Prev 117 0 R
+/Next 119 0 R
+/Dest [49 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+119 0 obj
+<<
+/Title (SetVar)
+/Parent 82 0 R
+/Prev 118 0 R
+/Dest [49 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+121 0 obj
+<<
+/Title (JsPdfOptions)
+/Parent 120 0 R
+/Next 122 0 R
+/Dest [53 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+122 0 obj
+<<
+/Title (Logger Object)
+/Parent 120 0 R
+/Prev 121 0 R
+/Next 123 0 R
+/Dest [53 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+123 0 obj
+<<
+/Title (Supported Page Sizes)
+/Parent 120 0 R
+/Prev 122 0 R
+/Dest [53 0 R /XYZ 0 841.8899999999999864 0]
+>> 
+endobj
+
+124 0 obj
+<<
+/Producer (jsPDF 2.5.2)
+/Title (jsPdf-Dynamo Developer's Documentation)
+/Author (Stephen Corbett)
+/Creator (jsPdf-Dynamo)
+/CreationDate (D:20240924091301+10'00')
+>>
+endobj
+125 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+/Outlines 71 0 R
+>>
+endobj
+xref
+0 126
+0000000000 65535 f 
+0000148323 00000 n 
+0000150325 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000000662 00000 n 
+0000000799 00000 n 
+0000007142 00000 n 
+0000007279 00000 n 
+0000013127 00000 n 
+0000013265 00000 n 
+0000017558 00000 n 
+0000017697 00000 n 
+0000024921 00000 n 
+0000025060 00000 n 
+0000030501 00000 n 
+0000030640 00000 n 
+0000036760 00000 n 
+0000036899 00000 n 
+0000042041 00000 n 
+0000042180 00000 n 
+0000048505 00000 n 
+0000048644 00000 n 
+0000054394 00000 n 
+0000054533 00000 n 
+0000059676 00000 n 
+0000059815 00000 n 
+0000067596 00000 n 
+0000067735 00000 n 
+0000073095 00000 n 
+0000073234 00000 n 
+0000080357 00000 n 
+0000080496 00000 n 
+0000086385 00000 n 
+0000086524 00000 n 
+0000093083 00000 n 
+0000093222 00000 n 
+0000099019 00000 n 
+0000099158 00000 n 
+0000104505 00000 n 
+0000104644 00000 n 
+0000110512 00000 n 
+0000110651 00000 n 
+0000115534 00000 n 
+0000115673 00000 n 
+0000120806 00000 n 
+0000120945 00000 n 
+0000127241 00000 n 
+0000127380 00000 n 
+0000133268 00000 n 
+0000133407 00000 n 
+0000138874 00000 n 
+0000139013 00000 n 
+0000139696 00000 n 
+0000139835 00000 n 
+0000146919 00000 n 
+0000147058 00000 n 
+0000148560 00000 n 
+0000148686 00000 n 
+0000148817 00000 n 
+0000148951 00000 n 
+0000149089 00000 n 
+0000149213 00000 n 
+0000149342 00000 n 
+0000149474 00000 n 
+0000149610 00000 n 
+0000149738 00000 n 
+0000149865 00000 n 
+0000149994 00000 n 
+0000150127 00000 n 
+0000150229 00000 n 
+0000150579 00000 n 
+0000150657 00000 n 
+0000150778 00000 n 
+0000151457 00000 n 
+0000151574 00000 n 
+0000151708 00000 n 
+0000151851 00000 n 
+0000151989 00000 n 
+0000152118 00000 n 
+0000150953 00000 n 
+0000152237 00000 n 
+0000151121 00000 n 
+0000152358 00000 n 
+0000152476 00000 n 
+0000152628 00000 n 
+0000152780 00000 n 
+0000152907 00000 n 
+0000153036 00000 n 
+0000153163 00000 n 
+0000153285 00000 n 
+0000153413 00000 n 
+0000153540 00000 n 
+0000153673 00000 n 
+0000153802 00000 n 
+0000153930 00000 n 
+0000154058 00000 n 
+0000154189 00000 n 
+0000154324 00000 n 
+0000154455 00000 n 
+0000154583 00000 n 
+0000154709 00000 n 
+0000154842 00000 n 
+0000154976 00000 n 
+0000155110 00000 n 
+0000155256 00000 n 
+0000155406 00000 n 
+0000155535 00000 n 
+0000155665 00000 n 
+0000155799 00000 n 
+0000155933 00000 n 
+0000156071 00000 n 
+0000156207 00000 n 
+0000156341 00000 n 
+0000156475 00000 n 
+0000156610 00000 n 
+0000156746 00000 n 
+0000156881 00000 n 
+0000157013 00000 n 
+0000157154 00000 n 
+0000151291 00000 n 
+0000157269 00000 n 
+0000157391 00000 n 
+0000157528 00000 n 
+0000157658 00000 n 
+0000157843 00000 n 
+trailer
+<<
+/Size 126
+/Root 125 0 R
+/Info 124 0 R
+/ID [ <FCE636827708DE684356630994953C9D> <FCE636827708DE684356630994953C9D> ]
+>>
+startxref
+157965
+%%EOF

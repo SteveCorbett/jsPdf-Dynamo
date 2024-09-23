@@ -787,7 +787,7 @@ export class JsPdfProcessor {
     if (isNaN(imageNo) || imageNo < 0 || imageNo > this._images.length - 1) {
       this.lastError = this._images.length
         ? "The image number must be in the range of 0 to " +
-          (this._images.length - 1).toString()
+        (this._images.length - 1).toString()
         : "Only one image has been loaded, the image number can only be 0";
       this.lastResult = "0";
       return;
@@ -870,7 +870,7 @@ export class JsPdfProcessor {
     this.lastResult = "1";
 
     if (lines.length > 1) {
-      this.lastError = "Text was truncated to fit within the available width";
+      this.lastError = `Text was truncated to fit within the available width (${lines[0]?.substring(0, 20)}...)`;
       this.lastResult = "0";
 
       if (lines[0]) {
@@ -905,7 +905,7 @@ export class JsPdfProcessor {
       return false;
     }
     if (isNaN(top)) {
-      this.lastError = `Vertical position '${top}' is not a number`;
+      this.lastError = `Vertical position '${top}' is not a number on page ${this._currentPageNumber}.`;
       this.lastResult = "0";
       return false;
     }
@@ -1050,9 +1050,9 @@ export class JsPdfProcessor {
       lines,
       left + this._marginLeft + horzAdjust,
       top +
-        this._marginTop +
-        adjustTop +
-        (this.fontHeight * 0.5) / this.lineHeightFactor,
+      this._marginTop +
+      adjustTop +
+      (this.fontHeight * 0.5) / this.lineHeightFactor,
       { align: horzAlign, baseline: "middle" },
     );
 
@@ -1264,9 +1264,8 @@ export class JsPdfProcessor {
       this.lastError = "Y Position resulted in negative value, adjusted to 0";
     }
     if (this.posnY > this._pageHeight) {
+      this.lastError = `Y Position ${this.posnY} exceeded page ${this._currentPageNumber} height, adjusted to page height (${this._pageHeight})`;
       this.posnY = this._pageHeight;
-      this.lastError =
-        "Y Position exceeded page height, adjusted to page height";
     }
   }
 

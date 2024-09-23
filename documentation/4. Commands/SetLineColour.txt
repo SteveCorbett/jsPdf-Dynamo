@@ -1,6 +1,6 @@
 ﻿.SetVar CommandName SetLineColour
 .Do CommandHeading
-.DrawText 0 %_CurrentY Set the colour of subsequent lines drawn with the DrawBox and DrawLine commands.
+.DrawText 0 %_CurrentY% Set the colour of subsequent lines drawn with the DrawBox and DrawLine commands.
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
