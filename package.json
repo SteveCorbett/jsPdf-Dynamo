@@ -1,8 +1,12 @@
 {
   "name": "jspdf-dynamo",
-  "version": "1.0.0",
+  "version": "1.0.0-rc1",
   "description": "Generate data driven PDFs from dynamic templates",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SteveCorbett/jsPdf-Dynamo"
+  },
   "scripts": {
     "build": "tsup",
     "build-docs": "vitest --dir ./documentation run",
@@ -26,8 +30,7 @@
   "author": "Stephen Corbett",
   "license": "MIT",
   "dependencies": {
-    "jspdf": "^2.5.1",
-    "node-fetch": "^3.3.2"
+    "jspdf": "^2.5.1"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.4",

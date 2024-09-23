@@ -1,4 +1,3 @@
-import fetch from "node-fetch";
 import { JsPdfProcessor } from "./models/jsPdfProcessor.js";
 import { AppLogger, type ILogger } from "./models/logger.js";
 import { getNextNumber, getNextString } from "./utils/utils.js";

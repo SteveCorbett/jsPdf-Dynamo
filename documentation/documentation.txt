@@ -15,7 +15,6 @@
 .SetVar halfLineGap 2.0
 .SetLineColor %black%
 
-.Do SetDefaultText
 .SetVar margins 15
 .SetVar marginB %margins%
 .IncVar marginB %_FONTHEIGHT% 0.1
@@ -57,6 +56,8 @@
 .SetVar top %_PageHeight%
 .MultVar top 0.3
 .DrawTextBox 0 %top% %_PageWidth% %_FontHeight% centered top jsPdf-Dynamo
+.DrawTextBox 0 %_CurrentY% %_PageWidth% %_FontHeight% centered top (Draft)
+.incCurrentY 2
 .SetFontSize 24
 .SetTextColour %black%
 .DrawTextBox 0 %_CurrentY% %_PageWidth% %_FontHeight% centered top User Guide
@@ -82,6 +83,12 @@
 [Footer]
 .SetVar top %_PageHeight%
 .incVar top -%_FontHeight%
+.setMargin t 7
+.setFontStyle Bold
+.setFontSize 18
+.SetTextColour red
+.ifGt %_PageNo% 1 .DrawTextBox 0 0 %_PageWidth% 8 centered centered *** Draft ***
+.Do SetDefaultText
 .ifGt %_PageNo% 1 .DrawTextBox 0 %top% %_PageWidth% %_FontHeight% centered centered Page %_PageNo% of %LastPage%
 [End]
 
@@ -138,13 +145,15 @@
 .IncVar cl1Width -5
 .SetVar cl1bWidth %_PageWidth%
 .IncVar cl1bWidth -10
+.SetVar cl1cWidth %_PageWidth%
+.IncVar cl1cWidth -15
 .SetVar cl2Width %_PageWidth%
 .IncVar cl2Width -33
 .SetVar cl3Width %_PageWidth%
 .IncVar cl3Width -35
 .ifNotBlank CommandLine1 .DrawTextWrapped 5 %top% %cl1Width% CommandCheckPage %CommandLine1%
 .ifNotBlank CommandLine1b .DrawTextWrapped 10 %top% %cl1bWidth% CommandCheckPage %CommandLine1b%
-.ifNotBlank CommandLine1c .DrawText 15 %top% %CommandLine1c%
+.ifNotBlank CommandLine1c .DrawTextWrapped 15 %top% %cl1cWidth% CommandCheckPage  %CommandLine1c%
 .ifNotBlank CommandLine2 .DrawTextWrapped 33 %top% %cl2Width% CommandCheckPage %CommandLine2%
 .ifNotBlank CommandLine3 .DrawTextWrapped 35 %top% %cl3Width% CommandCheckPage %CommandLine3%
 .SetVar CommandLine1
@@ -189,7 +198,7 @@
 .SetVar CommandLine2
 [End]
 
-.do SetMargins TitlePage
+.do SetMargins TitlePage SetDefaultText
 .SetDocumentInfo Title jsPdf-Dynamo Developer's Documentation 
 .SetDocumentInfo Author Stephen Corbett
 .SetDocumentInfo Creator jsPdf-Dynamo
@@ -232,6 +241,7 @@
 .Include ./Documentation/4. Commands/incCurrentX.txt
 .Include ./Documentation/4. Commands/incCurrentY.txt
 .Include ./Documentation/4. Commands/Include.txt
+.Include ./Documentation/4. Commands/IncludeUrl.txt
 .Include ./Documentation/4. Commands/IncVar.txt
 .Include ./Documentation/4. Commands/MultVar.txt    
 .Include ./Documentation/4. Commands/setCurrentX.txt

@@ -6,7 +6,7 @@
 .DrawTextWrapped 0 %_CurrentY% %_PageWidth% *None %text%
 .incCurrentY  %_FONTHEIGHT%
 
-.SetVar text jsPdf-Dynamo can be used with browser or NodeJs JavaScript or TypeScript applications.
+.SetVar text jsPdf-Dynamo can be used with browser or NodeJs applications written in JavaScript or TypeScript.
 .DrawTextWrapped 0 %_CurrentY% %_PageWidth% *None %text%
 .incCurrentY  %_FONTHEIGHT%
 
@@ -51,7 +51,7 @@
 .SetVar text Output is driven by a series of plain text 'commands'. These
 .SetVar text %text% commands can be provided as a list of strings from multiple sources, 
 .SetVar text %text% including the JavaScript or TypeScript application, or loaded from
-.SetVar text %text% 'templates' retrieved from a URL (browser or NodeJs) or from local text 
+.SetVar text %text% 'templates' retrieved from a URL (browser only) or from local text 
 .SetVar text %text% files (NodeJs only).
 .DrawTextWrapped 10 %top% %width% *None %text%
 
