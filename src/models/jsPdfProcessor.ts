@@ -787,7 +787,7 @@ export class JsPdfProcessor {
     if (isNaN(imageNo) || imageNo < 0 || imageNo > this._images.length - 1) {
       this.lastError = this._images.length
         ? "The image number must be in the range of 0 to " +
-        (this._images.length - 1).toString()
+          (this._images.length - 1).toString()
         : "Only one image has been loaded, the image number can only be 0";
       this.lastResult = "0";
       return;
@@ -1050,9 +1050,9 @@ export class JsPdfProcessor {
       lines,
       left + this._marginLeft + horzAdjust,
       top +
-      this._marginTop +
-      adjustTop +
-      (this.fontHeight * 0.5) / this.lineHeightFactor,
+        this._marginTop +
+        adjustTop +
+        (this.fontHeight * 0.5) / this.lineHeightFactor,
       { align: horzAlign, baseline: "middle" },
     );
 
