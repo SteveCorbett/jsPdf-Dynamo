@@ -11,6 +11,8 @@
     "examples": "vitest --dir ./examples run",
     "format": "prettier --write .",
     "lint": "tsc",
+    "local-release": "changeset version && changeset publish",
+    "prepublishOnly": "npm run ci",
     "check-format": "prettier --check .",
     "test": "vitest --dir ./src run"
   },
@@ -29,6 +31,7 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.4",
+    "@changesets/cli": "^2.27.8",
     "@types/blob-stream": "^0.1.33",
     "@types/jspdf": "^1.3.3",
     "prettier": "^3.3.3",
