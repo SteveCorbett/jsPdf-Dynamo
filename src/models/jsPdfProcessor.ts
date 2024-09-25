@@ -1,7 +1,7 @@
 import jsPDF, { type OutlineItem } from "jspdf";
 import * as fs from "fs";
 
-import { type ILogger } from "./logger.js";
+import { AppLogger, type ILogger } from "./logger.js";
 import {
   getNextNumber,
   getNextString,
@@ -32,7 +32,7 @@ export class JsPdfProcessor {
   private _variables: Map<string, string> = new Map();
   private _bookmarks: OutlineItem[] = [];
   private _images: string[] = [];
-  private _logger: ILogger;
+  private _logger: AppLogger;
 
   private _pdfDocument: jsPDF;
   public get PdfDocument(): jsPDF {
@@ -374,7 +374,7 @@ export class JsPdfProcessor {
       : -1;
   }
 
-  constructor(options: Partial<IJsPdfOptions>, logger: ILogger) {
+  constructor(options: Partial<IJsPdfOptions>, logger: AppLogger) {
     this._logger = logger;
     const optn = new JsPdfOptions(options);
     this._pdfDocument = new jsPDF(optn);
@@ -395,8 +395,11 @@ export class JsPdfProcessor {
     this._variables.set("_PAGENO", "1");
     this._variables.set("_PAGES", "1");
 
+    this.posnX = 0;
+    this.posnY = 0;
     this.spaceHoz = 0;
     this.spaceVert = 0;
+    this.currentPageNumber = 1;
 
     this.lineWidth = this.pointsToUom(mmToPoints(0.2));
     this.lineColour = "black";
@@ -1089,11 +1092,16 @@ export class JsPdfProcessor {
     }
 
     let lastObjectHeight = 0;
-    text = text.replace("\\n", " \n").replace("\\N", " \n") + " ";
+    text = text.replace(/\\[nN]/g, " \n") + " ";
+    const splitText = text.split("\n");
+    const lines: string[] = [];
+    for (let line of splitText) {
+      lines.push(...this._pdfDocument.splitTextToSize(line, maxWidth));
+    }
+    if (lines.length > splitText.length) {
+      this._logger.trace(`Text was wrapped into ${lines.length} lines`, lines);
+    }
     this.posnY = top;
-    const lines: string[] =
-      this._pdfDocument.splitTextToSize(text, maxWidth) || [];
-    this._logger.trace(`Text was wrapped into ${lines.length} lines`, lines);
 
     while (lines.length > 0) {
       if (!cmdGroup.startsWith("*")) {

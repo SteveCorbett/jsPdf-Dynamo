@@ -1,10 +1,10 @@
-﻿.SetVar CommandName SetFillColour
+﻿.SetVar CommandName SetTextColour
 .Do CommandHeading
-.DrawText 0 %_CurrentY% Set the fill colour of subsequent boxes drawn with the DrawBox command.
+.DrawText 0 %_CurrentY% Set the colour of subsequent text.
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .SetFillColor  Colour
+.SetVar CommandLine1 .SetTextColour  Colour
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters
@@ -20,22 +20,24 @@
 
 .SetVar CommandSubHeading Examples
 .Do CommandSubHeading
-.SetVar CommandLine1 Set the colour of subsequent filled boxes to be a light blue:
+.SetVar CommandLine1 Set the colour of subsequent text to be brown:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .SetFillColour  LightSkyBlue
+.SetVar CommandLine1 .SetTextColour  Brown
 .Do CommandLine2
 
 .incCurrentY %_FontHeight%
-.SetVar CommandLine1 Set the colour of subsequent filled boxes to be lime green:
+.SetVar CommandLine1 Set the colour of subsequent text to be dark blue:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .SetFillColour  #32cd32
+.SetVar CommandLine1 .SetVar myColour #00008b
+.Do CommandLine2
+.SetVar CommandLine1 .SetTextColour  %%%%myColour%%%%
 .Do CommandLine2
 
 .SetVar CommandSubHeading See Also
 .Do CommandSubHeading
-.SetVar CommandLine1 DrawBox, SetLineColour, SetTextColour
+.SetVar CommandLine1 DrawBox, SetFillColour, SetLineColour
 .Do CommandLine
 
 .incCurrentY %_FontHeight%

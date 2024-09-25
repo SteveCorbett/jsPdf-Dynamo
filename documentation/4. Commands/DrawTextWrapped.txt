@@ -1,6 +1,8 @@
 ﻿.SetVar CommandName DrawTextWrapped
 .Do CommandHeading
-.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage Draw text at the given point on the page, relative to the page margins, wrapping to one or more new lines as required. 
+.SetVar CommandLine1 Draw text at the given point on the page, relative to the page margins, wrapping to one or more new lines
+.SetVar CommandLine1 %CommandLine1% as required, and handling overflowing of pages.
+.Do CommandLine1
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
@@ -10,15 +12,13 @@
 .SetVar CommandSubHeading Parameters
 .Do CommandSubHeading
 .SetVar CommandLine1 Left
-.SetVar CommandLine2 The position of the text, measured from the left margin, in millimeters.
+.SetVar CommandLine2 The position of the text, measured from the left margin.
 .Do CommandLine2
 .SetVar CommandLine1 Top
-.SetVar CommandLine2 The position of the text, measured from the top margin, in millimeters.
+.SetVar CommandLine2 The position of the text, measured from the top margin.
 .Do CommandLine2
 .SetVar CommandLine1 MaxWidth
-.SetVar CommandLine2 The maximum width of text to be output on each line before wrapping to
-.Do CommandLine2
-.SetVar CommandLine2 a new line.
+.SetVar CommandLine2 The maximum width of text to be output on each line before wrapping to a new line.
 .Do CommandLine2
 .SetVar CommandLine1 CmdGroup
 .SetVar CommandLine2 The name of a command group (macro) to be run prior to the output of 
@@ -34,19 +34,42 @@
 .SetVar CommandSubHeading Other
 .Do CommandSubHeading
 
-.SetVar LongText The variable _LastResult is always set to '1'. \n\nThe variable _CurrentX is set to the starting left position
-.SetVar LongText %LongText% of the text plus the maximum width of the text plus the value of the current horizontal spacing variable, _SpaceHoz.
-.SetVar LongText %LongText% \n\nThe variable _CurrentY is incremented by the height plus the value of the current vertical
-.SetVar LongText %LongText% spacing variable, _SpaceVert, for each line written. \n\nThe variable _LastObjectHeight is
-.SetVar LongText %LongText% updated to reflect the height of the text just output. \n\nThe variable _LastObjectWidth is set
-.SetVar LongText %LongText% to the value of the MaxWidth parameter.
-.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %LongText%
+.SetVar text Variable _LastResult is set to '0' if the position falls outside of the 
+.SetVar text %text% page margins, or the box area would not fit within the 
+.SetVar text %text% page margins, otherwise it is set to '1'.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %halfLineGap%
+.SetVar text The variable _CurrentX is set to the starting left position of the text plus
+.SetVar text %text% the maximum width of the text plus the value of the current horizontal spacing variable, _SpaceHoz.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %halfLineGap%
+.SetVar text The variable _CurrentY is incremented by the height plus the value of the current vertical
+.SetVar text %text% spacing variable, _SpaceVert, for each line written.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %halfLineGap%
+.SetVar text The variable _LastObjectHeight is updated to reflect the height of the text just output.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
 
-.SetVar CommandSubHeading Example
+.incCurrentY %halfLineGap%
+.SetVar text The variable _LastObjectWidth is set to the value of the MaxWidth parameter.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+
+.incCurrentY %halfLineGap%
+.SetVar text If a command group is specified it should check that there is sufficient space to draw each line of text,
+.SetVar text %text% otherwise any text that would extend beyond the bottom page margin will not be drawn.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+
+.incCurrentY %halfLineGap%
+.SetVar text If '*None' is provided for the command group, a check is made before drawing each line of text
+.SetVar text %text% that there is sufficient space on the page. If there is not space, a new page is added to the
+.SetVar text %text% document before drawing the line of text.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+
+.SetVar CommandSubHeading Examples
 .Do CommandSubHeading
-.SetVar LongText Output some text contained in the variable 'myLongText', over one or more lines starting from the left margin
-.SetVar LongText %LongText% at the current vertical position on the page. Command group 'CheckPage' is run to check for page overflow.
-.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %LongText%
+.SetVar text Output some text contained in the variable 'myLongText', over one or more lines starting from the left margin
+.SetVar text %text% at the current vertical position on the page. Command group 'CheckPage' is run to check for page overflow.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
 .incCurrentY %halfLineGap%
 .SetVar CommandLine1 .DrawTextWrapped  0  %%%%_CurrentY%%%%  %%%%_PageWidth%%%%  CheckPage  %%%%myLongText%%%%
 .Do CommandLine2

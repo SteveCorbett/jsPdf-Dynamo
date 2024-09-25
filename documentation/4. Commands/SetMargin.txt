@@ -32,7 +32,7 @@
 .SetVar CommandLine2 V or Vertical - Both vertical margins, top and bottom
 .Do CommandLine2
 .SetVar CommandLine1 Size
-.SetVar CommandLine2 The size of the margin in millimeters.
+.SetVar CommandLine2 The size of the margin.
 .Do CommandLine2
 
 .SetVar CommandSubHeading Other

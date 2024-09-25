@@ -73,7 +73,7 @@
 .SetVar CommandLine1 %CommandLine1% location on the page.
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .DrawImage %%%%ImageId%%%% %%%%_CurrentX%%%% %%%%_CurrentY%%%%
+.SetVar CommandLine1 .DrawImage  %%%%ImageId%%%%  %%%%_CurrentX%%%%  %%%%_CurrentY%%%%
 .Do CommandLine2
 .incCurrentY %_FontHeight%
 .SetVar CommandLine1 Assuming that the unit of measure is millimeters, 
@@ -81,7 +81,7 @@
 .SetVar CommandLine1 %CommandLine1% the page and scaled proportionally to be 10mm high.
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .DrawImage %%%%LogoId%%%% 0 0 0 10
+.SetVar CommandLine1 .DrawImage  %%%%LogoId%%%%  0  0  0  10
 .Do CommandLine2
 .incCurrentY %_FontHeight%
 

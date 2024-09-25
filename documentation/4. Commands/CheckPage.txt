@@ -38,7 +38,7 @@
 .SetVar CommandLine1 %CommandLine1% is within 10mm of the bottom margin and create a new page if so:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .CheckPage 10
+.SetVar CommandLine1 .CheckPage  10
 .Do CommandLine2
 .incCurrentY %_FontHeight%
 
@@ -47,6 +47,6 @@
 .SetVar CommandLine1 %CommandLine1% process the groups PageFooter, AddPage and GroupHeadingContinued:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .CHECKPAGE 1.25 PageFooter AddPage GroupHeadingContinued
+.SetVar CommandLine1 .CHECKPAGE  1.25  PageFooter  AddPage  GroupHeadingContinued
 .Do CommandLine2
 .incCurrentY %_FontHeight%

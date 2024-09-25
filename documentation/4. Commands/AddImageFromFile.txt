@@ -44,11 +44,11 @@
 .SetVar CommandLine1 Read a logo from an image and add it to the top left of the current page.
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .AddImageFromFile ../images/myLogo.jpg
+.SetVar CommandLine1 .AddImageFromFile  ../images/myLogo.jpg
 .Do CommandLine2
-.SetVar CommandLine1 .SetVar IdLogo %%%%_LastImageAdded%%%% 
+.SetVar CommandLine1 .SetVar  IdLogo  %%%%_LastImageAdded%%%% 
 .Do CommandLine2
-.SetVar CommandLine1 .DrawImage %%%%IdLogo%%%% 0 0 1
+.SetVar CommandLine1 .DrawImage  %%%%IdLogo%%%%  0  0  1
 .Do CommandLine2
 .incCurrentY %_FontHeight%
 

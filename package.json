@@ -1,6 +1,6 @@
 {
   "name": "jspdf-dynamo",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Generate data driven PDFs from dynamic templates",
   "main": "dist/index.js",
   "repository": {
@@ -33,7 +33,7 @@
   "author": "Stephen Corbett <corbett@corbtech.com.au> (https://corbtech.com.au)",
   "license": "MIT",
   "dependencies": {
-    "jspdf": "^2.5.1"
+    "jspdf": "^2.5.2"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.4",

@@ -4,7 +4,6 @@ export interface ILogger {
   info: (message: string, ...args: any | null) => void;
   trace: (message: string, ...args: any | null) => void;
   warn: (message: string, ...args: any | null) => void;
-  logLevel?: (newLevel: string | number) => void;
 }
 
 export class AppLogger implements ILogger {
@@ -65,9 +64,6 @@ export class AppLogger implements ILogger {
       if (newLevel >= 0 && newLevel <= 5) {
         this._logLevel = newLevel;
       }
-    }
-    if (this._logger.logLevel) {
-      this._logger.logLevel(this._logLevel);
     }
   }
 

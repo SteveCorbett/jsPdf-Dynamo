@@ -6,7 +6,7 @@ import type { IJsPdfOptions } from "./models/jsPdfOptions.js";
 export class JsPdfDynamo {
   #groups: { [key: string]: string[] } = {};
   _processor: JsPdfProcessor;
-  #appLogger: ILogger;
+  #appLogger: AppLogger;
 
   constructor(
     options: Partial<IJsPdfOptions> = {},
@@ -28,12 +28,11 @@ export class JsPdfDynamo {
     }
   }
 
-  public toBlobUrl(): string | null {
+  public toBlobUrl(fileName?: string): string | null {
     try {
-      const result = this._processor.PdfDocument.output(
-        "bloburi",
-        "application/pdf",
-      );
+      const result = this._processor.PdfDocument.output("bloburi", {
+        filename: fileName,
+      });
       return result;
     } catch {
       this.#appLogger.warn(
@@ -43,7 +42,7 @@ export class JsPdfDynamo {
     }
   }
 
-  public getVar(variableName: string): string | null {
+  public getVariable(variableName: string): string | null {
     return this._processor
       ? (this._processor.getVar(variableName) ?? null)
       : null;
@@ -51,7 +50,7 @@ export class JsPdfDynamo {
 
   private prepareNewPdf(
     options: Partial<IJsPdfOptions>,
-    logger: ILogger,
+    logger: AppLogger,
   ): JsPdfProcessor {
     return new JsPdfProcessor(options, logger);
   }
@@ -210,8 +209,8 @@ export class JsPdfDynamo {
       case "Include".toLowerCase():
         await this.includeFile(processor, parameters);
         return;
-      case "IncludeUri".toLowerCase():
-        await this.includeUri(processor, parameters);
+      case "IncludeUrl".toLowerCase():
+        await this.includeUrl(processor, parameters);
         return;
       case "IncVar".toLowerCase():
         processor.incVar(parameters);
@@ -358,12 +357,12 @@ export class JsPdfDynamo {
     }
   }
 
-  private async includeUri(
+  private async includeUrl(
     processor: JsPdfProcessor,
     input: string,
   ): Promise<void> {
     const subs = processor.substitute(input);
-    this.#appLogger.debug(`.includeUri ${subs}`);
+    this.#appLogger.debug(`.includeUrl ${subs}`);
 
     try {
       const response = await fetch(subs, {

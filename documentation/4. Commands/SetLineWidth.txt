@@ -10,7 +10,7 @@
 .SetVar CommandSubHeading Parameters
 .Do CommandSubHeading
 .SetVar CommandLine1 Width
-.SetVar CommandLine2 The width of the line(s) to be drawn in millimeters, as a floating point number
+.SetVar CommandLine2 The width of the line(s) to be drawn, as a floating point number
 .Do CommandLine2
 
 .SetVar CommandSubHeading Other

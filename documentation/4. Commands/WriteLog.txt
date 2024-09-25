@@ -1,0 +1,56 @@
+.SetVar CommandName WriteLog
+.Do CommandHeading
+.SetVar CommandLine1 Writes a message to the logger with the given severity level.
+.Do CommandLine
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .WriteLog  severity  message
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 severity
+.SetVar CommandLine2 The severity of the message expressed as either a number (0-4) or as text 
+.SetVar CommandLine2 %CommandLine2% (trace, debug, info, warn, error).
+.Do CommandLine2
+.SetVar CommandLine1 message
+.SetVar CommandLine2 The message to be written.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 The variable _LastResult is not changed by this command.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 The output of the message is dependent on the minimum log level of the (optional) logger
+.SetVar CommandLine1 %CommandLine1% passed into the JsPdfDynamo object on creation, and the current
+.SetVar CommandLine1 %CommandLine1% minimum log level set by the SetLogLevel command.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 The initial minimum log level of the JsPdfDynamo class is 'info'.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Write an informational message:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .WriteLog  info  Job completed!
+.Do CommandLine2
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Write a debug message showing the current value of the variable 'amount':
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetLogLevel  debug
+.Do CommandLine2
+.SetVar CommandLine1 .WriteLog  debug  The current amount is %%%%amount%%%%
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 SetLogLevel
+.Do CommandLine
+
+.incCurrentY %_FontHeight%

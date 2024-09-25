@@ -1,0 +1,7 @@
+.SetVar ChapterName Commands
+.do ChapterHeading
+
+.SetVar text Note that unless otherwise stated, all distances and positions are in the unit of measure specified
+.SetVar text %text% when creating the JsPdfDynamo object.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %_FontHeight%

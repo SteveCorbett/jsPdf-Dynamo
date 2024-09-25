@@ -34,14 +34,14 @@
 .SetVar CommandLine1 Print text stored in the variable called 'MyHeading' if it is not blank:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .IfNotBlank MyHeading .DrawText 0 %%%%_CurrentY%%%% %%%%MyHeading%%%%
+.SetVar CommandLine1 .IfNotBlank  MyHeading  .DrawText  0  %%%%_CurrentY%%%%  %%%%MyHeading%%%%
 .Do CommandLine2
 .incCurrentY %_FontHeight%
 
 .SetVar CommandLine1 Process the groups 'continued' and 'AddPage' if the variable called 'more' is not blank:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .IfNotBlank MORE .Do continued AddPage
+.SetVar CommandLine1 .IfNotBlank  MORE  .Do  continued  AddPage
 .Do CommandLine2
 .incCurrentY %_FontHeight%
 
@@ -50,7 +50,7 @@
 .SetVar CommandLine1 variable named 'varname' is not blank:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .IfNotBlank %%%%VarName%%%% .Do continued AddPage
+.SetVar CommandLine1 .IfNotBlank  %%%%VarName%%%%  .Do  continued  AddPage
 .Do CommandLine2
 
 .SetVar CommandSubHeading See Also

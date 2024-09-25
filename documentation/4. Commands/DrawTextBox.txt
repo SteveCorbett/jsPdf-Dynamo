@@ -6,7 +6,7 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .DrawTextBox Left Top Width Height Horizontal-alignment Vertical-alignment Text
+.SetVar CommandLine1 .DrawTextBox  Left  Top  Width  Height  Horizontal-alignment  Vertical-alignment  Text
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters

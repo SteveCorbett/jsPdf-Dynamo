@@ -4,7 +4,7 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .SetDocumentInfo Property Value
+.SetVar CommandLine1 .SetDocumentInfo  Property  Value
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters
@@ -27,9 +27,9 @@
 
 .SetVar CommandSubHeading Examples
 .Do CommandSubHeading
-.SetVar CommandLine1 .SetDocumentInfo Author 12th Level
+.SetVar CommandLine1 .SetDocumentInfo  Author  ACME Automation Inc.
 .Do CommandLine2
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .SetDocumentInfo Title Weekly Status Report %%%%ReportDate%%%%
+.SetVar CommandLine1 .SetDocumentInfo  Title  Weekly Status Report %%%%ReportDate%%%%
 .Do CommandLine2
 .incCurrentY %_FontHeight%

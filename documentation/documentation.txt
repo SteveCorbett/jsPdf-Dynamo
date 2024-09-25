@@ -81,14 +81,14 @@
 [End]
 
 [Footer]
-.SetVar top %_PageHeight%
-.incVar top -%_FontHeight%
 .setMargin t 7
 .setFontStyle Bold
 .setFontSize 18
 .SetTextColour red
 .ifGt %_PageNo% 1 .DrawTextBox 0 0 %_PageWidth% 8 centered centered *** Draft ***
-.Do SetDefaultText
+.Do SetDefaultText  
+.SetVar top %_PageHeight%
+.incVar top -%_FontHeight%
 .ifGt %_PageNo% 1 .DrawTextBox 0 %top% %_PageWidth% %_FontHeight% centered centered Page %_PageNo% of %LastPage%
 [End]
 
@@ -216,9 +216,7 @@
 .Include ./Documentation/3. Variables/Introduction.txt
 .Include ./Documentation/3. Variables/SystemMaintained.txt
 
-.SetVar ChapterName Commands
-.do ChapterHeading
-
+.Include ./Documentation/4. Commands/Commands.txt
 .Include ./Documentation/4. Commands/AddBookmark.txt
 .Include ./Documentation/4. Commands/AddImageFromFile.txt
 .Include ./Documentation/4. Commands/AddImageFromUrl.txt
@@ -244,6 +242,8 @@
 .Include ./Documentation/4. Commands/IncludeUrl.txt
 .Include ./Documentation/4. Commands/IncVar.txt
 .Include ./Documentation/4. Commands/MultVar.txt    
+.Include ./Documentation/4. Commands/SavePdf.txt    
+.Include ./Documentation/4. Commands/SelectPage.txt    
 .Include ./Documentation/4. Commands/setCurrentX.txt
 .Include ./Documentation/4. Commands/setCurrentY.txt
 .Include ./Documentation/4. Commands/SetDocumentInfo.txt
@@ -253,18 +253,17 @@
 .Include ./Documentation/4. Commands/SetFontStyle.txt
 .Include ./Documentation/4. Commands/SetLineColour.txt
 .Include ./Documentation/4. Commands/SetLineWidth.txt
+.Include ./Documentation/4. Commands/SetLogLevel.txt
 .Include ./Documentation/4. Commands/SetMargin.txt
-.Include ./Documentation/4. Commands/SetPageOrientation.txt
+.Include ./Documentation/4. Commands/SetTextColour.txt
 .Include ./Documentation/4. Commands/SetVar.txt
+.Include ./Documentation/4. Commands/WriteLog.txt
 
 .SetVar ChapterName Other Definitions
 .do ChapterHeading
 .Include ./Documentation/5. Other Definitions/jsPdfOptions.txt
 .Include ./Documentation/5. Other Definitions/logger.txt
 .Include ./Documentation/5. Other Definitions/pageSizes.txt
-
-.Include ./Documentation/6. Other/PossibleEnhancements.txt
-.Include ./Documentation/6. Other/To Be Documented.txt
 
 .SetVar LastPage %_PageNo%
 .Do SetMargins SetDefaultText

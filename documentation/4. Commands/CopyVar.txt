@@ -33,7 +33,7 @@
 .SetVar CommandLine1 Set the variable 'SaveCurrentTop' to the system maintained variable '_CurrentY':
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .CopyVar SaveCurrentTop  _CurrentY
+.SetVar CommandLine1 .CopyVar  SaveCurrentTop  _CurrentY
 .Do CommandLine2
 .incCurrentY %_FontHeight%
 

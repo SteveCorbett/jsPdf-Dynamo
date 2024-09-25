@@ -35,6 +35,6 @@
 .SetVar CommandLine1 Create a new page with a page size of 'A4':
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .AddPage A4
+.SetVar CommandLine1 .AddPage  a4
 .Do CommandLine2
 .incCurrentY %_FontHeight%

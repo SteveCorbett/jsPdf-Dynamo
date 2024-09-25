@@ -12,12 +12,12 @@
 .SetVar CommandSubHeading Parameters
 .Do CommandSubHeading
 .SetVar CommandLine1 Value
-.SetVar CommandLine2 The value to assign to the current top position, expressed in millimeters.
+.SetVar CommandLine2 The value to assign to the current top position.
 .Do CommandLine2
 
 .SetVar CommandSubHeading Examples
 .Do CommandSubHeading
-.SetVar CommandLine1 Set the current top position :
+.SetVar CommandLine1 Set the current top position:
 .Do CommandLine
 .incCurrentY %halfLineGap%
 .SetVar CommandLine1 .setCurrentY  14

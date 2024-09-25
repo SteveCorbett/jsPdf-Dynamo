@@ -34,13 +34,13 @@
 .SetVar CommandLine1 %CommandLine1% 'Detail', 'Footer', 'Heading', 'Detail', 'Footer', 'Heading', 'Detail, 'Footer'):
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .DoRepeat 3 Heading Detail Footer
+.SetVar CommandLine1 .DoRepeat  3  Heading Detail Footer
 .Do CommandLine2
 .incCurrentY %_FontHeight%
 .SetVar CommandLine1 Process the group PrintAddress the number of times stored in the variable 'AddressCount':
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .DoRepeat %%%%AddressCount%%%% PrintAddress
+.SetVar CommandLine1 .DoRepeat  %%%%AddressCount%%%%  PrintAddress
 .Do CommandLine2
 .incCurrentY %_FontHeight%
 
