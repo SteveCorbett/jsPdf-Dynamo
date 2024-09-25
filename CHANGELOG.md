@@ -1,5 +1,11 @@
 # jspdf-dynamo
 
+## 1.0.4
+
+### Patch Changes
+
+- 9867176: Minor fixes and documentation updates
+
 ## 1.0.0
 
 ### Patch Changes
