@@ -1,5 +1,11 @@
 # jspdf-dynamo
 
+## 1.0.5
+
+### Patch Changes
+
+- 2fcbce5: Added DivVar and \_ImageAspect
+
 ## 1.0.4
 
 ### Patch Changes
