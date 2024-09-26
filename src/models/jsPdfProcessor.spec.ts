@@ -10,7 +10,7 @@ describe("jsPdfProcessor", () => {
 
   describe("commands", () => {
     beforeEach(() => {
-      logger = new Logger({ name: "jsPdfProcessor.spec" });
+      logger = new Logger({ name: "jsPdfProcessor.spec", minLevel: 4 });
       dynamo = new JsPdfDynamo(
         { pageSize: "a4", orientation: "portrait" },
         logger,
@@ -455,59 +455,12 @@ describe("jsPdfProcessor", () => {
         processor.setVar("_var1 value1");
         expect(processor.getVar("_lastResult")).toBe("0");
       });
+      it("should be able to hand a variable name that is a substitution variable", () => {
+        processor.setVar("value1 ABC");
+        processor.setVar("varName value1");
+        processor.setVar("%varName% DEF");
+        expect(processor.getVar("value1")).toBe("DEF");
+      });
     });
   });
-
-  // describe("utility functions", () => {
-  //     describe("getNextWrappedLine", () => {
-  //         it("should return the next wrapped line", () => {
-  //             const input = "This is a test string.";
-  //             const result = processor["getNextWrappedLine"](input, 45);
-  //             expect(result.first, `Input "${input}" is ${processor["getTextWidth"](input)} pts wide`).toBe("This is a");
-  //             expect(result.rest).toBe("test string.");
-  //         });
-
-  //         it("should return the next wrapped line with a new line", () => {
-  //             const input = "This is\\n a test string.";
-  //             const result = processor["getNextWrappedLine"](input, 35);
-  //             expect(result.first, `Input "${input}" is ${processor["getTextWidth"](input)} pts wide`).toBe("This is");
-  //             expect(result.rest).toBe("a test string.");
-  //         });
-
-  //         it("should return the entire line if it fits", () => {
-  //             const input = "This is a test string.";
-  //             const result = processor["getNextWrappedLine"](input, 140);
-  //             expect(result.first).toBe("This is a test string.");
-  //             expect(result.rest).toBe("");
-  //         });
-
-  //         it("should return leading blanks", () => {
-  //             const input = "  This is a test string.";
-  //             const result = processor["getNextWrappedLine"](input, 34);
-  //             expect(result.first).toBe("  This");
-  //             expect(result.rest).toBe("is a test string.");
-  //         });
-
-  //         it("should not break on the leading blanks", () => {
-  //             const input = "  This-is-a-test-string.";
-  //             const result = processor["getNextWrappedLine"](input, 34);
-  //             expect(result.first).toBe("  This-");
-  //             expect(result.rest).toBe("is-a-test-string.");
-  //         });
-
-  //         it("should handle a string starting with a new line", () => {
-  //             const input = "\\nThis is a test string.";
-  //             const result = processor["getNextWrappedLine"](input, 34);
-  //             expect(result.first).toBe("");
-  //             expect(result.rest).toBe("This is a test string.");
-  //         });
-
-  //         it("should handle a string starting with two new lines", () => {
-  //             const input = "\\n\\nThis is a test string.";
-  //             const result = processor["getNextWrappedLine"](input, 34);
-  //             expect(result.first).toBe("");
-  //             expect(result.rest).toBe("\\nThis is a test string.");
-  //         });
-  //     });
-  // });
 });

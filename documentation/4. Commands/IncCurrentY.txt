@@ -5,7 +5,7 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .incCurrentY Value Value (etc)
+.SetVar CommandLine1 .incCurrentY  Value  Value  (etc)
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters

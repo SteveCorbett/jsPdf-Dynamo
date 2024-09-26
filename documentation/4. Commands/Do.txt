@@ -3,7 +3,7 @@
 .DrawText 0 %_CurrentY% 'Do' (ie process) one or more groups of commands that have already been defined.
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .Do Group1, Group2...etc
+.SetVar CommandLine1 .Do  Group1,  Group2...etc
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters
@@ -23,13 +23,13 @@
 .SetVar CommandLine1 Process the groups 'NewChapter' and 'NewSection':
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .Do NewChapter NewSection
+.SetVar CommandLine1 .Do  NewChapter  NewSection
 .Do CommandLine2
 .incCurrentY %_FontHeight%
 .SetVar CommandLine1 Process the group whose name is stored in the variable 'NextGroup':
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .Do %%%%NextGroup%%%%
+.SetVar CommandLine1 .Do  %%%%NextGroup%%%%
 .Do CommandLine2
 .incCurrentY %_FontHeight%
 

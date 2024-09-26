@@ -6,7 +6,7 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .AddBookmark ParentId PageNo Text
+.SetVar CommandLine1 .AddBookmark  ParentId  PageNo  Text
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters
@@ -34,14 +34,14 @@
 .SetVar CommandLine1 Create a top level bookmark entry for the current page:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .AddBookmark 0 %%%%_PAGENO%%%% Chapter one of the document 
+.SetVar CommandLine1 .AddBookmark  0  %%%%_PAGENO%%%%  Chapter one of the document 
 .Do CommandLine2
-.SetVar CommandLine1 .SetVar Chapter1 %%%%_LastResult%%%% 
+.SetVar CommandLine1 .SetVar  Chapter1  %%%%_LastResult%%%% 
 .Do CommandLine2
 .incCurrentY %_FontHeight%
 .SetVar CommandLine1 Create a child bookmark entry for the chapter 1:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .AddBookmark %%%%Chapter1%%%% %%%%_PAGENO%%%% Chapter one, Paragraph 1 
+.SetVar CommandLine1 .AddBookmark  %%%%Chapter1%%%%  %%%%_PAGENO%%%%  Chapter one, Paragraph 1 
 .Do CommandLine2
 .incCurrentY %_FontHeight%

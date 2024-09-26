@@ -1,4 +1,4 @@
-﻿.SetVar CommandName SetFontSize
+﻿.SetVar CommandName SavePdf
 .Do CommandHeading
 .SetVar CommandLine1 To be documented.
 .Do CommandLine

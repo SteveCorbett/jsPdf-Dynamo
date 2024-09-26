@@ -7,7 +7,7 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .DrawDebugGrid Option
+.SetVar CommandLine1 .DrawDebugGrid  Option
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters
@@ -24,14 +24,14 @@
 .SetVar CommandLine1 %CommandLine1% down to the bottom right.
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .DrawDebugGrid Page
+.SetVar CommandLine1 .DrawDebugGrid  Page
 .Do CommandLine2
 .incCurrentY %_FontHeight%
 
 .SetVar CommandLine1 Draws a debug grid on all pages of the document, within the current margin settings.
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .ForEachPage .DrawDebugGrid
+.SetVar CommandLine1 .ForEachPage  .DrawDebugGrid
 .Do CommandLine2
 
 .SetVar CommandSubHeading See Also

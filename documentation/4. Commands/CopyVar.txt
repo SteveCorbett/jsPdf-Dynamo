@@ -6,7 +6,7 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .CopyVar CopyTo CopyFrom
+.SetVar CommandLine1 .CopyVar  CopyTo  CopyFrom
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters
@@ -33,7 +33,7 @@
 .SetVar CommandLine1 Set the variable 'SaveCurrentTop' to the system maintained variable '_CurrentY':
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .CopyVar SaveCurrentTop  _CurrentY
+.SetVar CommandLine1 .CopyVar  SaveCurrentTop  _CurrentY
 .Do CommandLine2
 .incCurrentY %_FontHeight%
 
@@ -47,6 +47,6 @@
 
 .SetVar CommandSubHeading See Also
 .Do CommandSubHeading
-.SetVar CommandLine1 IncVar, MultVar, SetVar
+.SetVar CommandLine1 DivVar, IncVar, MultVar, SetVar
 .Do CommandLine2
 .incCurrentY %_FontHeight%

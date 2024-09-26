@@ -4,7 +4,7 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .DrawBox Left Top Width Height Option
+.SetVar CommandLine1 .DrawBox  Left  Top  Width  Height  Option
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters
@@ -48,7 +48,7 @@
 .SetVar CommandLine1 %CommandLine1% spans the width of the page and is 14.5 millimeters high.
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .DrawBox 0 %%%%_CurrentY%%%% %%%%_PageWidth%%%% 14.5 0
+.SetVar CommandLine1 .DrawBox  0  %%%%_CurrentY%%%%  %%%%_PageWidth%%%%  14.5  0
 .Do CommandLine2
 
 .incCurrentY %_FontHeight%
@@ -57,7 +57,7 @@
 .SetVar CommandLine1 %CommandLine1% of the page and is ½ inch high.
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .DrawBox 0 0 %%%%_PageWidth%%%% 0.5 2
+.SetVar CommandLine1 .DrawBox  0  0  %%%%_PageWidth%%%%  0.5  2
 .Do CommandLine2
 
 .SetVar CommandSubHeading See Also

@@ -1,26 +1,26 @@
 ﻿.SetVar CommandName Include (NodeJs Only)
 .Do CommandHeading
 .SetVar CommandLine1 Load commands from a text file in the file system. The loaded commands may also load other commands.
-.SetVar CommandLine1 %CommandLine1% The text file  may contain individual commands or groups of commands.
+.SetVar CommandLine1 %CommandLine1% The text file may contain individual commands or groups of commands.
 .SetVar CommandLine1 %CommandLine1% Commands not within a group will be executed.
 .Do CommandLine
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .Include FileName
+.SetVar CommandLine1 .Include  FileName
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters
 .Do CommandSubHeading
 .SetVar CommandLine1 FileName
-.SetVar CommandLine2 The path and name of the file to be included.
+.SetVar CommandLine2 The path and name of the file from which the commands will be loaded.
 .Do CommandLine2
 
 .SetVar CommandSubHeading Other
 .Do CommandSubHeading
-.SetVar CommandLine1 The variable _LastResult is set to '1' if the file is found or '0' if the file could not be found or opened. 
-.SetVar CommandLine1 %CommandLine1% opened. Note that the _LastResult of any commands run by the include are not available and
-.SetVar CommandLine1 %CommandLine1% should be saved to variables within the included file if required. 
+.SetVar CommandLine1 The variable _LastResult is set to '1' if the file is found or '0' if the file could not be found or
+.SetVar CommandLine1 %CommandLine1% opened. Note that the _LastResult of any commands run by the include are not available
+.SetVar CommandLine1 %CommandLine1% and should be saved to variables within the included file if required. 
 .Do CommandLine
 
 .SetVar CommandSubHeading Examples
@@ -28,13 +28,13 @@
 .SetVar CommandLine1 Include the template file StdReportLayout.txt:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .Include ./StdReportLayout.txt
+.SetVar CommandLine1 .Include  ./StdReportLayout.txt
 .Do CommandLine2
 .incCurrentY %_FontHeight%
 .SetVar CommandLine1 Include the template file specified in the 'ReportType' variable:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .Include /tmplates/%%%%ReportType%%%%
+.SetVar CommandLine1 .Include  /tmplates/%%%%ReportType%%%%
 .Do CommandLine2
 
 .SetVar CommandSubHeading See Also

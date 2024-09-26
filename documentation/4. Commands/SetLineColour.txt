@@ -4,55 +4,37 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .SetLineColor Red Green Blue
+.SetVar CommandLine1 .SetLineColor  Colour
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters
 .Do CommandSubHeading
-.SetVar CommandLine1 Red
-.SetVar CommandLine2 The amount of red in the colour, represented as a number in the range
-.Do CommandLine2
-.SetVar CommandLine2 of  0 to 255
-.Do CommandLine2
-.SetVar CommandLine1 Green
-.SetVar CommandLine2 The amount of green in the colour, represented as a number in the range
-.Do CommandLine2
-.SetVar CommandLine2 of  0 to 255
-.Do CommandLine2
-.SetVar CommandLine1 Blue
-.SetVar CommandLine2 The amount of blue in the colour, represented as a number in the range
-.Do CommandLine2
-.SetVar CommandLine2 of  0 to 255
-.Do CommandLine2
+.SetVar CommandLine1 Colour
+.SetVar CommandLine2 Either a CSS named colour or a hexadecimal RGB colour.
 
 .SetVar CommandSubHeading Other
 .Do CommandSubHeading
-.SetVar CommandLine1 Colours are specified in the RGB style using three numbers in the range of 0 to 255,
-.Do CommandLine
-.SetVar CommandLine1 representing the amount of red, green and blue in the final colour.
-.Do CommandLine
-.incCurrentY %halfLineGap%
 .SetVar CommandLine1 The variable _LastResult is set to '1' by this command.
 .Do CommandLine
 
 .SetVar CommandSubHeading Examples
 .Do CommandSubHeading
-.SetVar CommandLine1 Set the colour of subsequent lines to be black:
+.SetVar CommandLine1 Set the colour of subsequent lines to be purple:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .SetLineColour 0 0 0
+.SetVar CommandLine1 .SetLineColour  purple
 .Do CommandLine2
 
 .incCurrentY %_FontHeight%
-.SetVar CommandLine1 Set the colour of subsequent lines to be blue:
+.SetVar CommandLine1 Set the colour of subsequent lines to be bright pink:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .SetLineColour 0 0 200
+.SetVar CommandLine1 .SetLineColour  #ff69b4
 .Do CommandLine2
 
 .SetVar CommandSubHeading See Also
 .Do CommandSubHeading
-.SetVar CommandLine1 DrawBox, DrawLine, SetFillColour, SetLineWidth
+.SetVar CommandLine1 DrawBox, DrawLine, SetFillColour, SetLineWidth, SetTextColour
 .Do CommandLine
 
 .incCurrentY %_FontHeight%

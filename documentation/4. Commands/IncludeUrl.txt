@@ -1,7 +1,49 @@
 ﻿.SetVar CommandName IncludeUrl (Browser Only)
 .Do CommandHeading
-.SetVar CommandLine1 To be documented.
+
+.SetVar CommandLine1 Load commands from a document fetched over http. The loaded commands may also load other
+.SetVar CommandLine1 %CommandLine1% commands. The document should be a text file containing individual commands
+.SetVar CommandLine1 %CommandLine1% or groups of commands. Commands not within a group will be executed.
 .Do CommandLine
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .IncludeUrl  Url
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Url
+.SetVar CommandLine2 The URL from which the commands are to be loaded.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 The variable _LastResult is set to '1' if the commands are loaded from the URL, or '0' 
+.SetVar CommandLine1 %CommandLine1% if the document at the URL could not be retrieved. Note that the
+.SetVar CommandLine1 %CommandLine1% _LastResult of any commands run by the include are not available and
+.SetVar CommandLine1 %CommandLine1% should be saved to variables within the included document if required. 
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 The document is attempted to be retrieved using a 'GET' call of the JavaScript 'fetch' method.
+.SetVar CommandLine1 %CommandLine1% If there are any special requirements to retrieve the document, for example to meet
+.SetVar CommandLine1 %CommandLine1% proxy or security requirements, then these are best handled by the calling program.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Retrieve and load the invoice template from the current applications templates directory:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .IncludeUrl  /templates/invoice.txt
+.Do CommandLine2
+.incCurrentY %_FontHeight%
+
+.SetVar CommandLine1 Retrieve and load the template file specified in the 'DocumentType' variable:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .Include  /templates/%%%%DocumentType%%%%
+.Do CommandLine2
 
 .SetVar CommandSubHeading See Also
 .Do CommandSubHeading

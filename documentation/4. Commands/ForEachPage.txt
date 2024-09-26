@@ -1,7 +1,7 @@
 ﻿.SetVar CommandName ForEachPage
 .Do CommandHeading
 .DrawText 0 %_CurrentY% Run one or more groups of commands for each page that has been created so far. This
-.SetVar CommandLine1 can be used for several purposes, including: to run at the end of the report to . 
+.SetVar CommandLine1 can be used at the end of the document generation to:
 .Do CommandLine
 .incCurrentY %halfLineGap%
 .SetVar CommandLine1 * Printing a footer "Page 1 of 4" on each page.
@@ -12,7 +12,7 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .ForEachPage Group1, Group2...etc
+.SetVar CommandLine1 .ForEachPage  Group1,  Group2...etc
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters
@@ -31,14 +31,14 @@
 .SetVar CommandLine1 Execute the commands in the 'footer' group on each page:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .ForEachPage Footer
+.SetVar CommandLine1 .ForEachPage  Footer
 .Do CommandLine2
 
 .incCurrentY %_FontHeight%
 .SetVar CommandLine1 Print a debug grid on each page (which is specified in the group called 'DrawDebug'):
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .ForEachPage DrawDebug
+.SetVar CommandLine1 .ForEachPage  DrawDebug
 .Do CommandLine2
 
 .incCurrentY %_FontHeight%

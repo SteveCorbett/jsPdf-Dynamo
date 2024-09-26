@@ -6,7 +6,7 @@ import type { IJsPdfOptions } from "./models/jsPdfOptions.js";
 export class JsPdfDynamo {
   #groups: { [key: string]: string[] } = {};
   _processor: JsPdfProcessor;
-  #appLogger: ILogger;
+  #appLogger: AppLogger;
 
   constructor(
     options: Partial<IJsPdfOptions> = {},
@@ -30,10 +30,7 @@ export class JsPdfDynamo {
 
   public toBlobUrl(): string | null {
     try {
-      const result = this._processor.PdfDocument.output(
-        "bloburi",
-        "application/pdf",
-      );
+      const result = this._processor.PdfDocument.output("bloburi");
       return result;
     } catch {
       this.#appLogger.warn(
@@ -43,7 +40,7 @@ export class JsPdfDynamo {
     }
   }
 
-  public getVar(variableName: string): string | null {
+  public getVariable(variableName: string): string | null {
     return this._processor
       ? (this._processor.getVar(variableName) ?? null)
       : null;
@@ -51,7 +48,7 @@ export class JsPdfDynamo {
 
   private prepareNewPdf(
     options: Partial<IJsPdfOptions>,
-    logger: ILogger,
+    logger: AppLogger,
   ): JsPdfProcessor {
     return new JsPdfProcessor(options, logger);
   }
@@ -76,7 +73,7 @@ export class JsPdfDynamo {
     processor: JsPdfProcessor,
     input: string[],
   ): Promise<void> {
-    let inGroupProcessing = false;
+    let inGroupLoading = false;
     let grpName = "";
     let currGroup: string[] = [];
 
@@ -87,8 +84,8 @@ export class JsPdfDynamo {
       }
 
       if (currLine.startsWith("[")) {
-        if (inGroupProcessing) {
-          inGroupProcessing = false;
+        if (inGroupLoading) {
+          inGroupLoading = false;
           this.#appLogger.debug(
             `Finished loading group ${grpName}   (${currLine})\n`,
           );
@@ -101,7 +98,7 @@ export class JsPdfDynamo {
             grpName = grpName.substring(0, iy);
           }
           grpName = grpName.trim().toLocaleUpperCase();
-          inGroupProcessing = true;
+          inGroupLoading = true;
           this.#appLogger.debug(`Loading group ${grpName}   (${currLine})\n`);
           currGroup = [];
           this.#groups[grpName] = currGroup;
@@ -109,7 +106,7 @@ export class JsPdfDynamo {
         continue;
       }
 
-      if (inGroupProcessing) {
+      if (inGroupLoading) {
         currGroup.push(currLine);
         this.#appLogger.trace(`  ${currLine}`);
         continue;
@@ -141,12 +138,6 @@ export class JsPdfDynamo {
       case "AddBookmark".toLowerCase():
         processor.addBookmark(parameters);
         return;
-      case "AddImageFromFile".toLowerCase():
-        processor.addImageFromFile(parameters);
-        return;
-      case "AddImageFromUrl".toLowerCase():
-        await processor.addImageFromUrl(parameters);
-        return;
       case "AddPage".toLowerCase():
         processor.addPage(parameters);
         return;
@@ -155,6 +146,9 @@ export class JsPdfDynamo {
         return;
       case "CopyVar".toLowerCase():
         processor.copyVar(parameters);
+        return;
+      case "DivVar".toLowerCase():
+        processor.divVar(parameters);
         return;
       case "Do".toLowerCase():
         await this.processGroups(processor, parameters);
@@ -210,11 +204,17 @@ export class JsPdfDynamo {
       case "Include".toLowerCase():
         await this.includeFile(processor, parameters);
         return;
-      case "IncludeUri".toLowerCase():
-        await this.includeUri(processor, parameters);
+      case "IncludeUrl".toLowerCase():
+        await this.includeUrl(processor, parameters);
         return;
       case "IncVar".toLowerCase():
         processor.incVar(parameters);
+        return;
+      case "LoadImageFromFile".toLowerCase():
+        processor.LoadImageFromFile(parameters);
+        return;
+      case "LoadImageFromUrl".toLowerCase():
+        await processor.LoadImageFromUrl(parameters);
         return;
       case "MultVar".toLowerCase():
         processor.multVar(parameters);
@@ -358,12 +358,12 @@ export class JsPdfDynamo {
     }
   }
 
-  private async includeUri(
+  private async includeUrl(
     processor: JsPdfProcessor,
     input: string,
   ): Promise<void> {
     const subs = processor.substitute(input);
-    this.#appLogger.debug(`.includeUri ${subs}`);
+    this.#appLogger.debug(`.includeUrl ${subs}`);
 
     try {
       const response = await fetch(subs, {

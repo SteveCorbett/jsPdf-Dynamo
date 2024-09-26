@@ -7,7 +7,7 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .DrawLine Left Top Right Bottom
+.SetVar CommandLine1 .DrawLine  Left  Top  Right  Bottom
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters
@@ -45,14 +45,14 @@
 .SetVar CommandLine1 %CommandLine1% output a vertical line 15cm from the left margin:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .DrawLine 150 0 150 %%%%_PageHeight%%%%
+.SetVar CommandLine1 .DrawLine  150  0  150  %%%%_PageHeight%%%%
 .Do CommandLine2
 
 .incCurrentY %_FontHeight%
 .SetVar CommandLine1 Output a horizontal line at the current vertical position on the page:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .DrawLine 0 %%%%_CurrentY%%%% %%%%_PageWidth%%%% %%%%_CurrentY%%%% 
+.SetVar CommandLine1 .DrawLine  0  %%%%_CurrentY%%%%  %%%%_PageWidth%%%%  %%%%_CurrentY%%%% 
 .Do CommandLine2
 
 .SetVar CommandSubHeading See Also
