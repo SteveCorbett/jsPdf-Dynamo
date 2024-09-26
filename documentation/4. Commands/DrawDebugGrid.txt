@@ -7,7 +7,7 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .DrawDebugGrid Option
+.SetVar CommandLine1 .DrawDebugGrid  Option
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters

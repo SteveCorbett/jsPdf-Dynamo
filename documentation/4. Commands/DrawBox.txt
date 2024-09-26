@@ -4,7 +4,7 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .DrawBox Left Top Width Height Option
+.SetVar CommandLine1 .DrawBox  Left  Top  Width  Height  Option
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters

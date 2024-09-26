@@ -4,15 +4,17 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .AddPage {PageSize}
+.SetVar CommandLine1 .AddPage  PageSize  Orientation
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters
 .Do CommandSubHeading
 .SetVar CommandLine1 PageSize
-.SetVar CommandLine2 The page size: A3, A4, Letter, etc. Optional and if not supplied the
+.SetVar CommandLine2 The size of the page to be added: A3, A4, Letter, etc. Optional and if not supplied, the current page size is used.
 .Do CommandLine2
-.SetVar CommandLine2 current page size is used
+.SetVar CommandLine1 Orientation
+.SetVar CommandLine2 The orientation of the page to be added: 'portrait' or 'landscape'. Optional and if not supplied, the
+.SetVar CommandLine2 %CommandLine2% current orientation is used. The orientation can be abbreviated to the first letter, 'p' or 'l'.
 .Do CommandLine2
 
 .SetVar CommandSubHeading Other

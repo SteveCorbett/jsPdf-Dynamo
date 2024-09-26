@@ -1,4 +1,4 @@
-.SetVar CommandName AddImageFromFile (NodeJs Only)
+.SetVar CommandName LoadImageFromFile (NodeJs Only)
 .Do CommandHeading
 .SetVar text Reads an image from the file system and stores it for later output. JsPdfDynamo can use all image types
 .SetVar text %text% that jsPDF supports, including: BMP, GIF, JPEG, PNG, TIFF and WEBP
@@ -7,7 +7,7 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .AddImageFromFile FileName
+.SetVar CommandLine1 .LoadImageFromFile  FileName
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters
@@ -44,7 +44,7 @@
 .SetVar CommandLine1 Read a logo from an image and add it to the top left of the current page.
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .AddImageFromFile  ../images/myLogo.jpg
+.SetVar CommandLine1 .LoadImageFromFile  ../images/myLogo.jpg
 .Do CommandLine2
 .SetVar CommandLine1 .SetVar  IdLogo  %%%%_LastImageAdded%%%% 
 .Do CommandLine2
@@ -54,6 +54,6 @@
 
 .SetVar CommandSubHeading See Also
 .Do CommandSubHeading
-.SetVar CommandLine1 AddImageFromUrl, DrawImage
+.SetVar CommandLine1 DrawImage, LoadImageFromUrl
 .Do CommandLine2
 .incCurrentY %_FontHeight%

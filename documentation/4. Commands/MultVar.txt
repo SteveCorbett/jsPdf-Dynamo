@@ -4,20 +4,17 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .MultVar Variable Value Value (etc)
+.SetVar CommandLine1 .MultVar  Variable  Value  Value (etc)
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters
 .Do CommandSubHeading
 .SetVar CommandLine1 Variable
 .SetVar CommandLine2 The name of the variable to update. This is not usually a substitution variable,
-.Do CommandLine2
-.SetVar CommandLine2 but it can be, or contain substitution variables. The variable must exist.
+.SetVar CommandLine2 %CommandLine2% but it can be, or contain substitution variables. The variable must exist.
 .Do CommandLine2
 .SetVar CommandLine1 Value
-.SetVar CommandLine2 One or more values to multiple the variable by. These can be constants or
-.Do CommandLine2
-.SetVar CommandLine2 substitution variables.
+.SetVar CommandLine2 One or more values to multiple the variable by. These can be constants or substitution variables.
 .Do CommandLine2
 
 .SetVar CommandSubHeading Other
@@ -65,6 +62,6 @@
 
 .SetVar CommandSubHeading See Also
 .Do CommandSubHeading
-.SetVar CommandLine1 CopyVar, IncVar, SetVar
+.SetVar CommandLine1 CopyVar, DivVar, IncVar, SetVar
 .Do CommandLine2
 .incCurrentY %_FontHeight%

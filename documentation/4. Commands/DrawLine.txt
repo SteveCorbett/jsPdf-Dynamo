@@ -7,7 +7,7 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .DrawLine Left Top Right Bottom
+.SetVar CommandLine1 .DrawLine  Left  Top  Right  Bottom
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters

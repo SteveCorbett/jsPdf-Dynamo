@@ -12,7 +12,7 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .CheckPage Distance {Group1, Group2 ...}
+.SetVar CommandLine1 .CheckPage  Distance  {Group1,  Group2 ...}
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters

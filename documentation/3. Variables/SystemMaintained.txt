@@ -53,6 +53,11 @@
 .Do VariableLine
 
 .incCurrentY %halfLineGap%
+.SetVar CommandLine1 _ImageAspect
+.SetVar CommandLine2 The aspect ratio of the last loaded image, calculated as width divided by height.
+.Do VariableLineWrapped
+
+.incCurrentY %halfLineGap%
 .SetVar CommandLine1 _ImageHeight
 .SetVar CommandLine2 The height of the last loaded image.
 .Do VariableLine

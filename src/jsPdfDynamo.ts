@@ -28,11 +28,9 @@ export class JsPdfDynamo {
     }
   }
 
-  public toBlobUrl(fileName?: string): string | null {
+  public toBlobUrl(): string | null {
     try {
-      const result = this._processor.PdfDocument.output("bloburi", {
-        filename: fileName,
-      });
+      const result = this._processor.PdfDocument.output("bloburi");
       return result;
     } catch {
       this.#appLogger.warn(
@@ -75,7 +73,7 @@ export class JsPdfDynamo {
     processor: JsPdfProcessor,
     input: string[],
   ): Promise<void> {
-    let inGroupProcessing = false;
+    let inGroupLoading = false;
     let grpName = "";
     let currGroup: string[] = [];
 
@@ -86,8 +84,8 @@ export class JsPdfDynamo {
       }
 
       if (currLine.startsWith("[")) {
-        if (inGroupProcessing) {
-          inGroupProcessing = false;
+        if (inGroupLoading) {
+          inGroupLoading = false;
           this.#appLogger.debug(
             `Finished loading group ${grpName}   (${currLine})\n`,
           );
@@ -100,7 +98,7 @@ export class JsPdfDynamo {
             grpName = grpName.substring(0, iy);
           }
           grpName = grpName.trim().toLocaleUpperCase();
-          inGroupProcessing = true;
+          inGroupLoading = true;
           this.#appLogger.debug(`Loading group ${grpName}   (${currLine})\n`);
           currGroup = [];
           this.#groups[grpName] = currGroup;
@@ -108,7 +106,7 @@ export class JsPdfDynamo {
         continue;
       }
 
-      if (inGroupProcessing) {
+      if (inGroupLoading) {
         currGroup.push(currLine);
         this.#appLogger.trace(`  ${currLine}`);
         continue;
@@ -140,12 +138,6 @@ export class JsPdfDynamo {
       case "AddBookmark".toLowerCase():
         processor.addBookmark(parameters);
         return;
-      case "AddImageFromFile".toLowerCase():
-        processor.addImageFromFile(parameters);
-        return;
-      case "AddImageFromUrl".toLowerCase():
-        await processor.addImageFromUrl(parameters);
-        return;
       case "AddPage".toLowerCase():
         processor.addPage(parameters);
         return;
@@ -154,6 +146,9 @@ export class JsPdfDynamo {
         return;
       case "CopyVar".toLowerCase():
         processor.copyVar(parameters);
+        return;
+      case "DivVar".toLowerCase():
+        processor.divVar(parameters);
         return;
       case "Do".toLowerCase():
         await this.processGroups(processor, parameters);
@@ -214,6 +209,12 @@ export class JsPdfDynamo {
         return;
       case "IncVar".toLowerCase():
         processor.incVar(parameters);
+        return;
+      case "LoadImageFromFile".toLowerCase():
+        processor.LoadImageFromFile(parameters);
+        return;
+      case "LoadImageFromUrl".toLowerCase():
+        await processor.LoadImageFromUrl(parameters);
         return;
       case "MultVar".toLowerCase():
         processor.multVar(parameters);

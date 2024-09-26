@@ -5,7 +5,7 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .DrawImage ImageNo Left Top Width Height Scale
+.SetVar CommandLine1 .DrawImage  ImageNo  Left  Top  Width  Height  Scale
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters
@@ -87,6 +87,6 @@
 
 .SetVar CommandSubHeading See Also
 .Do CommandSubHeading
-.SetVar CommandLine1 AddImageFromFile, AddImageFromUrl
+.SetVar CommandLine1 LoadImageFromFile, LoadImageFromUrl
 .Do CommandLine2
 .incCurrentY %_FontHeight%

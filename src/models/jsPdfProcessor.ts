@@ -392,6 +392,11 @@ export class JsPdfProcessor {
       }),
     );
     this._variables.set("_DATEDMY", new Date().toLocaleDateString("en-GB"));
+    this._variables.set("_IMAGEASPECT", "1");
+    this._variables.set("_IMAGEHEIGHT", "0");
+    this._variables.set("_IMAGEHEIGHTPX", "0");
+    this._variables.set("_IMAGEWIDTH", "0");
+    this._variables.set("_IMAGEWIDTHPX", "0");
     this._variables.set("_PAGENO", "1");
     this._variables.set("_PAGES", "1");
 
@@ -518,8 +523,8 @@ export class JsPdfProcessor {
     }
   }
 
-  public addImageFromFile(input: string): void {
-    const subs = this.logAndParseCommand(".addImageFromFile", input);
+  public LoadImageFromFile(input: string): void {
+    const subs = this.logAndParseCommand(".LoadImageFromFile", input);
 
     let fileName = subs;
 
@@ -545,8 +550,8 @@ export class JsPdfProcessor {
     }
   }
 
-  public async addImageFromUrl(input: string): Promise<void> {
-    const subs = this.logAndParseCommand(".addImageFromUrl", input);
+  public async LoadImageFromUrl(input: string): Promise<void> {
+    const subs = this.logAndParseCommand(".LoadImageFromUrl", input);
 
     let url = subs;
 
@@ -593,6 +598,11 @@ export class JsPdfProcessor {
       this.setFixedDec(this.pixelsToUom(info.height), 3),
     );
     this._variables.set("_IMAGEHEIGHTPX", info.height.toString());
+
+    this._variables.set(
+      "_IMAGEASPECT",
+      info.height > 0 ? this.setFixedDec(info.width / info.height, 3) : "1",
+    );
   }
 
   private getContentType(fileName: string): string {
@@ -1315,6 +1325,60 @@ export class JsPdfProcessor {
           removeTrailingZeros((Number(varValue) + nextOp).toFixed(4)),
         );
       }
+    }
+    this.lastResult = "1";
+    this._logger.trace(
+      "Variable " + varName + " incremented to " + this._variables.get(varName),
+    );
+  }
+
+  public divVar(input: string): void {
+    let subs = this.substitute(input.trim());
+    this._logger.debug(".divVar " + subs);
+
+    let { first: varName, rest } = getNextString(subs.toLocaleUpperCase());
+
+    if (varName === "") {
+      this.lastResult = "0";
+      this.lastError = "DivVar must reference a variable";
+      return;
+    }
+
+    if (varName.startsWith("_")) {
+      this.lastResult = "0";
+      this.lastError =
+        "DivVar can not be used to update system maintained variables";
+      return;
+    }
+
+    let varValue = this._variables.get(varName);
+    if (!varValue) {
+      this.lastResult = "0";
+      this.lastError = "Variable '" + varName + "' is not defined";
+      return;
+    }
+
+    if (isNaN(Number(varValue))) {
+      this._variables.set(varName, "0");
+    }
+
+    while (rest.length > 0) {
+      const { first: nextOp, rest: remainder } = getNextNumber(rest, 4);
+      rest = remainder;
+      let varValue = this._variables.get(varName);
+      if (!isNaN(Number(nextOp)) && Number(nextOp) === 0) {
+        this.lastResult = "0";
+        this.lastError = "Divide by zero error";
+        return;
+      }
+      if (!isNaN(Number(varValue)) && !isNaN(Number(nextOp))) {
+        this._variables.set(
+          varName,
+          removeTrailingZeros((Number(varValue) / Number(nextOp)).toFixed(4)),
+        );
+      }
+
+      varValue = this._variables.get(varName)!;
     }
     this.lastResult = "1";
     this._logger.trace(

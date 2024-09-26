@@ -218,11 +218,10 @@
 
 .Include ./Documentation/4. Commands/Commands.txt
 .Include ./Documentation/4. Commands/AddBookmark.txt
-.Include ./Documentation/4. Commands/AddImageFromFile.txt
-.Include ./Documentation/4. Commands/AddImageFromUrl.txt
 .Include ./Documentation/4. Commands/AddPage.txt
 .Include ./Documentation/4. Commands/CheckPage.txt
 .Include ./Documentation/4. Commands/CopyVar.txt
+.Include ./Documentation/4. Commands/DivVar.txt
 .Include ./Documentation/4. Commands/Do.txt
 .Include ./Documentation/4. Commands/DoRepeat.txt
 .Include ./Documentation/4. Commands/DrawBox.txt
@@ -234,6 +233,7 @@
 .Include ./Documentation/4. Commands/DrawTextWrapped.txt
 .Include ./Documentation/4. Commands/ForEachPage.txt
 .Include ./Documentation/4. Commands/IfBlank.txt
+.Include ./Documentation/4. Commands/IfEq.txt
 .Include ./Documentation/4. Commands/IfGt.txt
 .Include ./Documentation/4. Commands/IfNotBlank.txt
 .Include ./Documentation/4. Commands/incCurrentX.txt
@@ -241,6 +241,8 @@
 .Include ./Documentation/4. Commands/Include.txt
 .Include ./Documentation/4. Commands/IncludeUrl.txt
 .Include ./Documentation/4. Commands/IncVar.txt
+.Include ./Documentation/4. Commands/LoadImageFromFile.txt
+.Include ./Documentation/4. Commands/LoadImageFromUrl.txt
 .Include ./Documentation/4. Commands/MultVar.txt    
 .Include ./Documentation/4. Commands/SavePdf.txt    
 .Include ./Documentation/4. Commands/SelectPage.txt    

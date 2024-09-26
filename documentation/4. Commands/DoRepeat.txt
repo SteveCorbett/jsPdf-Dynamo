@@ -6,7 +6,7 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .DoRepeat Number Group1, Group2...etc
+.SetVar CommandLine1 .DoRepeat  Number  Group1,  Group2...etc
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters

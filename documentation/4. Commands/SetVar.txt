@@ -55,8 +55,7 @@
 .incCurrentY %_FontHeight%
 
 .SetVar CommandLine1 Set the variable 'Item7' to the current value of the variable 'Description', given that the
-.Do CommandLine
-.SetVar CommandLine1 variable 'CurrentItem' has the value of '7':
+.SetVar CommandLine1 %CommandLine1% variable 'CurrentItem' has the value of '7':
 .Do CommandLine
 .incCurrentY %halfLineGap%
 .SetVar CommandLine1 .SetVar  Item%%%%CurrentItem%%%%  %%%%Description%%%%
@@ -64,6 +63,6 @@
 
 .SetVar CommandSubHeading See Also
 .Do CommandSubHeading
-.SetVar CommandLine1 CopyVar, IncVar, MultVar
+.SetVar CommandLine1 CopyVar, DivVar, IncVar, MultVar
 .Do CommandLine2
 .incCurrentY %_FontHeight%

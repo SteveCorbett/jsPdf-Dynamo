@@ -4,7 +4,7 @@
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
-.SetVar CommandLine1 .SetLineWidth Width
+.SetVar CommandLine1 .SetLineWidth  Width
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters
@@ -20,23 +20,23 @@
 
 .SetVar CommandSubHeading Examples
 .Do CommandSubHeading
-.SetVar CommandLine1 Set the width of subsequent lines to be 0.5mm:
+.SetVar CommandLine1 Assuming that the unit of measure is millimeters, set the width of subsequent lines to be 0.5mm:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .SetLineWidth 0.5
+.SetVar CommandLine1 .SetLineWidth  0.5
 .Do CommandLine2
 
 .incCurrentY %_FontHeight%
-.SetVar CommandLine1 Set the width of subsequent lines to be 1mm:
+.SetVar CommandLine1 Assuming that the unit of measure is inches, set the width of subsequent lines to be 0.02 inch:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1 .SetLineWidth 1
+.SetVar CommandLine1 .SetLineWidth  0.02
 .Do CommandLine2
 .incCurrentY %_FontHeight%
 
 .SetVar CommandSubHeading See Also
 .Do CommandSubHeading
-.SetVar CommandLine1 DrawBox, DrawLine, SetFillColour, SetLineColour
+.SetVar CommandLine1 DrawBox, DrawLine, SetLineColour
 .Do CommandLine
 
 .incCurrentY %_FontHeight%
