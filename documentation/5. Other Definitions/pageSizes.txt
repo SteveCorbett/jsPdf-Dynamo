@@ -7,11 +7,11 @@
 
 .SetVar CommandSubHeading ISO 216 & ISO 269 (Metric)
 .Do CommandSubHeading
-.SetVar CommandLine1c %CommandLine2% - a0 to a10
+.SetVar CommandLine1c %CommandLine2% - a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10
 .Do CommandLine2
-.SetVar CommandLine1c %CommandLine2% - b0 to b10
+.SetVar CommandLine1c %CommandLine2% - b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10
 .Do CommandLine2
-.SetVar CommandLine1c %CommandLine2% - c0 to c10
+.SetVar CommandLine1c %CommandLine2% - c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10
 .Do CommandLine2
 
 .SetVar CommandSubHeading Other

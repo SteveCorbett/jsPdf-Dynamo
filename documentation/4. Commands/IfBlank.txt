@@ -58,6 +58,6 @@
 
 .SetVar CommandSubHeading See Also
 .Do CommandSubHeading
-.SetVar CommandLine1 IfGt, IfNotBlank
+.SetVar CommandLine1 IfEq, IfGt, IfNotBlank
 .Do CommandLine2
 .incCurrentY %_FontHeight%

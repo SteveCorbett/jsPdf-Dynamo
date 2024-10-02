@@ -4,7 +4,7 @@ jsPdf-Dynamo is a wrapper around the open-source JavaScript PDF generation libra
 template driven approach, it enables the separation of layout and formatting logic from the placement of
 data.
 
-jsPdf-Dynamo can be used with browser or NodeJs JavaScript or TypeScript applications.
+jsPdf-Dynamo can be used with browser or NodeJs applications written in JavaScript or TypeScript.
 
 Advantages of using jsPdf-Dynamo include:
 
@@ -31,8 +31,8 @@ yarn add jspdf
 There are a few basic concepts to be aware of when using jsPdf-Dynamo:
 
 - The functionality of jsPdf-Dynamo is implemented through the JsPdfDynamo class.
-- The initial page size, orientation and units of measure are set when the JsPdfDynamo instance is instantiated.
-- Output is driven by a series of plain text 'commands'. These commands can be provided as a list of strings from multiple sources, including the JavaScript or TypeScript application, or loaded from 'templates' retrieved from a URL (browser or NodeJs) or from local text files (NodeJs only).
+- The initial page size, orientation and unit of measure are set when the JsPdfDynamo instance is instantiated.
+- Output is driven by a series of plain text 'commands'. These commands can be provided as a list of strings from multiple sources, including the JavaScript or TypeScript application, or loaded from 'templates' retrieved from a URL (browser only) or from local text files (NodeJs only).
 - Positions are specified relative to the left and top margin. The exception to this are margins which are measured from the appropriate edge of the page.
 - All measurements and positions are in the unit of measure specified when the instance
   of JsPdfDynamo is created. This can be millimeters, inches, or points. The exception to this are fonts, which are always specified in points.

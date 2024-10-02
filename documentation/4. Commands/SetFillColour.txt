@@ -10,12 +10,14 @@
 .SetVar CommandSubHeading Parameters
 .Do CommandSubHeading
 .SetVar CommandLine1 Colour
-.SetVar CommandLine2 Either a CSS named colour or a hexadecimal RGB colour.
+.SetVar CommandLine2 Either a CSS named colour or a hexadecimal RGB colour. This is a required parameter.
 .Do CommandLine2
 
 .SetVar CommandSubHeading Other
 .Do CommandSubHeading
-.SetVar CommandLine1 The variable _LastResult is set to '1' by this command.
+.SetVar CommandLine1 The variable _LastResult is set to '0' by this command if the colour parameter is not
+.SetVar CommandLine1 %CommandLine1% provided, otherwise it is set to '1'. The variable _FillColour is set
+.SetVar CommandLine1 %CommandLine1% to the colour parameter.
 .Do CommandLine
 
 .SetVar CommandSubHeading Examples

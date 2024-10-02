@@ -10,30 +10,31 @@
 .incCurrentY %halfLineGap%
 .DrawText 0 %_CurrentY% Commands are described in a following chapter.
 
-.incCurrentY %_FontHeight%
+.incCurrentY %halfLineGap%
 .SetVar CommandLine1 Variables are referenced by enclosing them in percentage symbols. For example, to write some
 .SetVar CommandLine1 %CommandLine1% text at the current position on the page the following DrawText command can be used:
-.Do CommandLine1
-.incCurrentY %_FontHeight%
+.Do CommandLine
+.incCurrentY %halfLineGap%
 .SetVar CommandLine1 .DrawText %%%%_CurrentX%%%% %%%%_CurrentY%%%% Hello World!
 .Do CommandLine2
-.incCurrentY %_FontHeight%
+.incCurrentY %halfLineGap%
 .SetVar CommandLine1 Variables (and commands) are not case sensitive and the above command could also be given as:
-.Do CommandLine1 
-.incCurrentY %_FontHeight%
+.Do CommandLine
+.incCurrentY %halfLineGap%
 .SetVar CommandLine1 .drawTEXT %%%%_currentX%%%% %%%%_CURRENTy%%%% Hello World!
 .Do CommandLine2 
-.incCurrentY %_FontHeight%
+.incCurrentY %halfLineGap%
 
 .SetVar CommandLine1 Variables are stored as strings though there is a limited capability to perform arithmetic on
 .SetVar CommandLine1 %CommandLine1% variables. For example, the .IncVar command can be used to add or subtract a number from
 .SetVar CommandLine1 %CommandLine1% a variable.
-.Do CommandLine1
-.incCurrentY %_FontHeight%
+.Do CommandLine
+.incCurrentY %halfLineGap%
 
-.DrawText 0 %_CurrentY% Variables do not have to be assigned a value before being used. 
+.DrawText 0 %_CurrentY% Variables do not have to be assigned a value before being used.
+.incCurrentY %halfLineGap%
 .DrawText 0 %_CurrentY% The value of a variable referenced before being assigned a value is an empty string.
-.incCurrentY %_FontHeight%
+.incCurrentY %halfLineGap%
 .SetVar CommandLine1 All variables are global, there is no scoping of variables within a group. A variable
 .SetVar CommandLine1 %CommandLine1% defined within a group is available to commands run after that group.
-.Do CommandLine1
+.Do CommandLine

@@ -2,7 +2,7 @@
 .Do CommandHeading
 .SetVar CommandLine1 Draw text at the given point on the page, relative to the page margins, wrapping to one or more new lines
 .SetVar CommandLine1 %CommandLine1% as required, and handling overflowing of pages.
-.Do CommandLine1
+.Do CommandLine
 
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading

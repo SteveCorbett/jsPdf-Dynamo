@@ -1,9 +1,9 @@
 export interface ILogger {
-  debug: (message: string, ...args: any | null) => void;
-  error: (message: string, ...args: any | null) => void;
-  info: (message: string, ...args: any | null) => void;
-  trace: (message: string, ...args: any | null) => void;
-  warn: (message: string, ...args: any | null) => void;
+  debug: (message: string, args?: any) => void;
+  error: (message: string, args?: any) => void;
+  info: (message: string, args?: any) => void;
+  trace: (message: string, args?: any) => void;
+  warn: (message: string, args?: any) => void;
 }
 
 export class AppLogger implements ILogger {
@@ -18,22 +18,22 @@ export class AppLogger implements ILogger {
     }
   }
 
-  public trace(message: string, ...args: any | null): void {
+  public trace(message: string, args?: any): void {
     this.canLog(0) ? this._logger.trace(message, args) : null;
   }
-  public debug(message: string, ...args: any | null): void {
+  public debug(message: string, args?: any): void {
     this.canLog(1) ? this._logger.debug(message, args) : null;
   }
 
-  public info(message: string, ...args: any | null): void {
+  public info(message: string, args?: any): void {
     this.canLog(2) ? this._logger.info(message, args) : null;
   }
 
-  public warn(message: string, ...args: any | null): void {
+  public warn(message: string, args?: any): void {
     this.canLog(3) ? this._logger.warn(message, args) : null;
   }
 
-  public error(message: string, ...args: any | null): void {
+  public error(message: string, args?: any): void {
     this.canLog(4) ? this._logger.error(message, args) : null;
   }
 

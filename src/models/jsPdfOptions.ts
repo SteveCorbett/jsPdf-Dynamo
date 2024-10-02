@@ -2,6 +2,7 @@ import type { pageSizeType } from "../utils/page.utils";
 import type { orientationType, uomType } from "../utils/types";
 
 export interface IJsPdfOptions {
+  compress: boolean;
   margins: {
     top: number;
     bottom: number;
@@ -9,11 +10,13 @@ export interface IJsPdfOptions {
     right: number;
   };
   pageSize: pageSizeType;
+  putOnlyUsedFonts: boolean;
   orientation: "portrait" | "landscape" | "p" | "l";
   unit: "mm" | "in" | "pt";
 }
 
 export class JsPdfOptions {
+  compress = true
   margins: {
     top: number;
     bottom: number;
@@ -21,6 +24,7 @@ export class JsPdfOptions {
     right: number;
   };
   pageSize: pageSizeType;
+  putOnlyUsedFonts = true;
   orientation: orientationType;
   unit: uomType;
 
