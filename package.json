@@ -1,6 +1,6 @@
 {
   "name": "jspdf-dynamo",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Generate data driven PDFs from dynamic templates",
   "main": "dist/index.js",
   "repository": {

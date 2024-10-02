@@ -1,5 +1,11 @@
 # jspdf-dynamo
 
+## 1.0.6
+
+### Patch Changes
+
+- 8638b04: Documentation updates, improved logging and added invoice example
+
 ## 1.0.5
 
 ### Patch Changes
