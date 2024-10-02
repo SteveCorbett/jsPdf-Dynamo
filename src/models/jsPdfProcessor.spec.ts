@@ -502,7 +502,7 @@ describe("jsPdfProcessor", () => {
     describe("_DateDdMmYyyy", () => {
       it("should be the current date in DD/MM/YYYY format", () => {
         const date = new Date();
-        const dateString = `${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getFullYear()}`;
+        const dateString = `${date.getDate().toString().padStart(2, "0")}/${(date.getMonth() + 1).toString().padStart(2, "0")}/${date.getFullYear()}`;
         expect(processor.getVar("_DateDdMmYyyy")).toBe(dateString);
       });
     });
@@ -510,7 +510,7 @@ describe("jsPdfProcessor", () => {
     describe("_DateMmDdYyyy", () => {
       it("should be the current date in MM/DD/YYYY format", () => {
         const date = new Date();
-        const dateString = `${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getDate().toString().padStart(2, '0')}/${date.getFullYear()}`;
+        const dateString = `${(date.getMonth() + 1).toString().padStart(2, "0")}/${date.getDate().toString().padStart(2, "0")}/${date.getFullYear()}`;
         expect(processor.getVar("_DateMmDdYyyy")).toBe(dateString);
       });
     });
@@ -518,7 +518,7 @@ describe("jsPdfProcessor", () => {
     describe("_DateISO", () => {
       it("should be the current date in YYYY-MM-DD format", () => {
         const date = new Date();
-        const dateString = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
+        const dateString = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`;
         expect(processor.getVar("_DateISO")).toBe(dateString);
       });
     });

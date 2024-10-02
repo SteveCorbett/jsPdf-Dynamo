@@ -16,7 +16,7 @@ export interface IJsPdfOptions {
 }
 
 export class JsPdfOptions {
-  compress = true
+  compress = true;
   margins: {
     top: number;
     bottom: number;

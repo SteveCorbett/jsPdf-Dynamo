@@ -392,16 +392,22 @@ export class JsPdfProcessor {
         minute: "2-digit",
       }),
     );
-    this._variables.set("_DATEDDMMYYYY", now.toLocaleDateString("en-GB", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-    }));
-    this._variables.set("_DATEMMDDYYYY", now.toLocaleDateString("en-US", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-    }));
+    this._variables.set(
+      "_DATEDDMMYYYY",
+      now.toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+      }),
+    );
+    this._variables.set(
+      "_DATEMMDDYYYY",
+      now.toLocaleDateString("en-US", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+      }),
+    );
     this._variables.set("_DATEISO", now.toISOString().substring(0, 10));
     this._variables.set("_IMAGEASPECT", "1");
     this._variables.set("_IMAGEHEIGHT", "0");
@@ -813,9 +819,10 @@ export class JsPdfProcessor {
     }
 
     if (isNaN(imageNo) || imageNo < 0 || imageNo > this._images.length - 1) {
-      this.lastError = this._images.length > 1
-        ? `The image number ${imageNo} must be in the range of 0 to ${(this._images.length - 1).toString()}`
-        : "Only one image has been loaded, the image number can only be 0";
+      this.lastError =
+        this._images.length > 1
+          ? `The image number ${imageNo} must be in the range of 0 to ${(this._images.length - 1).toString()}`
+          : "Only one image has been loaded, the image number can only be 0";
       this.lastResult = "0";
       return;
     }
@@ -1077,9 +1084,9 @@ export class JsPdfProcessor {
       lines,
       left + this._marginLeft + horzAdjust,
       top +
-      this._marginTop +
-      adjustTop +
-      (this.fontHeight * 0.5) / this.lineHeightFactor,
+        this._marginTop +
+        adjustTop +
+        (this.fontHeight * 0.5) / this.lineHeightFactor,
       { align: horzAlign, baseline: "middle" },
     );
 

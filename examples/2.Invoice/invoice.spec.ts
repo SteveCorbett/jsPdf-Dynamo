@@ -1,6 +1,6 @@
 import { expect, it, describe } from "vitest";
 import { JsPdfDynamo } from "../../src/jsPdfDynamo";
-import * as allParts from './parts.json';
+import * as allParts from "./parts.json";
 
 describe("2.Invoice example", () => {
   it("Create invoice", async () => {
@@ -10,7 +10,9 @@ describe("2.Invoice example", () => {
       unit: "mm",
     });
 
-    const formatter = new Intl.NumberFormat(undefined, { minimumFractionDigits: 2 });
+    const formatter = new Intl.NumberFormat(undefined, {
+      minimumFractionDigits: 2,
+    });
 
     const commands = [
       // Load the template
@@ -23,18 +25,25 @@ describe("2.Invoice example", () => {
     ];
 
     const total = addParts(commands, allParts.parts, 380, formatter);
-    commands.push(`.setVar total ${formatter.format(total)}`,
+    commands.push(
+      `.setVar total ${formatter.format(total)}`,
       ".Do Totals",
-      ".ForEachPage NumberPages");
+      ".ForEachPage NumberPages",
+    );
 
-    commands.push(".SavePdf ./examples/2.Invoice/invoice.pdf")
+    commands.push(".SavePdf ./examples/2.Invoice/invoice.pdf");
 
     await pdfDynamo.processCommands(commands);
     expect(true).toBe(true);
   });
 });
 
-function addParts(commands: string[], parts: any, maxParts: number, formatter: Intl.NumberFormat): number {
+function addParts(
+  commands: string[],
+  parts: any,
+  maxParts: number,
+  formatter: Intl.NumberFormat,
+): number {
   let result = 0;
   for (let ix = 0; ix < parts.length && ix < maxParts; ix++) {
     const part = parts[ix];
@@ -45,7 +54,7 @@ function addParts(commands: string[], parts: any, maxParts: number, formatter: I
     commands.push(`.setVar price ${formatter.format(part.price)}`);
     const total = qty * part.price;
     commands.push(`.setVar total ${qty === 0 ? "-" : formatter.format(total)}`);
-    commands.push(`.SetVar ix ${ix + 1}`)
+    commands.push(`.SetVar ix ${ix + 1}`);
     commands.push(`.Do AddPart`);
     result += total;
   }
