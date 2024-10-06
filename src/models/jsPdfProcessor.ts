@@ -2,7 +2,6 @@ import jsPDF, { type OutlineItem } from "jspdf";
 import * as fs from "fs";
 
 import { AppLogger, type ILogger } from "./logger.js";
-import { AppLogger, type ILogger } from "./logger.js";
 import {
   getNextNumber,
   getNextString,
@@ -1207,13 +1206,10 @@ export class JsPdfProcessor {
     }
 
     let adjustTop = 0;
-    // let adjustedHeight = height;
     if (vertAlign === "center") {
       adjustTop = (height - textHeight) / 2;
-      // adjustedHeight -= adjustTop;
     } else if (vertAlign === "bottom") {
       adjustTop = height - textHeight;
-      // adjustedHeight = textHeight;
     }
     this._pdfDocument.text(
       lines,

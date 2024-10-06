@@ -11,7 +11,6 @@ describe("jsPdfProcessor", () => {
   describe("commands", () => {
     beforeEach(() => {
       logger = new Logger({ name: "jsPdfProcessor.spec", minLevel: 4 });
-      logger = new Logger({ name: "jsPdfProcessor.spec", minLevel: 4 });
       dynamo = new JsPdfDynamo(
         { pageSize: "a4", orientation: "portrait" },
         logger,
@@ -519,7 +518,7 @@ describe("jsPdfProcessor", () => {
     describe("_DateISO", () => {
       it("should be the current date in YYYY-MM-DD format", () => {
         const date = new Date();
-        const dateString = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`;
+        const dateString = `${date.getUTCFullYear()}-${(date.getUTCMonth() + 1).toString().padStart(2, "0")}-${date.getUTCDate().toString().padStart(2, "0")}`;
         expect(processor.getVar("_DateISO")).toBe(dateString);
       });
     });
