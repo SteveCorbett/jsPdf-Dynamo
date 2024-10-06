@@ -2,6 +2,7 @@ import jsPDF, { type OutlineItem } from "jspdf";
 import * as fs from "fs";
 
 import { AppLogger, type ILogger } from "./logger.js";
+import { AppLogger, type ILogger } from "./logger.js";
 import {
   getNextNumber,
   getNextString,

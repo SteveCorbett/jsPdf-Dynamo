@@ -9,6 +9,12 @@
 .SetVar text Note that unless otherwise stated, all distances and positions are in the unit of measure specified
 .SetVar text %text% when creating the JsPdfDynamo object.
 .DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.SetVar text %text% variables can not be changed directly by using the SetVar command. 
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %halfLineGap%
+.SetVar text Note that unless otherwise stated, all distances and positions are in the unit of measure specified
+.SetVar text %text% when creating the JsPdfDynamo object.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
 .incCurrentY %halfLineGap%
 .SetMargin L 20
 

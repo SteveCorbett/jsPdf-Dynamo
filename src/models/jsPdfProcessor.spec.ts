@@ -11,6 +11,7 @@ describe("jsPdfProcessor", () => {
   describe("commands", () => {
     beforeEach(() => {
       logger = new Logger({ name: "jsPdfProcessor.spec", minLevel: 4 });
+      logger = new Logger({ name: "jsPdfProcessor.spec", minLevel: 4 });
       dynamo = new JsPdfDynamo(
         { pageSize: "a4", orientation: "portrait" },
         logger,

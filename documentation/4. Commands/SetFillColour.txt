@@ -5,6 +5,7 @@
 .SetVar CommandSubHeading Syntax
 .Do CommandSubHeading
 .SetVar CommandLine1 .SetFillColor  Colour
+.SetVar CommandLine1 .SetFillColor  Colour
 .Do CommandLine2
 
 .SetVar CommandSubHeading Parameters
