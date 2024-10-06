@@ -1,5 +1,11 @@
 # jspdf-dynamo
 
+## 1.0.7
+
+### Patch Changes
+
+- 3bdaa0a: Added DrawCircle and DrawEllipse
+
 ## 1.0.6
 
 ### Patch Changes
