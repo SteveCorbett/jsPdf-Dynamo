@@ -86,9 +86,6 @@ export class JsPdfDynamo {
       if (currLine.startsWith("[")) {
         if (inGroupLoading) {
           inGroupLoading = false;
-          this.#appLogger.debug(
-            `Finished loading group ${grpName}   (${currLine})\n`,
-          );
         } else {
           if (currLine.length === 1) continue;
 
@@ -99,7 +96,7 @@ export class JsPdfDynamo {
           }
           grpName = grpName.trim().toLocaleUpperCase();
           inGroupLoading = true;
-          this.#appLogger.debug(`Loading group ${grpName}   (${currLine})\n`);
+          this.#appLogger.debug(`Loading group ${grpName}`);
           currGroup = [];
           this.#groups[grpName] = currGroup;
         }
@@ -159,8 +156,14 @@ export class JsPdfDynamo {
       case "DrawBox".toLowerCase():
         processor.drawBox(parameters);
         return;
+      case "DrawCircle".toLowerCase():
+        processor.drawCircle(parameters);
+        return;
       case "DrawDebugGrid".toLowerCase():
         processor.drawDebugGrid(parameters);
+        return;
+      case "DrawEllipse".toLowerCase():
+        processor.drawEllipse(parameters);
         return;
       case "DrawImage".toLowerCase():
         processor.drawImage(parameters);
@@ -294,9 +297,10 @@ export class JsPdfDynamo {
     while (subs.length > 0) {
       let { first: group, rest } = getNextString(subs);
       subs = rest;
-      this.#appLogger.debug(`\n[${group}]`);
+      this.#appLogger.debug(`\n[${group} - Enter]`);
       if (this.#groups[group]) {
         await this.processTemplate(processor, this.#groups[group]);
+        this.#appLogger.debug(`[${group} - Exit]\n`);
       } else {
         this.#appLogger.warn(`Group ${group} was not found.`);
         processor.lastResult = "0";

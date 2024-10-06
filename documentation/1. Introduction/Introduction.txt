@@ -42,7 +42,7 @@
 
 .SetVar top %_CurrentY%
 .DrawText 5 %top% -
-.SetVar text The initial page size, orientation and units of measure are set when the
+.SetVar text The initial page size, orientation and unit of measure are set when the
 .SetVar text %text% JsPdfDynamo instance is instantiated.
 .DrawTextWrapped 10 %top% %width% *None %text%
 

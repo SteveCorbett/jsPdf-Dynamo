@@ -9,6 +9,12 @@
 .SetVar text Note that unless otherwise stated, all distances and positions are in the unit of measure specified
 .SetVar text %text% when creating the JsPdfDynamo object.
 .DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.SetVar text %text% variables can not be changed directly by using the SetVar command. 
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %halfLineGap%
+.SetVar text Note that unless otherwise stated, all distances and positions are in the unit of measure specified
+.SetVar text %text% when creating the JsPdfDynamo object.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
 .incCurrentY %halfLineGap%
 .SetMargin L 20
 
@@ -29,6 +35,26 @@
 .incCurrentY %halfLineGap%
 .SetVar CommandLine1 _CurrentPageOrientation
 .SetVar CommandLine2 The last page orientation specified:  'portrait' or 'landscape'
+.Do VariableLineWide
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _DateDdMmYyyy
+.SetVar CommandLine2 The current date, formatted as DD/MM/YYYY.
+.Do VariableLineWrapped
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _DateMmDdYyyy
+.SetVar CommandLine2 The current date, formatted as MM/DD/YYYY.
+.Do VariableLineWrapped
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _DateISO
+.SetVar CommandLine2 The current date, formatted as YYYY-MM-DD.
+.Do VariableLineWrapped
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _FillColour
+.SetVar CommandLine2 The colour that will be used when rendering any following filled boxes.
 .Do VariableLineWide
 
 .incCurrentY %halfLineGap%
@@ -116,6 +142,16 @@
 .Do VariableLineWrapped
 
 .incCurrentY %halfLineGap%
+.SetVar CommandLine1 _LineColour
+.SetVar CommandLine2 The colour that will be used to render any following lines.
+.Do VariableLineWide
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _LineWidth
+.SetVar CommandLine2 The width that any following lines will be drawn.
+.Do VariableLine
+
+.incCurrentY %halfLineGap%
 .SetVar CommandLine1 _MarginBottom
 .SetVar CommandLine2 The current margin from the bottom edge of the page.
 .Do VariableLine
@@ -169,6 +205,16 @@
 .SetVar CommandLine2 %CommandLine2% to the top margin, after each object is output. This position is calculated
 .SetVar CommandLine2 %CommandLine2% from the height of the object plus the current vertical spacing, which can 
 .SetVar CommandLine2 %CommandLine2% be set with the SetSpaceVert command. 
+.Do VariableLineWrapped
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _TextColour
+.SetVar CommandLine2 The colour that will be used when rendering any following text.
+.Do VariableLineWrapped
+
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 _TimeHhMm
+.SetVar CommandLine2 The current time, formatted as HH:MM.
 .Do VariableLineWrapped
 .incCurrentY %_SPACEVERT%
 .Do SetMargins 

@@ -1,5 +1,17 @@
 # jspdf-dynamo
 
+## 1.0.7
+
+### Patch Changes
+
+- 3bdaa0a: Added DrawCircle and DrawEllipse
+
+## 1.0.6
+
+### Patch Changes
+
+- 8638b04: Documentation updates, improved logging and added invoice example
+
 ## 1.0.5
 
 ### Patch Changes

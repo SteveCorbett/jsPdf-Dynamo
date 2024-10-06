@@ -10,10 +10,10 @@
 .SetVar CommandSubHeading Parameters
 .Do CommandSubHeading
 .SetVar CommandLine1 Left
-.SetVar CommandLine2 The horizontal starting position of the box, measured from the left margin.
+.SetVar CommandLine2 The horizontal top left corner of the box, measured from the left margin.
 .Do CommandLine2
 .SetVar CommandLine1 Top
-.SetVar CommandLine2 The vertical starting position of the box, measured from the top margin.
+.SetVar CommandLine2 The vertical top left corner of the box, measured from the top margin.
 .Do CommandLine2
 .SetVar CommandLine1 Width
 .SetVar CommandLine2 The width of the box.
@@ -25,15 +25,12 @@
 .SetVar CommandLine2 Specifies how the box is drawn:
 .Do CommandLine2
 .incCurrentY %halfLineGap%
-.SetVar CommandLine3 0 - An outline of the box is drawn
+.SetVar CommandLine3 0 - An outline of the box is drawn using the current line width
 .Do CommandLine2
-.SetVar CommandLine3 1 - A filled box, without an outline is drawn
+.SetVar CommandLine3 1 - A box filled with the current fill colour, without an outline is drawn
 .Do CommandLine2
-.SetVar CommandLine3 2 - A filled box, with an outline is drawn
+.SetVar CommandLine3 2 - A box filled with the current fill colour, with an outline is drawn using the current line width
 .Do CommandLine2
-.incCurrentY %halfLineGap%
-.SetVar CommandLine1 All measurements are in the unit of measure specified when the JsPdfDynamo object was created.
-.Do CommandLine
 
 .SetVar CommandSubHeading Other
 .Do CommandSubHeading
@@ -62,6 +59,6 @@
 
 .SetVar CommandSubHeading See Also
 .Do CommandSubHeading
-.SetVar CommandLine1 SetFillColour, SetLineColour, SetLineWidth
+.SetVar CommandLine1 DrawCircle, DrawEllipse, DrawLine, SetFillColour, SetLineColour, SetLineWidth
 .Do CommandLine2
 .incCurrentY %_FontHeight%

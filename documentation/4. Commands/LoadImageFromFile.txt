@@ -24,11 +24,11 @@
 .SetVar CommandLine1 If successful then several other variables are also set:
 .Do CommandLine
 .incCurrentY %halfLineGap%
-.SetVar CommandLine1c _ImageHeight is set to the height of the image in the current units of measure.
+.SetVar CommandLine1c _ImageHeight is set to the height of the image.
 .Do CommandLine2
 .SetVar CommandLine1c _ImageHeightPx is set to the height of the image pixels.
 .Do CommandLine2
-.SetVar CommandLine1c _ImageWidth is set to the width of the image in the current units of measure.
+.SetVar CommandLine1c _ImageWidth is set to the width of the image.
 .Do CommandLine2
 .SetVar CommandLine1c _ImageWidthPx is set to the width of the image pixels.
 .Do CommandLine2

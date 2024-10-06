@@ -1,6 +1,49 @@
 ﻿.SetVar CommandName SetFontSize
 .Do CommandHeading
-.SetVar CommandLine1 To be documented.
+
+.SetVar CommandLine1 Sets the size of text in points.  Subsequent rendering of text will be this size
+.SetVar CommandLine1 %CommandLine1% until changed by another SetFontSize command.
 .Do CommandLine
 
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .SetFontSize  fontSize
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 fontSize
+.SetVar CommandLine2 The size of the font in points. This parameter is required.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 If a valid font size is provided the variable _LastResult is set to '1' otherwise the current
+.SetVar CommandLine1 %CommandLine1% font size is unchanged and _LastResult is set to '0'. 
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 The variable _FontPointSize is set to the value provided on this command.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 The variable _FontHeight is set to the height of the current font multiplied by the
+.SetVar CommandLine1 %CommandLine1% 'line height factor' (which is 1.15) to allow for the space between 
+.SetVar CommandLine1 %CommandLine1% lines within a paragraph. (This is known as 'kerning'.) Note that this value
+.SetVar CommandLine1 %CommandLine1% is in the unit of measure specified when the instance of JsPdfDynamo was created.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+
+.SetVar CommandSubHeading Example
+.Do CommandSubHeading
+.SetVar CommandLine1 Set the size of subsequent text to be 24 points:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetFontSize  24
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 DrawTextBox, DrawText, SetFontName, SetFontStyle, SetTextColour
+.Do CommandLine
+
+.incCurrentY %_FontHeight%
 .incCurrentY %_FontHeight%

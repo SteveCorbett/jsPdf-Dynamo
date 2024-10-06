@@ -1,0 +1,136 @@
+[Initialise]
+.SetMargin a 10
+.SetVar MetaPrompt 130
+.SetVar MetaData 155
+.SetSpaceVert 0.7
+.SetLineWidth 0.3
+.SetVar CurrentPage 1
+.SetVar NextPage 2
+[End]
+
+[FirstPageHeader]
+.LoadImageFromFile ./examples/2.Invoice/gearz.png
+.SetVar LogoId %_LastImageAdded%
+.DrawImage %LogoId% 0 0 40
+.SetFontSize 24
+.SetFontStyle Bold
+.DrawTextBox 0 0 %_PageWidth% 10 C T %DocumentCaption%
+
+.Do MetaData Address
+.SetCurrentY 70
+[End]
+
+[MetaData]
+.Do NormalText
+.SetVar top %_CurrentY%
+.DrawText %MetaPrompt% %top% %DocumentType% No:
+.DrawText %MetaData% %top% %DocumentNo%
+
+.SetVar top %_CurrentY%
+.DrawText %MetaPrompt% %top% %DocumentType% Date:
+.DrawText %MetaData% %top% %docDate%
+
+.SetVar top %_CurrentY%
+.DrawText %MetaPrompt% %top% Customer No:
+.DrawText %MetaData% %top% %CustNo%
+
+.SetVar top %_CurrentY%
+.DrawText %MetaPrompt% %top% Reference:
+.DrawText %MetaData% %top% %CustRef%
+
+.SetVar pageNoTop %_CurrentY%
+[End]
+
+[NumberPages]
+.DrawText %MetaPrompt% %pageNoTop% Page:
+.DrawText %MetaData% %pageNoTop% %_PageNo% of %_Pages%
+[End]
+
+[NormalText]
+.SetFontSize 11
+.SetFontStyle Normal
+[End]
+
+[Address]
+.SetVar left 10
+.SetVar right 90
+.SetFontSize 9
+.SetVar top 40
+.DrawText 5 %top% %to1%:
+.DrawText 85 %top% %to2%:
+
+.do NormalText
+.SetVar top %_CurrentY%
+.DrawText %left% %top% %Name1%
+.ifNotBlank Addr1Line1 .DrawText %left% %_CurrentY% %Addr1Line1%
+.ifNotBlank Addr1Line2 .DrawText %left% %_CurrentY% %Addr1Line2%
+.DrawText %left% %_CurrentY% %City1% %State1% %Zip1%
+
+.DrawText %right% %top% %Name2%
+.ifNotBlank Addr2Line1 .DrawText %right% %_CurrentY% %Addr2Line1%
+.ifNotBlank Addr2Line2 .DrawText %right% %_CurrentY% %Addr2Line2%
+.DrawText %right% %_CurrentY% %City2% %State2% %Zip2%
+[End]
+
+[Headings]
+.drawLine 0 %_CurrentY% %_PageWidth% %_CurrentY%
+.IncCurrentY %_SpaceVert%
+.setVar top %_CurrentY%
+.DrawText 0 %top% Line
+.DrawText 9 %top% Part No.
+.DrawText 43 %top% Description
+.DrawTextBox 125 %top% 20 %_FontHeight% r t Quantity
+.DrawTextBox 145 %top% 20 %_FontHeight% r t Price
+.DrawTextBox 165 %top% 20 %_FontHeight% r t  Extended
+.IncCurrentY %_SpaceVert%
+.drawLine 0 %_CurrentY% %_PageWidth% %_CurrentY% 
+[End]
+
+[CheckPage]
+.CheckPage 15 NextPage
+[End]
+
+[NextPage]
+.IncCurrentY %_SpaceVert%
+.DrawLine 0 %_CurrentY% %_PageWidth% %_CurrentY%
+.IncCurrentY %_SpaceVert%
+.DrawTextBox 0 %_CurrentY% %_PageWidth% %_FontHeight% c t Continued on page %NextPage%
+.IncVar NextPage 1
+.AddPage
+.SetFontSize 24
+.SetFontStyle Bold
+.DrawTextBox 0 0 %_PageWidth% 10 C T %DocumentCaption% - Continued
+.Do MetaData
+.IncCurrentY  %_FontHeight% %_FontHeight%
+.Do Headings
+.IncCurrentY %_SpaceVert%
+.DrawTextBox 0 %_CurrentY% %_PageWidth% %_FontHeight% c t Continued from page %CurrentPage%
+.IncVar CurrentPage 1
+[End]
+
+[AddPart]
+.Do CheckPage
+.setVar top %_CurrentY%
+.DrawTextBox 0 %top% 6 %_FontHeight% r t %ix%
+.DrawText 9 %top% %PartNo%
+.DrawTextWrapped 43 %top% 80 CheckPage %Description%
+.SetVar NextTop %_CurrentY%
+.DrawTextBox 125 %top% 20 %_FontHeight% r t %Qty%
+.DrawTextBox 145 %top% 20 %_FontHeight% r t %Price%
+.DrawTextBox 165 %top% 20 %_FontHeight% r t %total%
+.SetCurrentY %NextTop%
+[End]
+
+[Totals]
+.Do CheckPage
+.IncCurrentY %_SpaceVert%
+.DrawLine 0 %_CurrentY% %_PageWidth% %_CurrentY%
+.IncCurrentY %_SpaceVert%
+.setVar top %_CurrentY%
+.DrawTextBox 43 %top% 80 %_FontHeight% r t %DocumentType% Totals
+.SetFontStyle Bold
+.DrawTextBox 165 %top% 20 %_FontHeight% r t %total%
+.IncCurrentY %_SpaceVert%
+.DrawLine 0 %_CurrentY% %_PageWidth% %_CurrentY%
+.Do NormalText
+[End]

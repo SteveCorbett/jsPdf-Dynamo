@@ -1,9 +1,8 @@
 .SetVar CommandName SetFontStyle
 .Do CommandHeading
-.DrawText 0 %_CurrentY% Apply the typographical emphasis for the current font. For example, normal, bold or italic.
-.SetVar CommandLine1 Subsequent output of text will continue to use this emphasis until changed by another
-.Do CommandLine
-.SetVar CommandLine1 SetFontStyle command.
+.SetVar CommandLine1 Apply the typographical emphasis for the current font. For example, normal, bold
+.SetVar CommandLine1 %CommandLine1% or italic. Subsequent rendering of text will continue to use this
+.SetVar CommandLine1 %CommandLine1% emphasis until changed by another SetFontStyle command.
 .Do CommandLine
 
 .SetVar CommandSubHeading Syntax
@@ -67,7 +66,7 @@
 
 .SetVar CommandSubHeading See Also
 .Do CommandSubHeading
-.SetVar CommandLine1 DrawTextBox, DrawText, SetFontType, SetFontSize, SetTextColour
+.SetVar CommandLine1 DrawTextBox, DrawText, SetFontName, SetFontSize, SetTextColour
 .Do CommandLine
 
 .incCurrentY %_FontHeight%

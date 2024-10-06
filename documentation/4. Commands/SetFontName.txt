@@ -1,6 +1,87 @@
 .SetVar CommandName SetFontName
 .Do CommandHeading
-.SetVar CommandLine1 To be documented.
+.SetVar CommandLine1 Select the font to be used for rendering text. Subsequent output of text
+.SetVar CommandLine1 %CommandLine1% will continue to use this font until changed by another SetFontName command.
 .Do CommandLine
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .SetFontName  font
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 font
+.SetVar CommandLine2 The name of the font to use. This parameter is required. The default fonts that care available are:
+.Do CommandLine2
+.incCurrentY %halfLineGap%
+.Do CommandCheckPage
+.SetVar top %_CurrentY%
+.SetVar CommandLine2 -
+.Do CommandLine2
+.setCurrentY %top%
+.SetVar CommandLine3 Courier
+.SetFontName Courier
+.Do CommandLine2
+
+.Do CommandCheckPage
+.SetFontName Helvetica
+.SetVar CommandLine2 -
+.SetVar CommandLine3 Helvetica
+.Do CommandLine2
+
+.Do CommandCheckPage
+.SetVar top %_CurrentY%
+.SetVar CommandLine2 -
+.SetVar CommandLine3 Symbol
+.Do CommandLine2
+.SetFontName Symbol
+.setCurrentY %top%
+.DrawText 50 %top% (Symbol)
+
+.Do CommandCheckPage
+.SetFontName Helvetica
+.SetVar top %_CurrentY%
+.SetVar CommandLine2 -
+.Do CommandLine2
+.SetVar CommandLine3 Times
+.SetFontName Times
+.setCurrentY %top%
+.Do CommandLine2
+
+.Do CommandCheckPage
+.SetFontName Helvetica
+.SetVar top %_CurrentY%
+.SetVar CommandLine2 -
+.SetVar CommandLine3 ZapfDingbats
+.Do CommandLine2
+.SetFontName ZapfDingbats
+.DrawText 60 %top% (ZapfDingbats)
+
+.SetFontName Helvetica
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 The font name is not case sensitive so can be either upper, lower or mixed case.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 If a valid font name is provided the variable _LastResult is set to '1' otherwise the current
+.SetVar CommandLine1 %CommandLine1% font is unchanged and _LastResult is set to '0'. 
+.Do CommandLine
+
+.SetVar CommandSubHeading Example
+.Do CommandSubHeading
+.SetVar CommandLine1 Set subsequent text to be in fixed width courier:
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetFontName courier
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 DrawTextBox, DrawText, SetFontSize, SetFontStyle, SetTextColour
+.Do CommandLine
+
+.incCurrentY %_FontHeight%
 
 .incCurrentY %_FontHeight%

@@ -383,15 +383,32 @@ export class JsPdfProcessor {
     this.currentUom = optn.unit;
     (this._pdfDocument as any).setLineHeightFactor(1);
 
+    const now = new Date();
     this._variables.set(
       "_TIMEHM",
-      new Date().toLocaleTimeString("en-US", {
+      now.toLocaleTimeString(undefined, {
         hour12: false,
         hour: "2-digit",
         minute: "2-digit",
       }),
     );
-    this._variables.set("_DATEDMY", new Date().toLocaleDateString("en-GB"));
+    this._variables.set(
+      "_DATEDDMMYYYY",
+      now.toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+      }),
+    );
+    this._variables.set(
+      "_DATEMMDDYYYY",
+      now.toLocaleDateString("en-US", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+      }),
+    );
+    this._variables.set("_DATEISO", now.toISOString().substring(0, 10));
     this._variables.set("_IMAGEASPECT", "1");
     this._variables.set("_IMAGEHEIGHT", "0");
     this._variables.set("_IMAGEHEIGHTPX", "0");
@@ -643,6 +660,18 @@ export class JsPdfProcessor {
       return;
     }
 
+    if (isNaN(width)) {
+      this.lastError = `The width of the box is not a number`;
+      this.lastResult = "0";
+      return;
+    }
+
+    if (isNaN(height)) {
+      this.lastError = `The height of the box is not a number`;
+      this.lastResult = "0";
+      return;
+    }
+
     this.posnX = left;
     this.posnY = top;
     let lineWidthAdjustment = this._lineWidth;
@@ -665,6 +694,10 @@ export class JsPdfProcessor {
         style = "FD";
         this._pdfDocument.setFillColor(this.fillColour);
         break;
+      default:
+        this.lastError = `The box style option '${boxType}' is not valid. It must be '0', '1' or '2'`;
+        this.lastResult = "0";
+        return;
     }
 
     this._pdfDocument.rect(x, y, w, h, style);
@@ -676,11 +709,67 @@ export class JsPdfProcessor {
     this.lastResult = "1";
   }
 
+  public drawCircle(input: string): void {
+    const subs = this.logAndParseCommand(".drawCircle", input);
+
+    const { first: left, rest: rest1 } = getNextNumber(subs);
+    const { first: top, rest: rest2 } = getNextNumber(rest1);
+    const { first: radius, rest: rest3 } = getNextNumber(rest2);
+    const { first: option } = getNextNumber(rest3);
+
+    if (!this.checkPosition(left, top)) {
+      return;
+    }
+
+    if (isNaN(radius)) {
+      this.lastError = `The radius of the circle is not a number`;
+      this.lastResult = "0";
+      return;
+    }
+
+    this.posnX = left;
+    this.posnY = top;
+
+    const x = this.posnX + this._marginLeft;
+    const y = this.posnY + this._marginTop;
+    let r = radius;
+
+    let style = "S";
+    switch (option) {
+      case 0:
+        r -= this._lineWidth * 0.5;
+        break;
+      case 1:
+        style = "F";
+        this._pdfDocument.setFillColor(this.fillColour);
+        break;
+      case 2:
+        style = "FD";
+        this._pdfDocument.setFillColor(this.fillColour);
+        r -= this._lineWidth * 0.5;
+        break;
+      default:
+        this.lastError = `The circle style option '${option}' is not valid. It must be '0', '1' or '2'`;
+        this.lastResult = "0";
+        return;
+    }
+
+    this._pdfDocument.circle(x, y, r, style);
+
+    this.lastObjectHeight = radius * 2;
+    this.lastObjectWidth = this.lastObjectHeight;
+    this.posnX = this.posnX + radius + this.spaceHoz;
+    this.posnY = this.posnY + radius + this.spaceVert;
+    this.lastResult = "1";
+  }
+
   public drawDebugGrid(input: string): void {
     const subs = this.logAndParseCommand(".drawDebugGrid", input);
 
     const savedLineColour = this.lineColour;
     const savedLineWidth = this.lineWidth;
+    const savedX = this.posnX;
+    const savedY = this.posnY;
     const mm = 0.1;
     const pts = mmToPoints(mm);
 
@@ -749,6 +838,72 @@ export class JsPdfProcessor {
     }
     this.lineColour = savedLineColour;
     this.lineWidth = savedLineWidth;
+    this.posnX = savedX;
+    this.posnY = savedY;
+  }
+
+  public drawEllipse(input: string): void {
+    const subs = this.logAndParseCommand(".drawEllipse", input);
+
+    const { first: left, rest: rest1 } = getNextNumber(subs);
+    const { first: top, rest: rest2 } = getNextNumber(rest1);
+    const { first: radiusX, rest: rest3 } = getNextNumber(rest2);
+    const { first: radiusY, rest: rest4 } = getNextNumber(rest3);
+    const { first: option } = getNextNumber(rest4);
+
+    if (!this.checkPosition(left, top)) {
+      return;
+    }
+
+    if (isNaN(radiusX)) {
+      this.lastError = `The horizontal radius of the ellipse is not a number`;
+      this.lastResult = "0";
+      return;
+    }
+
+    if (isNaN(radiusY)) {
+      this.lastError = `The vertical radius of the ellipse is not a number`;
+      this.lastResult = "0";
+      return;
+    }
+
+    this.posnX = left;
+    this.posnY = top;
+
+    const x = this.posnX + this._marginLeft;
+    const y = this.posnY + this._marginTop;
+    let rx = radiusX;
+    let ry = radiusY;
+
+    let style = "S";
+    switch (option) {
+      case 0:
+        rx -= this._lineWidth * 0.5;
+        ry -= this._lineWidth * 0.5;
+        break;
+      case 1:
+        style = "F";
+        this._pdfDocument.setFillColor(this.fillColour);
+        break;
+      case 2:
+        style = "FD";
+        this._pdfDocument.setFillColor(this.fillColour);
+        rx -= this._lineWidth * 0.5;
+        ry -= this._lineWidth * 0.5;
+        break;
+      default:
+        this.lastError = `The circle style option '${option}' is not valid. It must be '0', '1' or '2'`;
+        this.lastResult = "0";
+        return;
+    }
+
+    this._pdfDocument.ellipse(x, y, rx, ry, style);
+
+    this.lastObjectHeight = radiusY * 2;
+    this.lastObjectWidth = radiusX * 2;
+    this.posnX = this.posnX + radiusX + this.spaceHoz;
+    this.posnY = this.posnY + radiusY + this.spaceVert;
+    this.lastResult = "1";
   }
 
   public drawLine(input: string): void {
@@ -798,10 +953,10 @@ export class JsPdfProcessor {
     }
 
     if (isNaN(imageNo) || imageNo < 0 || imageNo > this._images.length - 1) {
-      this.lastError = this._images.length
-        ? "The image number must be in the range of 0 to " +
-          (this._images.length - 1).toString()
-        : "Only one image has been loaded, the image number can only be 0";
+      this.lastError =
+        this._images.length > 1
+          ? `The image number ${imageNo} must be in the range of 0 to ${(this._images.length - 1).toString()}`
+          : "Only one image has been loaded, the image number can only be 0";
       this.lastResult = "0";
       return;
     }
@@ -883,7 +1038,7 @@ export class JsPdfProcessor {
     this.lastResult = "1";
 
     if (lines.length > 1) {
-      this.lastError = `Text was truncated to fit within the available width (${lines[0]?.substring(0, 20)}...)`;
+      this.lastError = `Text was truncated to fit within the available width (${rest2.substring(0, 20)}...) on page ${this._currentPageNumber}.`;
       this.lastResult = "0";
 
       if (lines[0]) {
@@ -1051,13 +1206,10 @@ export class JsPdfProcessor {
     }
 
     let adjustTop = 0;
-    // let adjustedHeight = height;
     if (vertAlign === "center") {
       adjustTop = (height - textHeight) / 2;
-      // adjustedHeight -= adjustTop;
     } else if (vertAlign === "bottom") {
       adjustTop = height - textHeight;
-      // adjustedHeight = textHeight;
     }
     this._pdfDocument.text(
       lines,
@@ -1233,11 +1385,12 @@ export class JsPdfProcessor {
     jsPdfDynamo: JsPdfDynamo,
     input: string,
   ): Promise<void> {
-    let { first: variable, rest } = getNextString(input);
+    let { first: value1, rest } = getNextString(input);
     const subs = this.substitute(rest.trim());
-    this._logger.debug(".ifNotBlank " + variable + " " + subs);
+    this._logger.debug(".ifNotBlank " + value1 + " " + subs);
 
-    let value = this._variables.get(variable.toLocaleUpperCase()) || "";
+    const variable1 = this.substitute(value1);
+    let value = this._variables.get(variable1.toLocaleUpperCase()) || "";
 
     this.lastResult = "-1";
     if (value.trim() !== "") {
@@ -1536,9 +1689,16 @@ export class JsPdfProcessor {
   }
 
   public setFillColour(input: string): void {
-    let subs = this.substitute(input);
-    this._logger.debug(".setFillColour " + subs);
-    this.fillColour = subs;
+    const subs = this.logAndParseCommand(".setFillColour", input);
+    const { first: fillColour } = getNextString(subs);
+
+    if (fillColour === "") {
+      this.lastResult = "0";
+      this.lastError = "A fill colour must be specified";
+      return;
+    }
+
+    this.fillColour = fillColour;
     this.lastResult = "1";
   }
 
@@ -1559,14 +1719,28 @@ export class JsPdfProcessor {
   public setFontSize(input: string): void {
     const subs = this.logAndParseCommand(".setFontSize", input);
 
-    let { first: size } = getNextNumber(subs);
-    if (size > 0) {
-      this.fontPointSize = size;
-      this.lastResult = "1";
-    } else {
+    if (subs === "") {
       this.lastResult = "0";
-      this.lastError = "Invalid font size " + size;
+      this.lastError = "A font size must be specified";
+      return;
     }
+
+    let { first: sizeAlpha } = getNextNumber(subs);
+    const size = Number(sizeAlpha);
+    if (Number.isNaN(size)) {
+      this.lastResult = "0";
+      this.lastError = `A font size must be a number. '${sizeAlpha}' is not a number.`;
+      return;
+    }
+
+    if (size <= 0) {
+      this.lastResult = "0";
+      this.lastError = "A font size must be greater than 0";
+      return;
+    }
+
+    this.fontPointSize = size;
+    this.lastResult = "1";
   }
 
   public setFontStyle(input: string): void {
@@ -1589,9 +1763,16 @@ export class JsPdfProcessor {
   }
 
   public setLineColour(input: string): void {
-    let subs = this.substitute(input);
-    this._logger.debug(".setLineColour " + subs);
-    this.lineColour = subs;
+    const subs = this.logAndParseCommand(".setFontStyle", input);
+    const { first: lineColour } = getNextString(subs);
+
+    if (lineColour === "") {
+      this.lastResult = "0";
+      this.lastError = "A line colour must be specified";
+      return;
+    }
+
+    this.lineColour = lineColour;
     this.lastResult = "1";
   }
 
@@ -1715,7 +1896,14 @@ export class JsPdfProcessor {
 
   public setTextColour(input: string): void {
     const subs = this.logAndParseCommand(".setTextColour", input);
-    this.textColour = subs;
+    const { first: textColour } = getNextString(subs);
+
+    if (textColour === "") {
+      this.lastResult = "0";
+      this.lastError = "A text colour must be specified";
+      return;
+    }
+    this.textColour = textColour;
     this.lastResult = "1";
   }
 

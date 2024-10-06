@@ -19,13 +19,14 @@
 .SetVar CommandLine2 variables using substitution.
 .Do CommandLine2
 .SetVar CommandLine1 Command
-.SetVar CommandLine2 The command to execute if the first value is greater than the second.
+.SetVar CommandLine2 The command to execute if the first value is equal to the second.
 .Do CommandLine2
 
 .SetVar CommandSubHeading Other
 .Do CommandSubHeading
 .SetVar text The variable _LastResult is set to '0' if the first variable is not equal to the second, otherwise 
 .SetVar text %text% _LastResult is set to the result of the last command processed by this command.
+.SetVar text %text% (Which could also be zero, depending on the result of the last command processed.)
 .DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
 .incCurrentY %HalfFontHeight%
 .SetVar text Comparison of string values is case sensitive.
@@ -48,6 +49,6 @@
 
 .SetVar CommandSubHeading See Also
 .Do CommandSubHeading
-.SetVar CommandLine1 IfBlank, IfGt, IfNotBlank
+.SetVar CommandLine1 IfBlank, IfGt, IfNe, IfNotBlank
 .Do CommandLine2
 .incCurrentY %_FontHeight%

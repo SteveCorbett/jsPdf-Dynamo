@@ -1,0 +1,71 @@
+﻿.SetVar CommandName DrawCircle
+.Do CommandHeading
+.SetVar CommandLine1 Draw a circle, centered at the given point using the current fill colour, 
+.SetVar CommandLine1 %CommandLine1% line colour and line width.
+.Do CommandLine
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .DrawCircle  Left  Top  Radius  Option
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Left
+.SetVar CommandLine2 The horizontal center of the circle, measured from the left margin.
+.Do CommandLine2
+.SetVar CommandLine1 Top
+.SetVar CommandLine2 The vertical center of the circle, measured from the top margin.
+.Do CommandLine2
+.SetVar CommandLine1 Radius
+.SetVar CommandLine2 The radius of the circle, including the width of any outline.
+.Do CommandLine2
+.SetVar CommandLine1 Option
+.SetVar CommandLine2 Specifies how the circle is drawn:
+.Do CommandLine2
+.incCurrentY %halfLineGap%
+.SetVar CommandLine3 0 - An outline of the circle is drawn using the current line width
+.Do CommandLine2
+.SetVar CommandLine3 1 - A circle filled with the current fill colour, without an outline is drawn
+.Do CommandLine2
+.SetVar CommandLine3 2 - A circle filled with the current fill colour, with an outline is drawn using the current line width
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 The variable _LastResult is set to '0' if there were any issues with the parameters
+.SetVar CommandLine1 %CommandLine1% provided, otherwise it is set to '1'.
+.Do CommandLine
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Unlike most other commands, the top and left positions specify the
+.SetVar CommandLine1 %CommandLine1% center point of the circle, not the left-most and top-most points.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Assuming that the unit of measure is millimeters, 
+.SetVar CommandLine1 %CommandLine1% a circle outline is drawn that is 5 millimeters high
+.SetVar CommandLine1 %CommandLine1% and is centered at the current position on the page.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .DrawCircle  %%%%_CurrentX%%%%  %%%%_CurrentY%%%%  5  0
+.Do CommandLine2
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Assuming that the unit of measure is inches, 
+.SetVar CommandLine1 %CommandLine1% an outlined and filled circle is drawn at the center 
+.SetVar CommandLine1 %CommandLine1% of the page, touching the top margin and is ½ inch high.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetVar  center  %%%%_PageWidth%%%%
+.Do CommandLine2
+.SetVar CommandLine1 .MultVar  center  0.5
+.Do CommandLine2
+.SetVar CommandLine1 .DrawCircle  0.5  %%%%center%%%%  0.5  2
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 DrawBox, DrawEllipse, DrawLine, SetFillColour, SetLineColour, SetLineWidth
+.Do CommandLine2
+.incCurrentY %_FontHeight%

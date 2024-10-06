@@ -140,6 +140,31 @@ describe("jsPdfProcessor", () => {
       });
     });
 
+    describe("ifNotBlank", () => {
+      it("should not run the commands if the variable is blank", async () => {
+        processor.setVar("var1");
+        processor.setVar("var3 X");
+        await processor.ifNotBlank(dynamo, "var1 .setVar var3 20");
+        expect(processor.getVar("_lastResult")).toBe("-1");
+        expect(processor.getVar("var3")).toBe("X");
+      });
+      it("should run the commands if the variable is not blank", async () => {
+        processor.setVar("var1 abc");
+        processor.setVar("var3 X");
+        await processor.ifNotBlank(dynamo, "var1 .setVar var3 20");
+        expect(processor.getVar("_lastResult")).toBe("1");
+        expect(processor.getVar("var3")).toBe("20");
+      });
+      it("should handle substitution of the first variable", async () => {
+        processor.setVar("var1 abc");
+        processor.setVar("var2 var1");
+        processor.setVar("var3 X");
+        await processor.ifNotBlank(dynamo, "%var2% .setVar var3 20");
+        expect(processor.getVar("_lastResult")).toBe("1");
+        expect(processor.getVar("var3")).toBe("20");
+      });
+    });
+
     describe("incCurrentX", () => {
       it("should increment the current left (y) position", () => {
         processor.addPage("A4");
@@ -460,6 +485,41 @@ describe("jsPdfProcessor", () => {
         processor.setVar("varName value1");
         processor.setVar("%varName% DEF");
         expect(processor.getVar("value1")).toBe("DEF");
+      });
+    });
+  });
+
+  describe("variables", () => {
+    beforeEach(() => {
+      logger = new Logger({ name: "jsPdfProcessor.spec", minLevel: 4 });
+      dynamo = new JsPdfDynamo(
+        { pageSize: "a4", orientation: "portrait" },
+        logger,
+      );
+      processor = dynamo["_processor"];
+    });
+
+    describe("_DateDdMmYyyy", () => {
+      it("should be the current date in DD/MM/YYYY format", () => {
+        const date = new Date();
+        const dateString = `${date.getDate().toString().padStart(2, "0")}/${(date.getMonth() + 1).toString().padStart(2, "0")}/${date.getFullYear()}`;
+        expect(processor.getVar("_DateDdMmYyyy")).toBe(dateString);
+      });
+    });
+
+    describe("_DateMmDdYyyy", () => {
+      it("should be the current date in MM/DD/YYYY format", () => {
+        const date = new Date();
+        const dateString = `${(date.getMonth() + 1).toString().padStart(2, "0")}/${date.getDate().toString().padStart(2, "0")}/${date.getFullYear()}`;
+        expect(processor.getVar("_DateMmDdYyyy")).toBe(dateString);
+      });
+    });
+
+    describe("_DateISO", () => {
+      it("should be the current date in YYYY-MM-DD format", () => {
+        const date = new Date();
+        const dateString = `${date.getUTCFullYear()}-${(date.getUTCMonth() + 1).toString().padStart(2, "0")}-${date.getUTCDate().toString().padStart(2, "0")}`;
+        expect(processor.getVar("_DateISO")).toBe(dateString);
       });
     });
   });

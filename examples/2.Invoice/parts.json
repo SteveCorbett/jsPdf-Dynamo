@@ -1,0 +1,324 @@
+{
+  "parts": [
+    {
+      "partNumber": "AB12345A",
+      "description": "Air Filter - Standard",
+      "price": 10.99
+    },
+    {
+      "partNumber": "CDA87654F",
+      "description": "Brake Pads for Honda Ridgeline",
+      "price": 30.0
+    },
+    {
+      "partNumber": "BHG54321G",
+      "description": "Radiator for Nissan Titan",
+      "price": 100.0
+    },
+    {
+      "partNumber": "CC56789B",
+      "description": "Catalytic Converter - California",
+      "price": 829.1
+    },
+    {
+      "partNumber": "UVWXYZ123456D",
+      "description": "Chevrolet Silverado 3500HD Crew Cab Console Lining",
+      "price": 120.99
+    },
+    {
+      "partNumber": "ABC12345A",
+      "description": "Fuel Pump for Ford F-150",
+      "price": 120.99
+    },
+    {
+      "partNumber": "KMA67890B",
+      "description": "Air Filter for Chevrolet Silverado",
+      "price": 25.5
+    },
+    {
+      "partNumber": "XYZ90123C",
+      "description": "Muffler for Ram 1500",
+      "price": 150.0
+    },
+    {
+      "partNumber": "LTA34567D",
+      "description": "Timing Belt for Toyota Tundra",
+      "price": 80.99
+    },
+    {
+      "partNumber": "MNP98765E",
+      "description": "Transmission Filter for GMC Sierra",
+      "price": 40.5
+    },
+    {
+      "partNumber": "VWXYZA123456E",
+      "description": "Ram 2500 Laramie Trim 20-Inch Wheels",
+      "price": 180.99
+    },
+    {
+      "partNumber": "DA23456C",
+      "description": "Differential Assembly",
+      "price": 399.99
+    },
+    {
+      "partNumber": "EF34567D",
+      "description": "Engine Filter - High Performance",
+      "price": 14.99
+    },
+    {
+      "partNumber": "PQR12345H",
+      "description": "Wheel Bearing for Dodge Ram",
+      "price": 50.0
+    },
+    {
+      "partNumber": "VBU67890J",
+      "description": "Camshaft Sensor for Chevrolet Colorado",
+      "price": 70.5
+    },
+    {
+      "partNumber": "FG67890E",
+      "description": "Fan and Shroud",
+      "price": 139
+    },
+    {
+      "partNumber": "GH34567F",
+      "description": "Gearbox Gasket - Ford 9\"",
+      "price": 9.99
+    },
+    {
+      "partNumber": "HI23456G",
+      "description": "Headlight Assembly - Toyota Prius 2010",
+      "price": 144.2
+    },
+    {
+      "partNumber": "WXYZBC123456F",
+      "description": "Toyota Tundra 1794 Edition Center Console Lining",
+      "price": 120.99
+    },
+    {
+      "partNumber": "JK67890H",
+      "description": "Suspension Kit",
+      "price": 89.99
+    },
+    {
+      "partNumber": "KL34567I",
+      "description": "Cooling Fan",
+      "price": 24.99
+    },
+    {
+      "partNumber": "LMOPQR123456T",
+      "description": "Toyota Tacoma TRD Off-Road Wheels",
+      "price": 190.99
+    },
+    {
+      "partNumber": "WXY90123I",
+      "description": "Ignition Coils for Ford F-250",
+      "price": 60.99
+    },
+    {
+      "partNumber": "PQRSTU123456W",
+      "description": "Ram 2500 Laramie Interior Trim Kit",
+      "price": 120.99
+    },
+    {
+      "partNumber": "LM23456J",
+      "description": "Lever and Linkage",
+      "price": 29.99
+    },
+    {
+      "partNumber": "MN67890K",
+      "description": "Volvo Master Cylinder - Brake",
+      "price": 49.99
+    },
+    {
+      "partNumber": "BBCCC123456D",
+      "description": "Chevrolet Silverado Right Rear Brake Pads",
+      "price": 85.99
+    },
+    {
+      "partNumber": "NO34567L",
+      "description": "Neutral Safety Switch",
+      "price": 12.99
+    },
+    {
+      "partNumber": "TUVWXY123456C",
+      "description": "Ford F-250 Crew Cab 4- Way Flasher",
+      "price": 25.99
+    },
+    {
+      "partNumber": "OX23456M",
+      "description": "Oil Filter",
+      "price": 7.99
+    },
+    {
+      "partNumber": "PQ67890N",
+      "description": "Power Steering Pump",
+      "price": 169.3
+    },
+    {
+      "partNumber": "AABBCC123456",
+      "description": "Ford F-150 Left Front Tire",
+      "price": 120.99
+    },
+    {
+      "partNumber": "CCDDD123456A",
+      "description": "Ram 1500 Power Steering Pump",
+      "price": 156.99
+    },
+    {
+      "partNumber": "DDFFE123456G",
+      "description": "Toyota Tacoma 4- Wheel Drive Actuator",
+      "price": 120.99
+    },
+    {
+      "partNumber": "QR34567O",
+      "description": "Rear View Mirror",
+      "price": 19.99
+    },
+    {
+      "partNumber": "ST67890Q",
+      "description": "Sway Bar Link",
+      "price": 25.99
+    },
+    {
+      "partNumber": "RSWTUV123456A",
+      "description": "Ram 1500 Tradesman Trim Fuel Tank Skid Plate",
+      "price": 80.99
+    },
+    {
+      "partNumber": "TU34567R",
+      "description": "Taillight Assembly",
+      "price": 59.99
+    },
+    {
+      "partNumber": "QRSTUV123456Z",
+      "description": "Chevrolet Silverado 2500HD Bed Liner",
+      "price": 100.99
+    },
+    {
+      "partNumber": "STUVWX123456B",
+      "description": "Toyota Tacoma TRD Sport Trim Dash Trim Kit",
+      "price": 60.99
+    },
+    {
+      "partNumber": "UV67890S",
+      "description": "Upper Control Arm",
+      "price": 39.99
+    },
+    {
+      "partNumber": "QRSTUV123456X",
+      "description": "Toyota Tundra 1794 Edition Running Boards",
+      "price": 150.99
+    },
+    {
+      "partNumber": "QRSTWX123456Y",
+      "description": "Ford F-350 Super Duty Fender Flares",
+      "price": 80.99
+    },
+    {
+      "partNumber": "VW34567T",
+      "description": "Vacuum Pump",
+      "price": 15.99
+    },
+    {
+      "partNumber": "WX23456U",
+      "description": "Water Pump",
+      "price": 49.99
+    },
+    {
+      "partNumber": "EEFFG123456H",
+      "description": "Ford F-250 Crew Cab Interior Mirror",
+      "price": 35.99
+    },
+    {
+      "partNumber": "RS23456P",
+      "description": "Radiator Fan Shroud",
+      "price": 34.99
+    },
+    {
+      "partNumber": "FFGGH123456J",
+      "description": "Chevrolet Silverado 3500HD Suspension Spring",
+      "price": 110.99
+    },
+    {
+      "partNumber": "GGHIK123456L",
+      "description": "Ram 2500 Laramie Leveling Kit",
+      "price": 220.99
+    },
+    {
+      "partNumber": "HIJKL123456M",
+      "description": "Toyota Tundra 1794 Edition Tow Hitch",
+      "price": 150.99
+    },
+    {
+      "partNumber": "XY67890V",
+      "description": "X-Pipe Muffler",
+      "price": 99.99
+    },
+    {
+      "partNumber": "YZ34567W",
+      "description": "Y-Axis Gasket",
+      "price": 22.99
+    },
+    {
+      "partNumber": "JKLMN123456O",
+      "description": "Ford F-350 Super Duty Axle Shaft",
+      "price": 300.99
+    },
+    {
+      "partNumber": "ZA23456X",
+      "description": "Z-Bar Linkage",
+      "price": 35.99
+    },
+    {
+      "partNumber": "ZB67890Y",
+      "description": "Zip Tie",
+      "price": 1.99
+    },
+    {
+      "partNumber": "ZC34567Z",
+      "description": "Zerostart Battery",
+      "price": 129.99
+    },
+    {
+      "partNumber": "JKLMOP123456P",
+      "description": "Chevrolet Silverado 2500HD Bumper Cover",
+      "price": 60.99
+    },
+    {
+      "partNumber": "KLMOPQ123456R",
+      "description": "Ram 1500 Sport Trim Headlight Assembly",
+      "price": 80.99
+    },
+    {
+      "partNumber": "AA12345A",
+      "description": "Air Filter Assembly",
+      "price": 49.99
+    },
+    {
+      "partNumber": "BB56789B",
+      "description": "Battery Box",
+      "price": 29.99
+    },
+    {
+      "partNumber": "MOPQRT123456U",
+      "description": "Ford F-250 XL Crew Cab Seats",
+      "price": 120.99
+    },
+    {
+      "partNumber": "OPQRST123456V",
+      "description": "Chevrolet Silverado 2500HD Transfer Case",
+      "price": 280.99
+    },
+    {
+      "partNumber": "CC23456C",
+      "description": "Cooling Fan Shroud",
+      "price": 19.99
+    },
+    {
+      "partNumber": "DD34567D",
+      "description": "Dash Panel",
+      "price": 39.99
+    }
+  ]
+}
