@@ -1,0 +1,75 @@
+﻿.SetVar CommandName DrawEllipse
+.Do CommandHeading
+.SetVar CommandLine1 Draw an ellipse, centered at the given point using the current fill colour, 
+.SetVar CommandLine1 %CommandLine1% line colour and line width.
+.Do CommandLine
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .DrawEllipse  Left  Top  RadiusX  RadiusY  Option
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 Left
+.SetVar CommandLine2 The horizontal center of the ellipse, measured from the left margin.
+.Do CommandLine2
+.SetVar CommandLine1 Top
+.SetVar CommandLine2 The vertical center of the ellipse, measured from the top margin.
+.Do CommandLine2
+.SetVar CommandLine1 RadiusX
+.SetVar CommandLine2 The horizontal radius of the ellipse, including the width of any outline.
+.Do CommandLine2
+.Do CommandLine2
+.SetVar CommandLine1 RadiusY
+.SetVar CommandLine2 The vertical radius of the ellipse, including the width of any outline.
+.Do CommandLine2
+.SetVar CommandLine1 Option
+.SetVar CommandLine2 Specifies how the ellipse is drawn:
+.Do CommandLine2
+.incCurrentY %halfLineGap%
+.SetVar CommandLine3 0 - An outline of the ellipse is drawn using the current line width
+.Do CommandLine2
+.SetVar CommandLine3 1 - An ellipse filled with the current fill colour, without an outline is drawn
+.Do CommandLine2
+.SetVar CommandLine3 2 - An ellipse filled with the current fill colour, with an outline is drawn using the current line width
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar CommandLine1 The variable _LastResult is set to '0' if there were any issues with the parameters
+.SetVar CommandLine1 %CommandLine1% provided, otherwise it is set to '1'.
+.Do CommandLine
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Unlike most other commands, the top and left positions specify the
+.SetVar CommandLine1 %CommandLine1% center point of the ellipse, not the left-most and top-most points.
+.Do CommandLine
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1 Assuming that the unit of measure is millimeters, 
+.SetVar CommandLine1 %CommandLine1% an outline of an ellipse is drawn that is 4.5 millimeters high,
+.SetVar CommandLine1 %CommandLine1% 8.5 millimeters wide, and is centered at the current position on the page.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .DrawEllipse  %%%%_CurrentX%%%%  %%%%_CurrentY%%%%  8.5  4.5  0
+.Do CommandLine2
+
+.incCurrentY %_FontHeight%
+.SetVar CommandLine1 Assuming that the unit of measure is inches, an outlined and filled
+.SetVar CommandLine1 %CommandLine1% ellipse is drawn at the center of the page, touching the
+.SetVar CommandLine1 %CommandLine1% top margin and is ½ inch high and 1 inch wide.
+.Do CommandLine
+.incCurrentY %halfLineGap%
+.SetVar CommandLine1 .SetVar  center  %%%%_PageWidth%%%%
+.Do CommandLine2
+.SetVar CommandLine1 .MultVar  center  0.5
+.Do CommandLine2
+.SetVar CommandLine1 .DrawEllipse  0.5  %%%%center%%%%  1  0.5  2
+.Do CommandLine2
+
+.SetVar CommandSubHeading See Also
+.Do CommandSubHeading
+.SetVar CommandLine1 DrawBox, DrawCircle, DrawLine, SetFillColour, SetLineColour, SetLineWidth
+.Do CommandLine2
+.incCurrentY %_FontHeight%

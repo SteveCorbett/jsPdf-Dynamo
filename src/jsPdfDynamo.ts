@@ -156,8 +156,14 @@ export class JsPdfDynamo {
       case "DrawBox".toLowerCase():
         processor.drawBox(parameters);
         return;
+      case "DrawCircle".toLowerCase():
+        processor.drawCircle(parameters);
+        return;
       case "DrawDebugGrid".toLowerCase():
         processor.drawDebugGrid(parameters);
+        return;
+      case "DrawEllipse".toLowerCase():
+        processor.drawEllipse(parameters);
         return;
       case "DrawImage".toLowerCase():
         processor.drawImage(parameters);

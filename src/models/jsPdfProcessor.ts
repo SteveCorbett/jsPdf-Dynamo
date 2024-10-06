@@ -660,6 +660,18 @@ export class JsPdfProcessor {
       return;
     }
 
+    if (isNaN(width)) {
+      this.lastError = `The width of the box is not a number`;
+      this.lastResult = "0";
+      return;
+    }
+
+    if (isNaN(height)) {
+      this.lastError = `The height of the box is not a number`;
+      this.lastResult = "0";
+      return;
+    }
+
     this.posnX = left;
     this.posnY = top;
     let lineWidthAdjustment = this._lineWidth;
@@ -682,6 +694,10 @@ export class JsPdfProcessor {
         style = "FD";
         this._pdfDocument.setFillColor(this.fillColour);
         break;
+      default:
+        this.lastError = `The box style option '${boxType}' is not valid. It must be '0', '1' or '2'`;
+        this.lastResult = "0";
+        return;
     }
 
     this._pdfDocument.rect(x, y, w, h, style);
@@ -690,6 +706,60 @@ export class JsPdfProcessor {
     this.posnY = this.posnY + height + this.spaceVert;
     this.lastObjectHeight = height;
     this.lastObjectWidth = width;
+    this.lastResult = "1";
+  }
+
+  public drawCircle(input: string): void {
+    const subs = this.logAndParseCommand(".drawCircle", input);
+
+    const { first: left, rest: rest1 } = getNextNumber(subs);
+    const { first: top, rest: rest2 } = getNextNumber(rest1);
+    const { first: radius, rest: rest3 } = getNextNumber(rest2);
+    const { first: option } = getNextNumber(rest3);
+
+    if (!this.checkPosition(left, top)) {
+      return;
+    }
+
+    if (isNaN(radius)) {
+      this.lastError = `The radius of the circle is not a number`;
+      this.lastResult = "0";
+      return;
+    }
+
+    this.posnX = left;
+    this.posnY = top;
+
+    const x = this.posnX + this._marginLeft;
+    const y = this.posnY + this._marginTop;
+    let r = radius;
+
+    let style = "S";
+    switch (option) {
+      case 0:
+        r -= this._lineWidth * 0.5;
+        break;
+      case 1:
+        style = "F";
+        this._pdfDocument.setFillColor(this.fillColour);
+        break;
+      case 2:
+        style = "FD";
+        this._pdfDocument.setFillColor(this.fillColour);
+        r -= this._lineWidth * 0.5;
+        break;
+      default:
+        this.lastError = `The circle style option '${option}' is not valid. It must be '0', '1' or '2'`;
+        this.lastResult = "0";
+        return;
+    }
+
+    this._pdfDocument.circle(x, y, r, style);
+
+    this.lastObjectHeight = radius * 2;
+    this.lastObjectWidth = this.lastObjectHeight;
+    this.posnX = this.posnX + radius + this.spaceHoz;
+    this.posnY = this.posnY + radius + this.spaceVert;
     this.lastResult = "1";
   }
 
@@ -770,6 +840,70 @@ export class JsPdfProcessor {
     this.lineWidth = savedLineWidth;
     this.posnX = savedX;
     this.posnY = savedY;
+  }
+
+  public drawEllipse(input: string): void {
+    const subs = this.logAndParseCommand(".drawEllipse", input);
+
+    const { first: left, rest: rest1 } = getNextNumber(subs);
+    const { first: top, rest: rest2 } = getNextNumber(rest1);
+    const { first: radiusX, rest: rest3 } = getNextNumber(rest2);
+    const { first: radiusY, rest: rest4 } = getNextNumber(rest3);
+    const { first: option } = getNextNumber(rest4);
+
+    if (!this.checkPosition(left, top)) {
+      return;
+    }
+
+    if (isNaN(radiusX)) {
+      this.lastError = `The horizontal radius of the ellipse is not a number`;
+      this.lastResult = "0";
+      return;
+    }
+
+    if (isNaN(radiusY)) {
+      this.lastError = `The vertical radius of the ellipse is not a number`;
+      this.lastResult = "0";
+      return;
+    }
+
+    this.posnX = left;
+    this.posnY = top;
+
+    const x = this.posnX + this._marginLeft;
+    const y = this.posnY + this._marginTop;
+    let rx = radiusX;
+    let ry = radiusY;
+
+    let style = "S";
+    switch (option) {
+      case 0:
+        rx -= this._lineWidth * 0.5;
+        ry -= this._lineWidth * 0.5;
+        break;
+      case 1:
+        style = "F";
+        this._pdfDocument.setFillColor(this.fillColour);
+        break;
+      case 2:
+        style = "FD";
+        this._pdfDocument.setFillColor(this.fillColour);
+        rx -= this._lineWidth * 0.5;
+        ry -= this._lineWidth * 0.5;
+        break;
+      default:
+        this.lastError = `The circle style option '${option}' is not valid. It must be '0', '1' or '2'`;
+        this.lastResult = "0";
+        return;
+    }
+
+    this._pdfDocument.ellipse(x, y, rx, ry, style);
+
+    this.lastObjectHeight = radiusY * 2;
+    this.lastObjectWidth = radiusX * 2;
+    this.posnX = this.posnX + radiusX + this.spaceHoz;
+    this.posnY = this.posnY + radiusY + this.spaceVert;
+    this.lastResult = "1";
   }
 
   public drawLine(input: string): void {

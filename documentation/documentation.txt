@@ -225,7 +225,9 @@
 .Include ./Documentation/4. Commands/Do.txt
 .Include ./Documentation/4. Commands/DoRepeat.txt
 .Include ./Documentation/4. Commands/DrawBox.txt
+.Include ./Documentation/4. Commands/DrawCircle.txt
 .Include ./Documentation/4. Commands/DrawDebugGrid.txt
+.Include ./Documentation/4. Commands/DrawEllipse.txt
 .Include ./Documentation/4. Commands/DrawImage.txt
 .Include ./Documentation/4. Commands/DrawLine.txt
 .Include ./Documentation/4. Commands/DrawText.txt
@@ -235,6 +237,7 @@
 .Include ./Documentation/4. Commands/IfBlank.txt
 .Include ./Documentation/4. Commands/IfEq.txt
 .Include ./Documentation/4. Commands/IfGt.txt
+.Include ./Documentation/4. Commands/IfNe.txt
 .Include ./Documentation/4. Commands/IfNotBlank.txt
 .Include ./Documentation/4. Commands/incCurrentX.txt
 .Include ./Documentation/4. Commands/incCurrentY.txt
