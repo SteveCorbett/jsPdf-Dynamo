@@ -44,7 +44,7 @@
     "tslog": "^4.9.3",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4",
-    "vitest": "^2.1.1"
+    "vitest": "^3.0.9"
   },
   "files": [
     "dist",
