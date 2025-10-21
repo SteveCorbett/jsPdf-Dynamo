@@ -33,7 +33,7 @@
   "author": "Stephen Corbett <corbett@corbtech.com.au> (https://corbtech.com.au)",
   "license": "MIT",
   "dependencies": {
-    "jspdf": "^2.5.2"
+    "jspdf": "^3.0.0"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.4",
