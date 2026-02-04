@@ -1,8 +1,8 @@
 import { expect, it, describe } from "vitest";
-import { JsPdfDynamo } from "../src/jsPdfDynamo";
+import { JsPdfDynamo } from "../../src/jsPdfDynamo";
 
-describe("app", () => {
-  it("1. Simple", async () => {
+describe("1. Simple example", () => {
+  it("Create", async () => {
     const pdfDynamo = new JsPdfDynamo({
       pageSize: "a4",
       orientation: "portrait",
