@@ -56,7 +56,6 @@
 .SetVar top %_PageHeight%
 .MultVar top 0.3
 .DrawTextBox 0 %top% %_PageWidth% %_FontHeight% centered top jsPdf-Dynamo
-.DrawTextBox 0 %_CurrentY% %_PageWidth% %_FontHeight% centered top (Draft)
 .incCurrentY 2
 .SetFontSize 24
 .SetTextColour %black%
@@ -81,11 +80,6 @@
 [End]
 
 [Footer]
-.setMargin t 7
-.setFontStyle Bold
-.setFontSize 18
-.SetTextColour red
-.ifGt %_PageNo% 1 .DrawTextBox 0 0 %_PageWidth% 8 centered centered *** Draft ***
 .Do SetDefaultText  
 .SetVar top %_PageHeight%
 .incVar top -%_FontHeight%
