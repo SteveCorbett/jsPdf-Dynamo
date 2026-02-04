@@ -9,8 +9,6 @@
   - Ensure they change after adding a new page
 - Command Groups should normally end with [End]. If not they will be terminated by the next cmd group.
 - Check filled boxes!
-
-- .savePdf is now Node only (not browser)
 - Create DumpToText, DumpToPdf commands
 - Add some more examples:
   - Police report?
@@ -19,6 +17,11 @@
 
 ## Ideas
 
+- Handle some html tags in text input (but not CSS):
+  - Bold
+  - Underline
+  - Italic
+  - Links?
 - Enable setting variables from objects?
 - Update colour handling to allow RGB or CMYK formats.
 - DrawGrid:

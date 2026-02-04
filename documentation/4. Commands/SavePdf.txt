@@ -1,6 +1,39 @@
 ﻿.SetVar CommandName SavePdf
 .Do CommandHeading
-.SetVar CommandLine1 To be documented.
-.Do CommandLine
+.SetVar text Only available when running within Node.js, this command saves the current PDF to the given location.
+.SetVar text %text% A warning will be logged if used within a browser.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+
+.SetVar CommandSubHeading Syntax
+.Do CommandSubHeading
+.SetVar CommandLine1 .SavePdf  File-name
+.Do CommandLine2
+
+.SetVar CommandSubHeading Parameters
+.Do CommandSubHeading
+.SetVar CommandLine1 File-name
+.SetVar CommandLine2 The path and name of the file to save. This can include
+.Do CommandLine2
+.SetVar CommandLine2 variables as well as constant text.
+.Do CommandLine2
+
+.SetVar CommandSubHeading Other
+.Do CommandSubHeading
+.SetVar text The variable _LastResult is set to '1' if the current PDF is saved, otherwise it is set to '0'
+.SetVar text %text% and _LastError is set to a description of the problem.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %halfLineGap%
+.SetVar text Note that the path must exist or this command will fail.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+.incCurrentY %halfLineGap%
+.SetVar text If not given the default name of Document.pdf will be used.
+.DrawTextWrapped 0 %_CurrentY% %_PageWidth% CommandCheckPage %text%
+
+.SetVar CommandSubHeading Examples
+.Do CommandSubHeading
+.SetVar CommandLine1  .SavePdf  ../output/invoice.pdf
+.Do CommandLine2
+.SetVar CommandLine1  .SavePdf  %%%%savepath%%%%/%%%%customer%%%%.pdf
+.Do CommandLine2
 
 .incCurrentY %_FontHeight%

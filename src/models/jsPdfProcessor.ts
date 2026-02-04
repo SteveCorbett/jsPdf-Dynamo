@@ -1593,6 +1593,7 @@ export class JsPdfProcessor {
 
     if (isBrowser()) {
       this.lastError = "SavePdf is not supported in the browser";
+      this._logger.warn(this.lastError);
       this.lastResult = "0";
       return;
     }
@@ -1636,6 +1637,7 @@ export class JsPdfProcessor {
     this.lastResult = pageNo.toString();
     this.posnX = 0;
     this.posnY = 0;
+    this.lastResult = "1";
   }
 
   private setCurrentFont(fontName: string, fontStyle: string): void {
