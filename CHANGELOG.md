@@ -1,5 +1,10 @@
 # jspdf-dynamo
 
+## 1.0.9 February 2026
+
+- Fix: handle different `jspdf` import shapes (CJS/ESM interop) to avoid constructor type errors.
+- Set the default document content creator to `jsPdf-Dynamo`. This can be over-ridden using the SetDocumentInfo command.
+
 ## 1.0.8 February 2026
 
 - Generate CJS and ECMAScript modules.

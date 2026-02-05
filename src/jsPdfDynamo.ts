@@ -28,7 +28,7 @@ export class JsPdfDynamo {
     }
   }
 
-  public toBlobUrl(): string | null {
+  public toBlobUrl(): URL | null {
     try {
       const result = this._processor.PdfDocument.output("bloburi");
       return result;

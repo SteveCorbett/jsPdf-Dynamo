@@ -1,13 +1,13 @@
 {
   "name": "jspdf-dynamo",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Generate data driven PDFs from dynamic templates",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SteveCorbett/jsPdf-Dynamo"
+    "url": "git+https://github.com/SteveCorbett/jsPdf-Dynamo.git"
   },
   "bugs": {
     "url": "https://github.com/SteveCorbett/jsPdf-Dynamo/issues"
@@ -15,8 +15,8 @@
   "scripts": {
     "build": "tsup",
     "build-docs": "vitest --dir ./documentation run",
-    "check-exports": "attw --pack . ",
-    "ci": "npm run test && npm run lint && npm run build && npm run check-format && npm run check-exports ",
+    "check-exports": "npm pack && attw \"$(ls *.tgz | head -n 1)\" && rm -f *.tgz",
+    "ci": "npm run test && npm run lint && npm run build && npm run check-format && ( [ \"$npm_config_dry_run\" = \"true\" ] && echo \"Skipping check-exports in dry-run\" || npm run check-exports )",
     "examples": "vitest --dir ./examples run",
     "format": "prettier --write .",
     "lint": "tsc",

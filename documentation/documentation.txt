@@ -270,5 +270,5 @@
 .ForEachPage Footer
 
 ;.DrawDebugGrid
-.SAVEpdF ./documentation/Documentation.pdf
+.SAVEpdF ./Documentation.pdf
 .WriteLog info Documentation has been generated.

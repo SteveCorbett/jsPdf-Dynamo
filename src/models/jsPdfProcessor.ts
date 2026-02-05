@@ -1,7 +1,8 @@
-import jsPDF, { type OutlineItem } from "jspdf";
+import type { jsPDF, OutlineItem } from "jspdf";
+import * as jspdfModule from "jspdf";
 import * as fs from "fs";
 
-import { AppLogger, type ILogger } from "./logger.js";
+import { AppLogger } from "./logger.js";
 import {
   getNextNumber,
   getNextString,
@@ -369,19 +370,44 @@ export class JsPdfProcessor {
   }
 
   private get pageCount(): number {
-    return this._pdfDocument
-      ? this._pdfDocument.internal.getNumberOfPages()
+    const internal =
+      this._pdfDocument && this._pdfDocument.internal
+        ? this._pdfDocument.internal
+        : null;
+    return internal && typeof (internal as any).getNumberOfPages === "function"
+      ? (internal as any).getNumberOfPages()
       : -1;
   }
 
   constructor(options: Partial<IJsPdfOptions>, logger: AppLogger) {
     this._logger = logger;
     const optn = new JsPdfOptions(options);
-    this._pdfDocument = new jsPDF(optn);
+
+    // Resolve jsPDF constructor across common CJS/ESM interop shapes.
+    // Some consumers get: require('jspdf') -> { default: [Function jsPDF], jsPDF: [Function jsPDF], ... }
+    // Others may get a function directly. Make resolution robust so we don't crash on import shapes.
+    const jsPDFCtor: any =
+      jspdfModule && typeof (jspdfModule as any).default === "function"
+        ? (jspdfModule as any).default
+        : jspdfModule && typeof (jspdfModule as any).jsPDF === "function"
+          ? (jspdfModule as any).jsPDF
+          : typeof jspdfModule === "function"
+            ? jspdfModule
+            : undefined;
+
+    if (!jsPDFCtor) {
+      throw new Error(
+        'jsPDF constructor not found. Ensure a compatible "jspdf" package is installed.',
+      );
+    }
+
+    this._pdfDocument = new jsPDFCtor(optn);
+    this._pdfDocument.setLineHeightFactor(1);
+    this._pdfDocument.setProperties({ creator: "jsPdf-Dynamo" });
+
     this.pageSize = optn.pageSize;
     this.pageOrientation = optn.orientation;
     this.currentUom = optn.unit;
-    (this._pdfDocument as any).setLineHeightFactor(1);
 
     const now = new Date();
     this._variables.set(
@@ -1665,9 +1691,6 @@ export class JsPdfProcessor {
     let { first, rest } = getNextString(subs);
     this.lastResult = "1";
     switch (first.toLocaleLowerCase()) {
-      case "application":
-        this._pdfDocument.setProperties({ application: rest });
-        break;
       case "author":
         this._pdfDocument.setProperties({ author: rest });
         break;

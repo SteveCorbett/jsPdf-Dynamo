@@ -10,14 +10,10 @@
 .SetVar CommandSubHeading Parameters
 .Do CommandSubHeading
 .SetVar CommandLine1 Property
-.SetVar CommandLine2 One of the following values: Application, Author, Creator, CreationDate, Keywords, 
-.Do CommandLine2
-.SetVar CommandLine2 ModDate, Producer, Subject or Title.
+.SetVar CommandLine2 One of the following values: Author, Creator, Keywords, Subject or Title.
 .Do CommandLine2
 .SetVar CommandLine1 Value
-.SetVar CommandLine2 The value to set the property to. For CreationDate and ModDate this must
-.Do CommandLine2
-.SetVar CommandLine2 either be in the format of yyyy-mm-dd or blank.
+.SetVar CommandLine2 The value to set the property to.
 .Do CommandLine2
 
 .SetVar CommandSubHeading Other
